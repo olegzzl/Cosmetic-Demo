@@ -38,8 +38,8 @@
   --brand-lavender: #2C2C2C;
     --brand-text-secondary: #A0A0A0;
   --detail-header-bg: rgba(44, 44, 44, 0.8);
-  --bottom-nav-bg: rgba(44, 44, 44, 0.9);
-  --bottom-nav-border: rgba(255, 255, 255, 0.1);
+  --bottom-nav-bg: rgba(255, 255, 255, 0.15);
+  --bottom-nav-border: rgba(255, 255, 255, 0.2);
 
   /* Spacing */
   --page-margin: 1.25rem;
@@ -101,8 +101,8 @@
   --brand-lavender: #E2E2ED;
   --brand-text-secondary: #7A7A7A;
   --detail-header-bg: rgba(253, 251, 249, 0.85);
-  --bottom-nav-bg: rgba(253, 251, 249, 0.95);
-  --bottom-nav-border: rgba(0, 0, 0, 0.06);
+  --bottom-nav-bg: rgba(255, 255, 255, 0.4);
+  --bottom-nav-border: rgba(255, 255, 255, 0.5);
 }
 
 [data-theme="light"] .service-list-item {

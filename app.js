@@ -234,7 +234,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const servicesTop = servicesSection.offsetTop - 150;
       const contactsTop = contactsSection.offsetTop - 200;
       
-      if (scrollTop >= contactsTop) {
+      const isAtBottom = homePage.scrollHeight - scrollTop - homePage.clientHeight <= 30;
+      
+      if (isAtBottom || scrollTop >= contactsTop) {
         updateNav('appointment');
       } else if (scrollTop >= servicesTop) {
         updateNav('services');
@@ -283,11 +285,17 @@ function scrollToServices() {
     navigateTo('home');
     setTimeout(() => {
       const section = document.getElementById('services-section');
-      if (section) section.scrollIntoView({ behavior: 'smooth' });
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+        updateNav('services');
+      }
     }, 450);
   } else {
     const section = document.getElementById('services-section');
-    if (section) section.scrollIntoView({ behavior: 'smooth' });
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      updateNav('services');
+    }
   }
 }
 
@@ -301,12 +309,14 @@ function scrollToContacts() {
         section.scrollIntoView({ behavior: 'smooth' });
         // Trigger scroll animations for the newly visible section
         triggerAnimations(document.getElementById('page-home'));
+        updateNav('appointment');
       }
     }, 450);
   } else {
     const section = document.getElementById('contacts-section');
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
+      updateNav('appointment');
     }
   }
 }
