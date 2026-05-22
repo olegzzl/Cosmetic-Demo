@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="referrer" content="no-referrer">
   <title>Natalia Aesthetics — Косметолог Наталья</title>
   <meta name="description" content="Профессиональный косметолог Наталья. Чистка лица, пилинги, инъекции, массаж лица, лазерная эпиляция. Записаться на консультацию.">
   
@@ -32,13 +33,18 @@
                 <img src="avatar.jpg" alt="Наталья Косметолог">
               </div>
               <div class="home-header__text">
-                <h1 class="home-header__title">Здравствуйте, я<br>Косметолог Наталья ✨</h1>
+                <h1 class="home-header__title">Здравствуйте, я<br>Косметолог Наталья</h1>
                 <p class="home-header__subtitle">Забота о вашей коже — моя профессия. Красота начинается с уверенности.</p>
               </div>
             </div>
-            <button class="home-header__bell" aria-label="Уведомления" id="bell-btn">
-              <span class="material-symbols-outlined">notifications</span>
-            </button>
+            <div class="home-header__actions" style="display:flex; align-items:center; gap:0.25rem;">
+              <button class="home-header__theme" aria-label="Переключить тему" id="theme-toggle-btn">
+                <span class="material-symbols-outlined">light_mode</span>
+              </button>
+              <button class="home-header__bell" aria-label="Уведомления" id="bell-btn">
+                <span class="material-symbols-outlined">notifications</span>
+              </button>
+            </div>
           </div>
         </header>
 
@@ -68,7 +74,7 @@
 
           <!-- Grid: Services & About -->
           <section class="home-grid animate-on-scroll">
-            <div class="home-grid__services" onclick="navigateTo('services')">
+            <div class="home-grid__services" onclick="scrollToServices()">
               <img src="https://lh3.googleusercontent.com/aida/ADBb0ugTCbpdkBZm_9rNs0MUuMwQi_U0nqNJO4pMTIxQobmS0vhmrWAG5y9CEtfeUexxzBOgfBRxHdzJmUtn9NPmr6AslTQI3HNHw3zdhvSiVAxYK_imXQqFc_RABo_V0wJB4BFxg2IKTrm2Cl-jzocdQOEXd7CXnYps61sxR0JeOAZBw9JGoATCeUuJJs7hY1DhSokzXCmg5mH6kwcUJ-D3ytZCJIbGPtK3tco6HTY2W0rmY-SON6nxCW9sOP4" alt="Услуги">
               <div class="home-grid__overlay"></div>
               <div class="home-grid__services-text">
@@ -87,7 +93,7 @@
                   <p>Мой подход<br>и опыт</p>
                 </div>
               </div>
-              <div class="home-grid__contacts">
+              <div class="home-grid__contacts" onclick="scrollToContacts()">
                 <div class="home-grid__contacts-icon"><span class="material-symbols-outlined">call</span></div>
                 <div class="home-grid__contacts-text">
                   <h3>Контакты</h3>
@@ -101,7 +107,7 @@
           <section class="popular-services animate-on-scroll">
             <div class="popular-services__header">
               <h2>Популярные услуги</h2>
-              <button onclick="navigateTo('services')" aria-label="Все услуги">
+              <button onclick="scrollToServices()" aria-label="Все услуги">
                 <span class="material-symbols-outlined">arrow_forward</span>
               </button>
             </div>
@@ -120,12 +126,10 @@
               </div>
             </div>
           </section>
-        </main>
-      </div>
-
-      <!-- ==================== SERVICES LIST (Grid) ==================== -->
-      <div class="screen" id="page-services" data-page="services">
-        <header class="top-bar">
+        
+        <!-- Services Section Appended -->
+        <section id="services-section" style="padding-bottom: 2rem;">
+<header class="top-bar">
           <div class="top-bar__content">
             <div class="top-bar__podcast" onclick="navigateTo('home')">
               <div class="podcast-icon"><span class="material-symbols-outlined">headphones</span></div>
@@ -200,7 +204,7 @@
             <div class="consultation-block__text">
               <h2>Консультация<br>косметолога</h2>
               <p>Определим потребности<br>и подберём уход</p>
-              <button class="btn-pill btn-glass">
+              <button class="btn-pill btn-glass" onclick="scrollToContacts()">
                 Записаться
                 <span class="material-symbols-outlined btn-icon">arrow_forward</span>
               </button>
@@ -210,8 +214,57 @@
             </div>
           </div>
         </main>
+      
+        </section>
+
+        <!-- Contacts Section -->
+        <section id="contacts-section" class="contacts-section animate-on-scroll">
+          <div class="contacts-section__header">
+            <h2>Контакты & Запись</h2>
+            <p>Оставьте сообщение или свяжитесь напрямую</p>
+          </div>
+          
+          <div class="contact-socials">
+            <a href="tel:" class="social-btn" aria-label="Телефон">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://t.me/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Telegram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </a>
+          </div>
+
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="contact-name">Ваше имя</label>
+              <input type="text" id="contact-name" name="name" required placeholder="Введите ваше имя">
+            </div>
+            <div class="form-group">
+              <label for="contact-phone">Напишите ваш телефон</label>
+              <input type="text" id="contact-phone" name="phone" required placeholder="Введите ваш телефон">
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Сообщение</label>
+              <textarea id="contact-message" name="message" required placeholder="Какая услуга или вопрос вас интересует?" rows="4"></textarea>
+            </div>
+            
+            <button type="submit" id="contact-submit" class="btn-primary btn-submit">
+              <span>Отправить сообщение</span>
+              <span class="material-symbols-outlined btn-icon">arrow_forward</span>
+            </button>
+          </form>
+
+          <div id="form-toast" class="toast-message hidden">
+            <span class="material-symbols-outlined toast-icon">check_circle</span>
+            <span id="toast-text" class="toast-text">Сообщение успешно отправлено!</span>
+          </div>
+        </section>
+</main>
       </div>
 
+      
       <!-- ==================== NATURAL BEAUTY PAGE ==================== -->
       <div class="screen" id="page-natural-beauty" data-page="natural-beauty">
         <header class="detail-header">
@@ -247,7 +300,7 @@
             </div>
           </section>
           <section class="beauty-cta animate-on-scroll">
-            <button class="btn-primary" onclick="navigateTo('services')">
+            <button class="btn-primary" onclick="scrollToServices()">
               Узнать о процедурах
               <span class="material-symbols-outlined">arrow_forward</span>
             </button>
@@ -299,7 +352,7 @@
             <p>Я не использую шаблонные протоколы. Каждая процедура подбирается строго индивидуально после детальной диагностики состояния кожи. В работе я применяю премиальные космецевтические бренды, гарантирующие видимый и долгий результат.</p>
           </section>
           <section class="about-cta animate-on-scroll">
-            <button class="btn-outline-pill" onclick="navigateTo('home')">
+            <button class="btn-outline-pill" onclick="scrollToContacts()">
               Записаться на консультацию
               <span class="material-symbols-outlined">arrow_forward</span>
             </button>
@@ -318,7 +371,7 @@
           <div class="service-hero">
             <img src="https://lh3.googleusercontent.com/aida/ADBb0uhy9oQBzbH4Wd5rCEeIKd2SRtsBMat-Ht_6gPEIROjQnin1QZlCr0K3HzbEVz1NoXWuF9lSXMr7qckk2oyMqhViQUa5R4BRz5nlDLNm8t7qe5i1WYFs86Q18WdEmt3Fu-ZLhXd3iI-We_llCE_h83NwV5ymdl5u1H7dOWLe_C11oy_OhG4fQh7dqEryoWoInBHvSLY_U4fr1nP6oEBSO2dIqfAplZCW6DJ8T7LU6OFb1DgLW3YsDTEYkUw" alt="Чистка лица">
             <div class="service-hero__gradient"></div>
-            <div class="service-hero__text"><span class="service-hero__badge">PREMIUM CARE</span><h2>Чистка лица</h2></div>
+            <div class="service-hero__text service-hero__text--white"><h2>Чистка лица</h2></div>
           </div>
           <div class="service-content">
             <section class="glass-panel animate-on-scroll"><h3 class="section-label">О процедуре</h3><p>Глубокое очищение кожи, направленное на удаление комедонов, излишков себума и ороговевших клеток. Процедура восстанавливает дыхание кожи, улучшает микроциркуляцию и подготавливает лицо к дальнейшему уходу, придавая здоровое сияние.</p></section>
@@ -339,7 +392,7 @@
               </div>
             </section>
           </div>
-          <div class="booking-bar"><div class="booking-bar__price"><span class="price">3 500 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 60 мин</span></div><button class="btn-primary">Записаться</button></div>
+          <div class="booking-bar"><div class="booking-bar__price"><span class="price">3 500 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 60 мин</span></div><button class="btn-primary" onclick="scrollToContacts()">Записаться</button></div>
         </main>
       </div>
 
@@ -380,7 +433,7 @@
               </div>
             </section>
           </div>
-          <div class="booking-bar"><div class="booking-bar__price"><span class="price">3 800 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 50 мин</span></div><button class="btn-primary">Записаться</button></div>
+          <div class="booking-bar"><div class="booking-bar__price"><span class="price">3 800 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 50 мин</span></div><button class="btn-primary" onclick="scrollToContacts()">Записаться</button></div>
         </main>
       </div>
 
@@ -416,7 +469,7 @@
               </div>
             </section>
           </div>
-          <div class="booking-bar"><div class="booking-bar__price"><span class="price-label">Стоимость</span><span class="price">от 2 500 ₴</span><span class="duration"><span class="material-symbols-outlined">timer</span> 30 мин</span></div><button class="btn-primary">Записаться</button></div>
+          <div class="booking-bar"><div class="booking-bar__price"><span class="price-label">Стоимость</span><span class="price">от 2 500 ₴</span><span class="duration"><span class="material-symbols-outlined">timer</span> 30 мин</span></div><button class="btn-primary" onclick="scrollToContacts()">Записаться</button></div>
         </main>
       </div>
 
@@ -454,7 +507,7 @@
               </div>
             </section>
           </div>
-          <div class="booking-bar"><div class="booking-bar__price"><span class="price">4 500 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 40 мин</span></div><button class="btn-primary">Записаться</button></div>
+          <div class="booking-bar"><div class="booking-bar__price"><span class="price">4 500 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 40 мин</span></div><button class="btn-primary" onclick="scrollToContacts()">Записаться</button></div>
         </main>
       </div>
 
@@ -470,7 +523,7 @@
             <img src="https://lh3.googleusercontent.com/aida/ADBb0ugTCbpdkBZm_9rNs0MUuMwQi_U0nqNJO4pMTIxQobmS0vhmrWAG5y9CEtfeUexxzBOgfBRxHdzJmUtn9NPmr6AslTQI3HNHw3zdhvSiVAxYK_imXQqFc_RABo_V0wJB4BFxg2IKTrm2Cl-jzocdQOEXd7CXnYps61sxR0JeOAZBw9JGoATCeUuJJs7hY1DhSokzXCmg5mH6kwcUJ-D3ytZCJIbGPtK3tco6HTY2W0rmY-SON6nxCW9sOP4" alt="Инъекции">
             <div class="service-hero__gradient"></div>
           </div>
-          <div class="service-content" style="margin-top:-3rem;position:relative;z-index:10">
+          <div class="service-content" style="margin-top:-1rem;position:relative;z-index:10">
             <section class="info-card animate-on-scroll">
               <div class="info-card__badge"><span class="material-symbols-outlined">science</span><span>MEDICAL AESTHETIC</span></div>
               <h2 class="info-card__title">Инъекции</h2>
@@ -498,7 +551,7 @@
               </div>
             </section>
           </div>
-          <div class="booking-bar"><div class="booking-bar__price"><span class="price-label">Price from</span><span class="price">12 000 ₴</span></div><button class="btn-dark">Book Appointment <span class="material-symbols-outlined">arrow_forward</span></button></div>
+          <div class="booking-bar"><div class="booking-bar__price"><span class="price-label">Price from</span><span class="price">12 000 ₴</span></div><button class="btn-dark" onclick="scrollToContacts()">Book Appointment <span class="material-symbols-outlined">arrow_forward</span></button></div>
         </main>
       </div>
 
@@ -544,7 +597,7 @@
               </div>
             </section>
           </div>
-          <div class="booking-bar"><div class="booking-bar__price"><span class="price price--gradient">3 000 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 45 мин.</span></div><button class="btn-primary">Записаться <span class="material-symbols-outlined">arrow_forward</span></button></div>
+          <div class="booking-bar"><div class="booking-bar__price"><span class="price price--gradient">3 000 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 45 мин.</span></div><button class="btn-primary" onclick="scrollToContacts()">Записаться <span class="material-symbols-outlined">arrow_forward</span></button></div>
         </main>
       </div>
 
@@ -556,11 +609,11 @@
         <span class="material-symbols-outlined">home</span>
         <span>Главная</span>
       </a>
-      <a class="nav-item" data-nav="services" onclick="navigateTo('services')">
+      <a class="nav-item" data-nav="services" onclick="scrollToServices()">
         <span class="material-symbols-outlined">assignment</span>
         <span>Услуги</span>
       </a>
-      <a class="nav-item" data-nav="appointment" onclick="return false">
+      <a class="nav-item" data-nav="appointment" onclick="scrollToContacts()">
         <span class="material-symbols-outlined">chat_bubble</span>
         <span>Запись</span>
       </a>
