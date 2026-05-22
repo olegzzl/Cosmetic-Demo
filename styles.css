@@ -137,12 +137,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transform: translateX(100%);
   transition: transform var(--transition-page), opacity var(--transition-page);
   pointer-events: none;
-  will-change: transform, opacity;
 }
 
 .screen.active {
   opacity: 1;
-  transform: translateX(0);
+  transform: none;
   pointer-events: auto;
   z-index: 2;
 }
