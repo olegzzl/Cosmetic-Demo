@@ -360,6 +360,81 @@
         </main>
       </div>
 
+      <!-- ==================== CALENDAR PAGE ==================== -->
+      <div class="screen" id="page-calendar" data-page="calendar">
+        <header class="detail-header">
+          <button class="detail-header__back" onclick="goBack()"><span class="material-symbols-outlined">arrow_back</span></button>
+          <h1 class="detail-header__title">Календарь записи</h1>
+          <div class="detail-header__spacer"></div>
+        </header>
+        <main class="detail-main calendar-main">
+          <!-- Month selector -->
+          <div class="calendar-month-selector">
+            <button id="prev-month-btn" class="calendar-month-btn" aria-label="Предыдущий месяц"><span class="material-symbols-outlined">chevron_left</span></button>
+            <h3 id="calendar-month-year">Май 2026</h3>
+            <button id="next-month-btn" class="calendar-month-btn" aria-label="Следующий месяц"><span class="material-symbols-outlined">chevron_right</span></button>
+          </div>
+
+          <!-- Calendar Grid -->
+          <div class="calendar-grid-wrapper">
+            <div class="calendar-weekdays">
+              <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+            </div>
+            <div id="calendar-days" class="calendar-days">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Time slots -->
+          <div class="calendar-slots-section animate-on-scroll">
+            <h3 class="section-title">Доступное время</h3>
+            <div id="calendar-time-slots" class="time-slots-grid">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Form to book -->
+          <form id="calendar-booking-form" class="calendar-booking-form animate-on-scroll">
+            <h3 class="section-title">Данные для записи</h3>
+            <div class="form-group">
+              <label for="calendar-service">Выберите услугу</label>
+              <select id="calendar-service" name="service" required>
+                <option value="" disabled selected>Выберите процедуру</option>
+                <option value="Чистка лица">Чистка лица (3 500 ₴)</option>
+                <option value="Ультразвуковая чистка">Ультразвуковая чистка (2 500 ₴)</option>
+                <option value="Инъекции">Инъекции (от 12 000 ₴)</option>
+                <option value="Пилинги">Пилинг PRX-T33 (4 000 ₴)</option>
+                <option value="Лазерная эпиляция">Лазерная эпиляция (от 2 500 ₴)</option>
+                <option value="Массаж лица">Массаж лица (3 800 ₴)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="calendar-name">Ваше имя</label>
+              <input type="text" id="calendar-name" name="name" required placeholder="Введите ваше имя">
+            </div>
+            <div class="form-group">
+              <label for="calendar-phone">Напишите ваш телефон</label>
+              <input type="text" id="calendar-phone" name="phone" required placeholder="Введите ваш телефон">
+            </div>
+
+            <!-- Selected info summary -->
+            <div class="booking-summary hidden" id="booking-summary">
+              Выбрано: <span id="summary-date-time" class="summary-highlight"></span>
+            </div>
+
+            <button type="submit" id="calendar-submit" class="btn-primary btn-submit">
+              <span>Забронировать</span>
+              <span class="material-symbols-outlined btn-icon">event_available</span>
+            </button>
+          </form>
+
+          <div id="calendar-toast" class="toast-message hidden">
+            <span class="material-symbols-outlined toast-icon">check_circle</span>
+            <span id="calendar-toast-text" class="toast-text">Вы успешно записаны!</span>
+          </div>
+        </main>
+      </div>
+
       <!-- ==================== SERVICE DETAIL: Чистка лица ==================== -->
       <div class="screen" id="page-chistka" data-page="chistka">
         <header class="detail-header">
@@ -617,9 +692,9 @@
         <span class="material-symbols-outlined">chat_bubble</span>
         <span>Запись</span>
       </a>
-      <a class="nav-item" data-nav="more" onclick="navigateTo('about')">
-        <span class="material-symbols-outlined">more_horiz</span>
-        <span>Ещё</span>
+      <a class="nav-item" data-nav="calendar" onclick="navigateTo('calendar')">
+        <span class="material-symbols-outlined">calendar_today</span>
+        <span>Календарь</span>
       </a>
     </nav>
   </div>

@@ -214,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBellAnimation();
   initTapFeedback();
   initContactForm();
+  initCalendar();
 
   // Initialize history state
   if (!history.state) {
@@ -392,6 +393,282 @@ function initContactForm() {
       toast.classList.add('hidden');
     }, 5000);
   }
+}
+
+// --- Calendar Screen Logic ---
+function initCalendar() {
+  const form = document.getElementById('calendar-booking-form');
+  const monthYearLabel = document.getElementById('calendar-month-year');
+  const prevMonthBtn = document.getElementById('prev-month-btn');
+  const nextMonthBtn = document.getElementById('next-month-btn');
+  const calendarDaysContainer = document.getElementById('calendar-days');
+  const timeSlotsContainer = document.getElementById('calendar-time-slots');
+  const bookingSummary = document.getElementById('booking-summary');
+  const summaryDateTime = document.getElementById('summary-date-time');
+  const calendarToast = document.getElementById('calendar-toast');
+  const calendarToastText = document.getElementById('calendar-toast-text');
+  const submitBtn = document.getElementById('calendar-submit');
+
+  if (!form || !monthYearLabel || !prevMonthBtn || !nextMonthBtn || !calendarDaysContainer || !timeSlotsContainer || !bookingSummary || !summaryDateTime || !calendarToast || !submitBtn) return;
+
+  const monthsRu = [
+    "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+    "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+  ];
+
+  const monthsGenitiveRu = [
+    "января", "февраля", "марта", "апреля", "мая", "июня",
+    "июля", "августа", "сентября", "октября", "ноября", "декабря"
+  ];
+
+  const timeSlots = ["09:00", "10:30", "12:00", "13:30", "15:00", "16:30", "18:00", "19:30"];
+
+  let calendarDate = new Date(); // Represents displayed month/year
+  let selectedDate = null;
+  let selectedTime = null;
+
+  function renderCalendar() {
+    const year = calendarDate.getFullYear();
+    const month = calendarDate.getMonth();
+
+    // Set month/year header text
+    monthYearLabel.textContent = `${monthsRu[month]} ${year}`;
+
+    // Clear previous days
+    calendarDaysContainer.innerHTML = '';
+
+    // Day of the week offsets (Monday-based in Russia)
+    const firstDayIndex = new Date(year, month, 1).getDay();
+    const firstDayOffset = firstDayIndex === 0 ? 6 : firstDayIndex - 1;
+
+    // Total days in the month
+    const totalDays = new Date(year, month + 1, 0).getDate();
+
+    // Create empty cells for week offset
+    for (let i = 0; i < firstDayOffset; i++) {
+      const emptyDiv = document.createElement('div');
+      emptyDiv.className = 'calendar-day inactive';
+      calendarDaysContainer.appendChild(emptyDiv);
+    }
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    // Create calendar days
+    for (let day = 1; day <= totalDays; day++) {
+      const dayDate = new Date(year, month, day);
+      const dayDiv = document.createElement('div');
+      dayDiv.className = 'calendar-day';
+      dayDiv.textContent = day;
+
+      if (dayDate < today) {
+        dayDiv.classList.add('inactive');
+      } else {
+        // Check if selected
+        if (selectedDate && dayDate.getTime() === selectedDate.getTime()) {
+          dayDiv.classList.add('selected');
+        }
+        
+        // Check if today
+        if (dayDate.getTime() === today.getTime()) {
+          dayDiv.classList.add('today');
+        }
+
+        dayDiv.addEventListener('click', () => {
+          selectedDate = dayDate;
+          selectedTime = null; // Reset time when date changes
+          
+          // Re-render to update selected styling
+          renderCalendar();
+          renderTimeSlots();
+          updateSummary();
+        });
+      }
+
+      calendarDaysContainer.appendChild(dayDiv);
+    }
+  }
+
+  function renderTimeSlots() {
+    timeSlotsContainer.innerHTML = '';
+
+    if (!selectedDate) {
+      const placeholder = document.createElement('p');
+      placeholder.className = 'time-slots-placeholder';
+      placeholder.textContent = 'Пожалуйста, выберите дату на календаре';
+      placeholder.style.gridColumn = '1 / -1';
+      placeholder.style.textAlign = 'center';
+      placeholder.style.fontSize = '13px';
+      placeholder.style.opacity = '0.6';
+      timeSlotsContainer.appendChild(placeholder);
+      return;
+    }
+
+    timeSlots.forEach(slot => {
+      const slotDiv = document.createElement('div');
+      slotDiv.className = 'time-slot';
+      slotDiv.textContent = slot;
+
+      if (selectedTime === slot) {
+        slotDiv.classList.add('selected');
+      }
+
+      slotDiv.addEventListener('click', () => {
+        selectedTime = slot;
+        
+        // Re-render slots to update active class
+        renderTimeSlots();
+        updateSummary();
+      });
+
+      timeSlotsContainer.appendChild(slotDiv);
+    });
+  }
+
+  function updateSummary() {
+    if (selectedDate && selectedTime) {
+      const day = selectedDate.getDate();
+      const monthIndex = selectedDate.getMonth();
+      summaryDateTime.textContent = `${day} ${monthsGenitiveRu[monthIndex]} в ${selectedTime}`;
+      bookingSummary.classList.remove('hidden');
+    } else {
+      bookingSummary.classList.add('hidden');
+    }
+  }
+
+  // Month navigation click events
+  prevMonthBtn.addEventListener('click', () => {
+    calendarDate.setMonth(calendarDate.getMonth() - 1);
+    renderCalendar();
+  });
+
+  nextMonthBtn.addEventListener('click', () => {
+    calendarDate.setMonth(calendarDate.getMonth() + 1);
+    renderCalendar();
+  });
+
+  // Handle form submission
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    if (!selectedDate || !selectedTime) {
+      showCalendarToast('Выберите дату и доступное время на календаре', true);
+      return;
+    }
+
+    const serviceSelect = document.getElementById('calendar-service');
+    const nameInput = document.getElementById('calendar-name');
+    const phoneInput = document.getElementById('calendar-phone');
+
+    if (!serviceSelect || !nameInput || !phoneInput) return;
+
+    const service = serviceSelect.value;
+    const name = nameInput.value.trim();
+    const phone = phoneInput.value.trim();
+
+    if (!service || !name || !phone) {
+      showCalendarToast('Пожалуйста, заполните все поля формы', true);
+      return;
+    }
+
+    // Set loading state
+    const originalBtnHTML = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="spinner"></span> <span>Бронирование...</span>';
+
+    // Format final date text
+    const formattedDate = `${selectedDate.getDate()} ${monthsGenitiveRu[selectedDate.getMonth()]} ${selectedDate.getFullYear()}`;
+
+    // Construct Telegram message body
+    const textMessage = `📅 *Новая бронь через Календарь!*\n\n` +
+                        `👤 *Имя:* ${name}\n` +
+                        `📞 *Телефон:* ${phone}\n` +
+                        `💆‍♀️ *Услуга:* ${service}\n` +
+                        `📅 *Дата:* ${formattedDate}\n` +
+                        `⏰ *Время:* ${selectedTime}`;
+
+    try {
+      if (TG_CONFIG.botToken && TG_CONFIG.chatId) {
+        // Send request to Telegram API
+        const url = `https://api.telegram.org/bot${TG_CONFIG.botToken}/sendMessage`;
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            chat_id: TG_CONFIG.chatId,
+            text: textMessage,
+            parse_mode: 'Markdown'
+          })
+        });
+
+        if (response.ok) {
+          showCalendarToast('Вы успешно записаны!', false);
+          form.reset();
+          selectedDate = null;
+          selectedTime = null;
+          renderCalendar();
+          renderTimeSlots();
+          updateSummary();
+        } else {
+          const errData = await response.json();
+          console.error('Telegram API Error (Calendar):', errData);
+          showCalendarToast(`Ошибка отправки: ${errData.description || 'Неизвестная ошибка'}`, true);
+        }
+      } else {
+        // Simulator / Demo mode when credentials are not filled
+        console.warn(
+          'Telegram configuration is empty. Running calendar in Demo mode.\n' +
+          'To receive actual booking notifications, configure TG_CONFIG at the top of app.js.'
+        );
+        
+        // Simulate network delay
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        
+        showCalendarToast('Вы успешно записаны! (Демо-режим: настройте Telegram в app.js)', false);
+        form.reset();
+        selectedDate = null;
+        selectedTime = null;
+        renderCalendar();
+        renderTimeSlots();
+        updateSummary();
+      }
+    } catch (error) {
+      console.error('Network Error (Calendar):', error);
+      showCalendarToast('Ошибка сети. Проверьте подключение к интернету.', true);
+    } finally {
+      // Restore button state
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnHTML;
+    }
+  });
+
+  function showCalendarToast(message, isError = false) {
+    if (!calendarToast || !calendarToastText) return;
+
+    calendarToastText.textContent = message;
+    
+    // Set classes based on status
+    calendarToast.className = 'toast-message';
+    if (isError) {
+      calendarToast.classList.add('toast-error');
+      calendarToast.querySelector('.toast-icon').textContent = 'error';
+    } else {
+      calendarToast.querySelector('.toast-icon').textContent = 'check_circle';
+    }
+
+    calendarToast.classList.remove('hidden');
+
+    if (window.calendarToastTimeout) {
+      clearTimeout(window.calendarToastTimeout);
+    }
+    window.calendarToastTimeout = setTimeout(() => {
+      calendarToast.classList.add('hidden');
+    }, 5000);
+  }
+
+  // Initial render calls
+  renderCalendar();
+  renderTimeSlots();
 }
 
 // --- Theme Toggle Logic ---
