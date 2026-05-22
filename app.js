@@ -18,7 +18,16 @@ let currentPage = 'home';
 
 // --- Page Navigation ---
 function navigateTo(pageName, isPopState = false) {
-  if (pageName === currentPage) return;
+  if (pageName === currentPage) {
+    if (pageName === 'home') {
+      const homeScreen = document.getElementById('page-home');
+      if (homeScreen) {
+        homeScreen.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      updateNav('home');
+    }
+    return;
+  }
 
   const currentScreen = document.querySelector('.screen.active');
   const targetScreen = document.getElementById('page-' + pageName);
@@ -211,6 +220,29 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initScrollEffects();
+  
+  // Home page scrollspy to update active tab based on scroll position
+  if (homePage) {
+    homePage.addEventListener('scroll', () => {
+      if (currentPage !== 'home') return;
+      
+      const servicesSection = document.getElementById('services-section');
+      const contactsSection = document.getElementById('contacts-section');
+      if (!servicesSection || !contactsSection) return;
+      
+      const scrollTop = homePage.scrollTop;
+      const servicesTop = servicesSection.offsetTop - 150;
+      const contactsTop = contactsSection.offsetTop - 200;
+      
+      if (scrollTop >= contactsTop) {
+        updateNav('appointment');
+      } else if (scrollTop >= servicesTop) {
+        updateNav('services');
+      } else {
+        updateNav('home');
+      }
+    });
+  }
   initBellAnimation();
   initTapFeedback();
   initContactForm();
