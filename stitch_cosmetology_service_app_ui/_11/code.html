@@ -1,0 +1,232 @@
+<!DOCTYPE html><html lang="ru"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Услуги косметолога</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style data-purpose="custom-styles">
+    /* Custom styles for specific radii and colors not easily covered by standard Tailwind utilities */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #F8F8F8; /* Soft background */
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .card-radius {
+      border-radius: 24px;
+    }
+
+    .service-card-radius {
+      border-radius: 22px; /* Updated to 22px as per request */
+    }
+
+    .bg-beige {
+      background-color: #F8F2EC;
+    }
+
+    .bg-lavender {
+      background-color: #E6DFEE;
+    }
+    
+    .bg-lavender-light {
+      background-color: #EBE4F2;
+    }
+
+    /* Hide scrollbar for cleaner look */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 0.6s ease-out forwards;
+      opacity: 0;
+    }
+
+    .delay-100 { animation-delay: 100ms; }
+    .delay-200 { animation-delay: 200ms; }
+    .delay-300 { animation-delay: 300ms; }
+    .delay-400 { animation-delay: 400ms; }
+    .delay-500 { animation-delay: 500ms; }
+    .delay-600 { animation-delay: 600ms; }
+    .delay-700 { animation-delay: 700ms; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .animate-fade-in-up {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="text-gray-900 pb-24 h-screen overflow-y-auto no-scrollbar">
+<!-- BEGIN: Top Area (Podcast Banner) -->
+<header class="px-5 pt-14 pb-4 bg-white sticky top-0 z-10 animate-fade-in-up">
+<div class="flex items-center justify-between bg-beige card-radius p-4 h-[72px] transition-all duration-300 hover:bg-white/40 hover:backdrop-blur-md active:bg-white/40 active:backdrop-blur-md">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center bg-white/50">
+<i class="fa-solid fa-headphones text-gray-700"></i>
+</div>
+<div>
+<h2 class="text-sm font-semibold">Подкаст косметолога</h2>
+<p class="text-xs text-gray-500 mt-0.5">Советы, уход и ответы на вопросы</p>
+</div>
+</div>
+<i class="fa-solid fa-chevron-right text-gray-400 text-sm"></i>
+</div>
+</header>
+<!-- END: Top Area (Podcast Banner) -->
+<!-- BEGIN: Main Content Area -->
+<main class="px-5 pt-2 pb-6">
+<!-- Section Title -->
+<h1 class="text-2xl font-bold mb-4 animate-fade-in-up delay-100">Услуги косметолога</h1>
+<!-- BEGIN: Services Grid -->
+<div class="grid grid-cols-2 gap-4 mb-6">
+<!-- Service Card 1 -->
+<a class="flex flex-col h-[250px] service-card-radius overflow-hidden bg-white shadow-sm animate-fade-in-up delay-100 transition-all duration-300 hover:scale-[1.02] hover:shadow-md hover:bg-white/40 hover:backdrop-blur-md active:scale-[1.02] active:shadow-md active:bg-white/40 active:backdrop-blur-md" href="{{DATA:SCREEN:SCREEN_15}}">
+<div class="h-[65%] w-full bg-gray-200">
+<img alt="Чистка лица" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhy9oQBzbH4Wd5rCEeIKd2SRtsBMat-Ht_6gPEIROjQnin1QZlCr0K3HzbEVz1NoXWuF9lSXMr7qckk2oyMqhViQUa5R4BRz5nlDLNm8t7qe5i1WYFs86Q18WdEmt3Fu-ZLhXd3iI-We_llCE_h83NwV5ymdl5u1H7dOWLe_C11oy_OhG4fQh7dqEryoWoInBHvSLY_U4fr1nP6oEBSO2dIqfAplZCW6DJ8T7LU6OFb1DgLW3YsDTEYkUw">
+</div>
+<div class="h-[35%] bg-lavender p-3 flex flex-col justify-between relative transition-colors duration-300 group-hover:bg-transparent">
+<div class="relative z-10">
+<h3 class="font-semibold text-sm leading-tight mb-1">Чистка лица</h3>
+<p class="text-[11px] text-gray-600 leading-tight">Глубокое очищение<br>и уход</p>
+</div>
+<div class="absolute bottom-3 right-3 z-10">
+<i class="fa-solid fa-arrow-right text-gray-700 text-sm"></i>
+</div>
+</div>
+</a>
+<!-- Service Card 2 -->
+<a class="flex flex-col h-[250px] service-card-radius overflow-hidden bg-white shadow-sm animate-fade-in-up delay-200 transition-all duration-300 hover:scale-[1.02] hover:shadow-md hover:bg-white/40 hover:backdrop-blur-md active:scale-[1.02] active:shadow-md active:bg-white/40 active:backdrop-blur-md" href="{{DATA:SCREEN:SCREEN_18}}">
+<div class="h-[65%] w-full bg-gray-200">
+<img alt="Ультразвуковая чистка" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhMBjmWhyQD1dPO_gTLUB-2cY7bV5ap6BSIbxjZ6uKWTT_hT542e9OD5nn_hf2RvzqotaY_veu_rEQaET-KoY3udfhCabwGCMl1Hu_0Wi7BoAZBvy288PzJCHaebee6s19ksXzcnr-Kgt6kWSUETfJ2Lq59K9n2x7jlN2CkdU0NCB0aDM4t6FmMUWY1uUUok0lBGtHHNrccq0R9o7JgFy7eyqLF1EhL_6eqWg1kh1eb_z2Ura1CcRLFTXo">
+</div>
+<div class="h-[35%] bg-lavender-light p-3 flex flex-col justify-between relative transition-colors duration-300 group-hover:bg-transparent">
+<div class="relative z-10">
+<h3 class="font-semibold text-sm leading-tight mb-1">Ультразвуковая<br>чистка</h3>
+<p class="text-[11px] text-gray-600 leading-tight">Мягкое и деликатное<br>очищение</p>
+</div>
+<div class="absolute bottom-3 right-3 z-10">
+<i class="fa-solid fa-arrow-right text-gray-700 text-sm"></i>
+</div>
+</div>
+</a>
+<!-- Service Card 3 -->
+<a class="flex flex-col h-[250px] service-card-radius overflow-hidden bg-white shadow-sm animate-fade-in-up delay-300 transition-all duration-300 hover:scale-[1.02] hover:shadow-md hover:bg-white/40 hover:backdrop-blur-md active:scale-[1.02] active:shadow-md active:bg-white/40 active:backdrop-blur-md" href="{{DATA:SCREEN:SCREEN_21}}">
+<div class="h-[65%] w-full bg-gray-200">
+<img alt="Инъекции" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ugTCbpdkBZm_9rNs0MUuMwQi_U0nqNJO4pMTIxQobmS0vhmrWAG5y9CEtfeUexxzBOgfBRxHdzJmUtn9NPmr6AslTQI3HNHw3zdhvSiVAxYK_imXQqFc_RABo_V0wJB4BFxg2IKTrm2Cl-jzocdQOEXd7CXnYps61sxR0JeOAZBw9JGoATCeUuJJs7hY1DhSokzXCmg5mH6kwcUJ-D3ytZCJIbGPtK3tco6HTY2W0rmY-SON6nxCW9sOP4">
+</div>
+<div class="h-[35%] bg-lavender p-3 flex flex-col justify-between relative transition-colors duration-300 group-hover:bg-transparent">
+<div class="relative z-10">
+<h3 class="font-semibold text-sm leading-tight mb-1">Инъекции</h3>
+<p class="text-[11px] text-gray-600 leading-tight">Ботокс, филлеры<br>и биоревитализация</p>
+</div>
+<div class="absolute bottom-3 right-3 z-10">
+<i class="fa-solid fa-arrow-right text-gray-700 text-sm"></i>
+</div>
+</div>
+</a>
+<!-- Service Card 4 -->
+<a class="flex flex-col h-[250px] service-card-radius overflow-hidden bg-white shadow-sm animate-fade-in-up delay-400 transition-all duration-300 hover:scale-[1.02] hover:shadow-md hover:bg-white/40 hover:backdrop-blur-md active:scale-[1.02] active:shadow-md active:bg-white/40 active:backdrop-blur-md" href="{{DATA:SCREEN:SCREEN_7}}">
+<div class="h-[65%] w-full bg-gray-200">
+<img alt="Пилинги" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhy9oQBzbH4Wd5rCEeIKd2SRtsBMat-Ht_6gPEIROjQnin1QZlCr0K3HzbEVz1NoXWuF9lSXMr7qckk2oyMqhViQUa5R4BRz5nlDLNm8t7qe5i1WYFs86Q18WdEmt3Fu-ZLhXd3iI-We_llCE_h83NwV5ymdl5u1H7dOWLe_C11oy_OhG4fQh7dqEryoWoInBHvSLY_U4fr1nP6oEBSO2dIqfAplZCW6DJ8T7LU6OFb1DgLW3YsDTEYkUw">
+</div>
+<div class="h-[35%] bg-lavender p-3 flex flex-col justify-between relative transition-colors duration-300 group-hover:bg-transparent">
+<div class="relative z-10">
+<h3 class="font-semibold text-sm leading-tight mb-1">Пилинги</h3>
+<p class="text-[11px] text-gray-600 leading-tight">Обновление и сияние<br>кожи</p>
+</div>
+<div class="absolute bottom-3 right-3 z-10">
+<i class="fa-solid fa-arrow-right text-gray-700 text-sm"></i>
+</div>
+</div>
+</a>
+<!-- Service Card 5 -->
+<a class="flex flex-col h-[250px] service-card-radius overflow-hidden bg-white shadow-sm animate-fade-in-up delay-500 transition-all duration-300 hover:scale-[1.02] hover:shadow-md hover:bg-white/40 hover:backdrop-blur-md active:scale-[1.02] active:shadow-md active:bg-white/40 active:backdrop-blur-md" href="{{DATA:SCREEN:SCREEN_4}}">
+<div class="h-[65%] w-full bg-gray-200">
+<img alt="Лазерная эпиляция" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ug5zbBrDqBp2wjfIFHIFqCCcTF2oZncE1nEv3-HTWZfV2h-fp6qHWyDZaUo4RyE_sTLG0Ls9UrY4XGty8Lw0XVguVGyb_TOHCbPBcyMQEDfmMBXetjTTW_SRhhqHEwczTeOmRJQam5y_4o6c-OwPX-gSQDlqHpNhxUk-jXLt8aujYj-G6MP6iUlXcTQDcripsZlgVWKCPfy1pOW16bDOYNpToOeR0Zqq6CtbXQhnnxnuD8J5aXx3L-XLQ">
+</div>
+<div class="h-[35%] bg-lavender p-3 flex flex-col justify-between relative transition-colors duration-300 group-hover:bg-transparent">
+<div class="relative z-10">
+<h3 class="font-semibold text-sm leading-tight mb-1">Лазерная эпиляция</h3>
+<p class="text-[11px] text-gray-600 leading-tight">Гладкая кожа надолго</p>
+</div>
+<div class="absolute bottom-3 right-3 z-10">
+<i class="fa-solid fa-arrow-right text-gray-700 text-sm"></i>
+</div>
+</div>
+</a>
+<!-- Service Card 6 -->
+<a class="flex flex-col h-[250px] service-card-radius overflow-hidden bg-white shadow-sm animate-fade-in-up delay-600 transition-all duration-300 hover:scale-[1.02] hover:shadow-md hover:bg-white/40 hover:backdrop-blur-md active:scale-[1.02] active:shadow-md active:bg-white/40 active:backdrop-blur-md" href="{{DATA:SCREEN:SCREEN_6}}">
+<div class="h-[65%] w-full bg-gray-200">
+<img alt="Массаж лица" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhMBjmWhyQD1dPO_gTLUB-2cY7bV5ap6BSIbxjZ6uKWTT_hT542e9OD5nn_hf2RvzqotaY_veu_rEQaET-KoY3udfhCabwGCMl1Hu_0Wi7BoAZBvy288PzJCHaebee6s19ksXzcnr-Kgt6kWSUETfJ2Lq59K9n2x7jlN2CkdU0NCB0aDM4t6FmMUWY1uUUok0lBGtHHNrccq0R9o7JgFy7eyqLF1EhL_6eqWg1kh1eb_z2Ura1CcRLFTXo">
+</div>
+<div class="h-[35%] bg-lavender-light p-3 flex flex-col justify-between relative transition-colors duration-300 group-hover:bg-transparent">
+<div class="relative z-10">
+<h3 class="font-semibold text-sm leading-tight mb-1">Массаж лица</h3>
+<p class="text-[11px] text-gray-600 leading-tight">Лифтинг и расслабление<br>мышц</p>
+</div>
+<div class="absolute bottom-3 right-3 z-10">
+<i class="fa-solid fa-arrow-right text-gray-700 text-sm"></i>
+</div>
+</div>
+</a>
+</div>
+<!-- END: Services Grid -->
+<!-- BEGIN: Consultation Block -->
+<div class="bg-lavender card-radius p-5 flex relative overflow-hidden h-[180px] animate-fade-in-up delay-700">
+<div class="w-2/3 flex flex-col justify-between z-10">
+<div>
+<h2 class="text-xl font-bold leading-tight mb-2">Консультация<br>косметолога</h2>
+<p class="text-sm text-gray-600 mb-4">Определим потребности<br>и подберём уход</p>
+</div>
+<button class="bg-white/70 hover:bg-white text-gray-900 font-medium py-2.5 px-4 rounded-full w-fit text-sm flex items-center space-x-2 transition-colors">
+<span class="">Записаться</span>
+<i class="fa-solid fa-arrow-right text-xs"></i>
+</button>
+</div>
+<div class="absolute right-0 bottom-0 w-1/2 h-full flex justify-end">
+<img alt="Косметолог" class="h-full object-contain object-bottom right-0 absolute" src="https://lh3.googleusercontent.com/aida/ADBb0uhy9oQBzbH4Wd5rCEeIKd2SRtsBMat-Ht_6gPEIROjQnin1QZlCr0K3HzbEVz1NoXWuF9lSXMr7qckk2oyMqhViQUa5R4BRz5nlDLNm8t7qe5i1WYFs86Q18WdEmt3Fu-ZLhXd3iI-We_llCE_h83NwV5ymdl5u1H7dOWLe_C11oy_OhG4fQh7dqEryoWoInBHvSLY_U4fr1nP6oEBSO2dIqfAplZCW6DJ8T7LU6OFb1DgLW3YsDTEYkUw">
+</div>
+</div>
+<!-- END: Consultation Block -->
+</main>
+<!-- END: Main Content Area -->
+<!-- BEGIN: Bottom Navigation -->
+<nav class="fixed bottom-0 w-full bg-white border-t border-gray-100 pb-safe pt-2 px-6 flex justify-between items-center z-50 h-[80px]">
+<a class="flex flex-col items-center space-y-1 text-gray-900 w-16" href="{{DATA:SCREEN:SCREEN_11}}">
+<i class="fa-solid fa-house text-xl"></i>
+<span class="text-[10px] font-medium">Главная</span>
+</a>
+<a class="flex flex-col items-center space-y-1 text-gray-400 w-16" href="{{DATA:SCREEN:SCREEN_12}}">
+<i class="fa-regular fa-calendar text-xl"></i>
+<span class="text-[10px] font-medium">Услуги</span>
+</a>
+<a class="flex flex-col items-center space-y-1 text-gray-400 w-16" href="#">
+<i class="fa-regular fa-comment-dots text-xl"></i>
+<span class="text-[10px] font-medium">Запись</span>
+</a>
+<a class="flex flex-col items-center space-y-1 text-gray-400 w-16" href="{{DATA:SCREEN:SCREEN_23}}">
+<i class="fa-solid fa-ellipsis text-xl"></i>
+<span class="text-[10px] font-medium">Ещё</span>
+</a>
+</nav>
+<!-- END: Bottom Navigation -->
+</body></html>

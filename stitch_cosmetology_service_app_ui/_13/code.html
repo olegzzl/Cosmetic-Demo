@@ -1,0 +1,287 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Ультразвуковая чистка - Anna Aesthetics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#656767",
+                        "inverse-surface": "#303031",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#e6e2df",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface": "#fbf9f8",
+                        "primary-fixed": "#e7e0ed",
+                        "on-primary-fixed-variant": "#49454f",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#666462",
+                        "surface-tint": "#615c67",
+                        "surface-bright": "#fbf9f8",
+                        "on-surface-variant": "#48464b",
+                        "on-background": "#1b1c1c",
+                        "on-secondary-fixed": "#1c1b1a",
+                        "on-surface": "#1b1c1c",
+                        "surface-container-highest": "#e4e2e2",
+                        "secondary-fixed-dim": "#cac6c3",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "surface-container-high": "#e9e8e7",
+                        "on-primary-fixed": "#1d1a23",
+                        "primary-container": "#eae3f0",
+                        "outline-variant": "#cac5cb",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-dim": "#dbdad9",
+                        "surface-container-low": "#f5f3f3",
+                        "on-primary-container": "#69646f",
+                        "surface-container": "#efeded",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e4e2e2",
+                        "inverse-primary": "#cac4d1",
+                        "outline": "#79767c",
+                        "on-error": "#ffffff",
+                        "tertiary": "#5d5f5f",
+                        "primary": "#615c67",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "secondary": "#605e5c",
+                        "background": "#fbf9f8",
+                        "on-secondary-fixed-variant": "#484644",
+                        "secondary-fixed": "#e6e2df",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#cac4d1",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#e2e2e2",
+                        "tertiary-container": "#e6e6e6",
+                        "inverse-on-surface": "#f2f0f0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.375rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "1.5rem",
+                        "gutter-grid": "0.75rem",
+                        "stack-md": "1rem",
+                        "stack-sm": "0.5rem",
+                        "margin-page": "1.25rem"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "label-nav": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "caption": ["Manrope"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["20px", {"lineHeight": "26px", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+                        "label-nav": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "caption": ["11px", {"lineHeight": "14px", "fontWeight": "400"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-background'); }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, theme('colors.primary'), theme('colors.secondary'));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col pb-24">
+<!-- Top App Bar (Task-Focused: Sub-page, so no global nav, but standard header for 'Back') -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl shadow-sm dark:shadow-none transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-page h-16">
+<button aria-label="Go back" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container transition-colors text-primary dark:text-primary-fixed-dim">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface truncate px-4 text-center">Anna Aesthetics</h1>
+<div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-surface-container">
+<img alt="Anna's Profile Avatar" class="w-full h-full object-cover" data-alt="A small circular profile avatar for Anna, featuring a professional and soft aesthetic matching the modern corporate medical spa vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3d7ZhRsyeVGABD5YhTLcAzL8673sDwZmXKucD2ffOpIRpwmWcE7YOxbB2oJ6qhNLPd113PF_RiBNJ9WEj8FnFOaKiiSCxp_htkbIxy-PNR_DFJ0mwDfMopyFWmB7eyhzm28FIVxPkxvYBYVB8e4e_mvn6PvlHOn8OrhsnwBMSAdI0nSgP7AjSu3bUvFViDBTI5tT29sHr3ecPo-ZSbwGn_V8hnbhXX5llh4cwsI_vjgzgPwMtX9g0CqWsaBAKU_o0bHSAyBeTXY4">
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-16">
+<!-- Hero Section with Image -->
+<section class="relative w-full h-[45vh] min-h-[350px] max-h-[500px] overflow-hidden">
+<img alt="Ультразвуковая чистка" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAInsOujGc-OWA6K_q1bNOTIW_Xbq2VEjZjCjd0vl62hdWU_1_kGeuVCcDPO_sEyEgDTrgukFP8f7GDvxh443huo8oVdwYEuzRNFUlIru6ijlR91EG7GOb2gAag7sPc5N1lDIOQb_YkMJWoreorjLKYC9Dlzd1ZudpUZilJdSVR4QXFdatRTZgtSgriXI_OymcacCI4rufzbHPsnm76e8po6004GlkdQeKhb-7eZlYVhlc4W40y5kcJK0av5zAPjO2jL3fwGvDhKDI">
+<!-- Gradient Overlay for readability -->
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<!-- Hero Title Floating Block -->
+<div class="absolute bottom-0 left-0 w-full px-margin-page pb-stack-lg z-10">
+<div class="glass-panel rounded-2xl p-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container text-on-primary-container rounded-full font-label-nav text-label-nav mb-3">
+<span class="material-symbols-outlined text-[14px]">spa</span>
+<span>Аппаратная косметология</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">Ультразвуковая чистка</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Мягкое и деликатное очищение</p>
+</div>
+</div>
+</section>
+<div class="px-margin-page py-stack-lg space-y-stack-lg max-w-3xl mx-auto">
+<!-- Overview Section -->
+<section class="space-y-stack-sm animate-fade-in-up" style="animation-delay: 0.1s;">
+<h2 class="font-headline-md text-headline-md text-on-surface">Описание процедуры</h2>
+<div class="p-5 rounded-2xl bg-surface-container-lowest shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-surface-container border-opacity-50">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Ультразвуковая чистка лица — это аппаратная процедура, направленная на глубокое, но при этом максимально бережное очищение кожи от ороговевших клеток, излишков кожного сала и поверхностных загрязнений. 
+                        Процедура абсолютно безболезненна, не оставляет покраснений и подходит для любого типа кожи, включая чувствительную. Ультразвуковые волны создают микровибрации, которые осуществляют микромассаж на клеточном уровне, стимулируя обновление эпидермиса и улучшая микроциркуляцию.
+                    </p>
+</div>
+</section>
+<!-- Benefits Grid (Bento style) -->
+<section class="space-y-stack-sm animate-fade-in-up" style="animation-delay: 0.2s;">
+<h2 class="font-headline-md text-headline-md text-on-surface">Преимущества</h2>
+<div class="grid grid-cols-2 gap-gutter-grid">
+<!-- Benefit 1 -->
+<div class="p-4 rounded-2xl bg-surface-container-low flex flex-col justify-center items-start gap-3 transition-transform hover:scale-[1.02]">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">flight</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-surface">Атравматичность</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Кожа не повреждается и не растягивается</p>
+</div>
+<!-- Benefit 2 -->
+<div class="p-4 rounded-2xl bg-primary-container flex flex-col justify-center items-start gap-3 transition-transform hover:scale-[1.02]">
+<div class="w-10 h-10 rounded-full bg-surface text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">air</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-primary-container">Дыхание кожи</h3>
+<p class="font-body-md text-body-md text-on-primary-container text-sm opacity-80">Глубокое очищение пор от загрязнений</p>
+</div>
+<!-- Benefit 3 -->
+<div class="p-4 rounded-2xl bg-surface-container-low flex flex-col justify-center items-start gap-3 transition-transform hover:scale-[1.02]">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">texture</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-surface">Рельеф</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Улучшение текстуры и тонуса кожи</p>
+</div>
+<!-- Benefit 4 -->
+<div class="p-4 rounded-2xl bg-surface-container-low flex flex-col justify-center items-start gap-3 transition-transform hover:scale-[1.02]">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">timelapse</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-surface">Без реабилитации</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Сразу после процедуры можно идти на важную встречу</p>
+</div>
+</div>
+</section>
+<!-- Procedure Steps List -->
+<section class="space-y-stack-sm animate-fade-in-up" style="animation-delay: 0.3s;">
+<h2 class="font-headline-md text-headline-md text-on-surface">Этапы процедуры</h2>
+<div class="relative pl-6 space-y-6 before:absolute before:inset-y-2 before:left-[11px] before:w-[2px] before:bg-surface-container-highest">
+<!-- Step 1 -->
+<div class="relative">
+<div class="absolute -left-[30px] top-1 w-5 h-5 rounded-full bg-primary border-4 border-background flex items-center justify-center z-10"></div>
+<div class="p-4 rounded-2xl bg-surface-container-lowest shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-nav text-label-nav text-primary uppercase tracking-wider">Этап 1</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-surface font-bold">Очищение и демакияж</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Тщательное удаление поверхностных загрязнений и макияжа мягкими средствами по типу кожи.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative">
+<div class="absolute -left-[30px] top-1 w-5 h-5 rounded-full bg-primary border-4 border-background flex items-center justify-center z-10"></div>
+<div class="p-4 rounded-2xl bg-surface-container-lowest shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-nav text-label-nav text-primary uppercase tracking-wider">Этап 2</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-surface font-bold">Ультразвуковой пилинг</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Обработка кожи специальной лопаточкой (скрабером) по гелю-дезинкрустанту, которая "выбивает" загрязнения из пор.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative">
+<div class="absolute -left-[30px] top-1 w-5 h-5 rounded-full bg-primary border-4 border-background flex items-center justify-center z-10"></div>
+<div class="p-4 rounded-2xl bg-surface-container-lowest shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-nav text-label-nav text-primary uppercase tracking-wider">Этап 3</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-surface font-bold">Тонизация и увлажнение</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Восстановление pH-баланса кожи и нанесение активной сыворотки или легкой успокаивающей маски.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative">
+<div class="absolute -left-[30px] top-1 w-5 h-5 rounded-full bg-surface-variant border-4 border-background flex items-center justify-center z-10"></div>
+<div class="p-4 rounded-2xl bg-surface-container-lowest shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-nav text-label-nav text-on-surface-variant uppercase tracking-wider">Этап 4</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-surface font-bold">Финальный уход</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Нанесение защитного крема, подобранного по типу кожи, с SPF-фактором при необходимости.</p>
+</div>
+</div>
+</div>
+</section>
+<div class="h-8"></div> <!-- Spacer for bottom bar -->
+</div>
+</main>
+<!-- Contextual Transactional Bottom Bar -->
+<div class="fixed bottom-0 left-0 w-full glass-panel z-50 rounded-t-3xl sm:rounded-none">
+<div class="max-w-3xl mx-auto flex justify-between items-center px-6 py-4 pb-safe-area">
+<div class="flex flex-col">
+<span class="font-headline-lg text-headline-lg text-on-surface text-gradient">3 000 ₽</span>
+<span class="font-label-nav text-label-nav text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 45 мин.
+                </span>
+</div>
+<button class="bg-primary hover:bg-primary-fixed-variant text-on-primary font-body-lg text-body-lg py-3 px-8 rounded-full shadow-lg transition-transform active:scale-95 flex items-center gap-2">
+                Записаться
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<style>
+        /* Lightweight CSS animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        /* Safe area padding for mobile devices */
+        @supports (padding-bottom: env(safe-area-inset-bottom)) {
+            .pb-safe-area {
+                padding-bottom: max(1rem, env(safe-area-inset-bottom));
+            }
+        }
+    </style>
+</body></html>

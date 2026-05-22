@@ -1,0 +1,254 @@
+<!DOCTYPE html><html lang="ru"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>Лазерная эпиляция - Anna Aesthetics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#656767",
+                        "inverse-surface": "#303031",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#e6e2df",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface": "#fbf9f8",
+                        "primary-fixed": "#e7e0ed",
+                        "on-primary-fixed-variant": "#49454f",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#666462",
+                        "surface-tint": "#615c67",
+                        "surface-bright": "#fbf9f8",
+                        "on-surface-variant": "#48464b",
+                        "on-background": "#1b1c1c",
+                        "on-secondary-fixed": "#1c1b1a",
+                        "on-surface": "#1b1c1c",
+                        "surface-container-highest": "#e4e2e2",
+                        "secondary-fixed-dim": "#cac6c3",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "surface-container-high": "#e9e8e7",
+                        "on-primary-fixed": "#1d1a23",
+                        "primary-container": "#eae3f0",
+                        "outline-variant": "#cac5cb",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-dim": "#dbdad9",
+                        "surface-container-low": "#f5f3f3",
+                        "on-primary-container": "#69646f",
+                        "surface-container": "#efeded",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e4e2e2",
+                        "inverse-primary": "#cac4d1",
+                        "outline": "#79767c",
+                        "on-error": "#ffffff",
+                        "tertiary": "#5d5f5f",
+                        "primary": "#615c67",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "secondary": "#605e5c",
+                        "background": "#fbf9f8",
+                        "on-secondary-fixed-variant": "#484644",
+                        "secondary-fixed": "#e6e2df",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#cac4d1",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#e2e2e2",
+                        "tertiary-container": "#e6e6e6",
+                        "inverse-on-surface": "#f2f0f0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "1.5rem",
+                        "gutter-grid": "0.75rem",
+                        "stack-md": "1rem",
+                        "stack-sm": "0.5rem",
+                        "margin-page": "1.25rem"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "label-nav": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "caption": ["Manrope"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["20px", { "lineHeight": "26px", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+                        "label-nav": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "caption": ["11px", { "lineHeight": "14px", "fontWeight": "400" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* Hide scrollbar for clean look */
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pb-24">
+<!-- Top App Bar (Destination specific suppression rule applied - this is a details page, TopAppBar from JSON modified to match intent) -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-sm flex justify-between items-center px-margin-page h-16 transition-all duration-300" id="top-bar">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface" onclick="history.back()">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-on-surface truncate px-4 opacity-0 transition-opacity duration-300" id="header-title">Лазерная эпиляция</h1>
+<div class="w-10 h-10"></div> <!-- Spacer for balance -->
+</header>
+<main class="w-full max-w-3xl mx-auto pt-0">
+<!-- Hero Section -->
+<section class="relative w-full h-[45vh] min-h-[300px] overflow-hidden rounded-b-3xl shadow-sm">
+<img alt="Процедура лазерной эпиляции" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ug5zbBrDqBp2wjfIFHIFqCCcTF2oZncE1nEv3-HTWZfV2h-fp6qHWyDZaUo4RyE_sTLG0Ls9UrY4XGty8Lw0XVguVGyb_TOHCbPBcyMQEDfmMBXetjTTW_SRhhqHEwczTeOmRJQam5y_4o6c-OwPX-gSQDlqHpNhxUk-jXLt8aujYj-G6MP6iUlXcTQDcripsZlgVWKCPfy1pOW16bDOYNpToOeR0Zqq6CtbXQhnnxnuD8J5aXx3L-XLQ">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-margin-page text-white">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-md rounded-full mb-3">
+<span class="material-symbols-outlined text-[16px] fill" data-icon="star">star</span>
+<span class="font-label-nav text-label-nav">Premium</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg mb-2">Лазерная эпиляция</h1>
+<p class="font-body-lg text-body-lg text-white/90">Гладкая кожа надолго</p>
+</div>
+</section>
+<!-- Content Canvas -->
+<div class="px-margin-page py-stack-lg flex flex-col gap-stack-lg">
+<!-- Overview -->
+<section class="bg-surface-container-lowest p-5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-3">Обзор</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    Инновационная технология диодного лазера обеспечивает безболезненное и эффективное удаление нежелательных волос. Процедура комфортна благодаря встроенной системе охлаждения и подходит для чувствительных зон.
+                </p>
+</section>
+<!-- Benefits Bento Grid -->
+<section>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Преимущества</h2>
+<div class="grid grid-cols-2 gap-gutter-grid">
+<!-- Benefit 1 -->
+<div class="bg-primary-container/30 p-4 rounded-2xl flex flex-col items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-surface">Долгий эффект</h3>
+</div>
+<!-- Benefit 2 -->
+<div class="bg-secondary-container/50 p-4 rounded-2xl flex flex-col items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="spa">spa</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-surface">Без боли</h3>
+</div>
+<!-- Benefit 3 -->
+<div class="bg-surface-container-high p-4 rounded-2xl flex flex-col items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-on-surface/5 flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="face">face</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-surface">Все типы кожи</h3>
+</div>
+<!-- Benefit 4 -->
+<div class="bg-surface-container p-4 rounded-2xl flex flex-col items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-surface">Безопасно</h3>
+</div>
+</div>
+</section>
+<!-- Procedure Steps -->
+<section class="bg-surface-container-lowest p-5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Как проходит процедура</h2>
+<div class="flex flex-col gap-4 relative">
+<!-- Vertical Line connecting steps -->
+<div class="absolute left-[19px] top-4 bottom-4 w-0.5 bg-surface-variant z-0"></div>
+<!-- Step 1 -->
+<div class="flex items-start gap-4 relative z-10">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm shrink-0 border-4 border-surface-container-lowest">1</div>
+<div class="pt-2">
+<h3 class="font-body-lg text-body-lg text-on-surface">Настройка параметров</h3>
+<p class="font-caption text-caption text-on-surface-variant mt-1">Специалист подбирает индивидуальные настройки лазера.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-start gap-4 relative z-10">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-sm shrink-0 border-4 border-surface-container-lowest">2</div>
+<div class="pt-2">
+<h3 class="font-body-lg text-body-lg text-on-surface">Охлаждающий гель</h3>
+<p class="font-caption text-caption text-on-surface-variant mt-1">Нанесение специального геля для защиты кожи и лучшего скольжения.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-start gap-4 relative z-10">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-sm shrink-0 border-4 border-surface-container-lowest">3</div>
+<div class="pt-2">
+<h3 class="font-body-lg text-body-lg text-on-surface">Обработка лазером</h3>
+<p class="font-caption text-caption text-on-surface-variant mt-1">Непосредственное воздействие диодного лазера на волосяные фолликулы.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex items-start gap-4 relative z-10">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-sm shrink-0 border-4 border-surface-container-lowest">4</div>
+<div class="pt-2">
+<h3 class="font-body-lg text-body-lg text-on-surface">Пост-уход</h3>
+<p class="font-caption text-caption text-on-surface-variant mt-1">Очищение кожи и нанесение успокаивающего крема.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Bottom Action Bar (Contextual FAB / Action Area) -->
+<div class="fixed bottom-0 left-0 w-full bg-surface/90 backdrop-blur-xl border-t border-surface-variant px-margin-page py-4 pb-safe z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.04)]">
+<div class="max-w-3xl mx-auto flex items-center justify-between gap-4">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant">Стоимость</span>
+<span class="font-headline-md text-headline-md text-on-surface">от 2 500 ₽</span>
+<span class="font-caption text-caption text-primary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[12px]" data-icon="timer">timer</span> 30 мин
+                </span>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3.5 rounded-full font-body-lg text-body-lg hover:bg-primary/90 transition-colors shadow-sm whitespace-nowrap">
+                Записаться
+            </button>
+</div>
+</div>
+<!-- Scroll Interaction Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.getElementById('top-bar');
+            const headerTitle = document.getElementById('header-title');
+            
+            window.addEventListener('scroll', () => {
+                // Show title in header when scrolled past hero image (roughly 250px)
+                if (window.scrollY > 250) {
+                    headerTitle.classList.remove('opacity-0');
+                    headerTitle.classList.add('opacity-100');
+                    header.classList.add('shadow-md');
+                } else {
+                    headerTitle.classList.remove('opacity-100');
+                    headerTitle.classList.add('opacity-0');
+                    header.classList.remove('shadow-md');
+                }
+            });
+        });
+    </script>
+</body></html>

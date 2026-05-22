@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="ru"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Пилинги - Детали услуги</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Design System Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#656767",
+                    "inverse-surface": "#303031",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#e6e2df",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface": "#fbf9f8",
+                    "primary-fixed": "#e7e0ed",
+                    "on-primary-fixed-variant": "#49454f",
+                    "on-primary": "#ffffff",
+                    "on-secondary-container": "#666462",
+                    "surface-tint": "#615c67",
+                    "surface-bright": "#fbf9f8",
+                    "on-surface-variant": "#48464b",
+                    "on-background": "#1b1c1c",
+                    "on-secondary-fixed": "#1c1b1a",
+                    "on-surface": "#1b1c1c",
+                    "surface-container-highest": "#e4e2e2",
+                    "secondary-fixed-dim": "#cac6c3",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "surface-container-high": "#e9e8e7",
+                    "on-primary-fixed": "#1d1a23",
+                    "primary-container": "#eae3f0",
+                    "outline-variant": "#cac5cb",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "surface-dim": "#dbdad9",
+                    "surface-container-low": "#f5f3f3",
+                    "on-primary-container": "#69646f",
+                    "surface-container": "#efeded",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e4e2e2",
+                    "inverse-primary": "#cac4d1",
+                    "outline": "#79767c",
+                    "on-error": "#ffffff",
+                    "tertiary": "#5d5f5f",
+                    "primary": "#615c67",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "secondary": "#605e5c",
+                    "background": "#fbf9f8",
+                    "on-secondary-fixed-variant": "#484644",
+                    "secondary-fixed": "#e6e2df",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#cac4d1",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed": "#e2e2e2",
+                    "tertiary-container": "#e6e6e6",
+                    "inverse-on-surface": "#f2f0f0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "1.5rem",
+                    "gutter-grid": "0.75rem",
+                    "stack-md": "1rem",
+                    "stack-sm": "0.5rem",
+                    "margin-page": "1.25rem"
+            },
+            "fontFamily": {
+                    "headline-md": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "label-nav": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "caption": ["Manrope"],
+                    "body-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-md": ["20px", {"lineHeight": "26px", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+                    "label-nav": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "caption": ["11px", {"lineHeight": "14px", "fontWeight": "400"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24 antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar (Shared Component translated to HTML) -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-sm flex justify-between items-center px-margin-page h-16 transition-all duration-300">
+<button aria-label="Go back" class="text-primary hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-200 flex items-center justify-center p-2 -ml-2 rounded-full">
+<span class="material-symbols-outlined text-2xl" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-on-surface">Anna Aesthetics</h1>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant/30 flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity">
+<img alt="Anna's Profile Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQQ821Rw_yP4gDYMeU6W1hsbPIjcCs3K7X1Vy13DB-EXLHAeyMo92cuOf_HmDQANX4nG-UqA66Jf_aHvvVKFT2ADix5VeTqijU_TZI9F2Rt-6H0BOlEYaiVDZwMk0XURQ700PhP5myuUiPRXehz9p_41nqQRwNTBlAiFN2YA4n7xniHUeCH5cD3v8gQ2IX5ZT7INXU1SXLruoJ-gM5mskGBr2_NpKmEdRTy4e0X7NXvdbY-i3-fQHzpFPTio0I0T0ypPZgmX12VQw">
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative pt-16 w-full h-[380px] bg-surface-container-high rounded-b-[2rem] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
+<img alt="Cosmetology peel treatment" class="w-full h-full object-cover" data-alt="A close-up, soft-focus image of a woman's glowing, healthy skin receiving a gentle spa treatment. The lighting is bright, airy, and ethereal, with subtle hints of warm lavender and beige tones reflecting the brand's premium wellness aesthetic. The mood is calm, clinical yet luxurious, emphasizing cleanliness and rejuvenation in a modern dermatology clinic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcIAUOxlnihp5y-WtgsH1XVSJCF8aNkxvbZg5IK1e4b-hgMHuz9m5_9UpKUGDR-FJAjQvy_J5c4hapv5mhXY102SB6kHviaMILIWQvzMevJVU7egMYlK_7wp_pCXz68U98xImtAoETyy26c4iRWMnILfTRSMcILNOMxxvb9CRFMxd_ImV_yXz2vHvFCIpgq_bGHZ1KNTpsHSucZ6BO1T7hrYonUYXJ9IswNokzajOsVqd6w6NbwJzBSIbTcp4BOwtELrBfrD4jAqc">
+<!-- Gradient Overlay for text readability -->
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-on-background/20 to-transparent"></div>
+<div class="absolute bottom-6 left-margin-page right-margin-page flex flex-col justify-end">
+<div class="inline-flex items-center gap-2 bg-surface/30 backdrop-blur-md px-3 py-1 rounded-full w-fit mb-3 border border-surface/20">
+<span class="material-symbols-outlined text-on-tertiary text-[14px]" data-icon="spa">spa</span>
+<span class="font-caption text-caption text-on-tertiary tracking-wide uppercase">Косметология</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-tertiary mb-1">Пилинги</h1>
+<p class="font-body-md text-body-md text-on-tertiary/90">Обновление и сияние кожи</p>
+</div>
+</section>
+<!-- Main Content -->
+<main class="px-margin-page py-stack-lg flex flex-col gap-stack-lg">
+<!-- Overview -->
+<section>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Профессиональные химические и органические пилинги для глубокого обновления кожи. Процедура деликатно отшелушивает ороговевший слой, стимулирует клеточную регенерацию и выработку коллагена, возвращая лицу здоровое сияние и свежесть.
+            </p>
+</section>
+<!-- Benefits (Bento Grid Style) -->
+<section>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Эффект</h2>
+<div class="grid grid-cols-2 gap-gutter-grid">
+<!-- Card 1 -->
+<div class="bg-primary-container/30 border border-primary-container/50 rounded-xl p-4 flex flex-col gap-3 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<div class="w-8 h-8 rounded-full bg-surface flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="water_drop">water_drop</span>
+</div>
+<span class="font-body-md text-body-md font-medium text-on-surface">Ровный тон</span>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-xl p-4 flex flex-col gap-3 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<span class="font-body-md text-body-md font-medium text-on-surface">Уменьшение пигментации</span>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-xl p-4 flex flex-col gap-3 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="flare">flare</span>
+</div>
+<span class="font-body-md text-body-md font-medium text-on-surface">Эффект сияния</span>
+</div>
+<!-- Card 4 -->
+<div class="bg-primary-container/30 border border-primary-container/50 rounded-xl p-4 flex flex-col gap-3 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<div class="w-8 h-8 rounded-full bg-surface flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="lens_blur">lens_blur</span>
+</div>
+<span class="font-body-md text-body-md font-medium text-on-surface">Сужение пор</span>
+</div>
+</div>
+</section>
+<!-- Procedure Steps -->
+<section>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Этапы процедуры</h2>
+<div class="flex flex-col gap-4 relative before:absolute before:inset-y-2 before:left-[15px] before:w-[2px] before:bg-surface-container-high">
+<!-- Step 1 -->
+<div class="flex gap-4 relative">
+<div class="w-8 h-8 rounded-full bg-surface border-2 border-primary-fixed-dim flex items-center justify-center flex-shrink-0 z-10 shadow-sm">
+<span class="font-label-nav text-label-nav font-bold text-primary">1</span>
+</div>
+<div class="pt-1 pb-2">
+<h3 class="font-body-lg text-body-lg text-on-surface">Очищение и подготовка</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Демакияж и мягкое очищение кожи перед нанесением активного состава.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-4 relative">
+<div class="w-8 h-8 rounded-full bg-primary border-2 border-primary flex items-center justify-center flex-shrink-0 z-10 shadow-sm">
+<span class="font-label-nav text-label-nav font-bold text-on-primary">2</span>
+</div>
+<div class="pt-1 pb-2">
+<h3 class="font-body-lg text-body-lg text-on-surface">Нанесение кислот</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Индивидуальный подбор и нанесение пилингового состава в зависимости от типа кожи.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-4 relative">
+<div class="w-8 h-8 rounded-full bg-surface border-2 border-primary-fixed-dim flex items-center justify-center flex-shrink-0 z-10 shadow-sm">
+<span class="font-label-nav text-label-nav font-bold text-primary">3</span>
+</div>
+<div class="pt-1 pb-2">
+<h3 class="font-body-lg text-body-lg text-on-surface">Нейтрализация</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Снятие состава специальным нейтрализатором для остановки реакции.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex gap-4 relative">
+<div class="w-8 h-8 rounded-full bg-surface border-2 border-primary-fixed-dim flex items-center justify-center flex-shrink-0 z-10 shadow-sm">
+<span class="font-label-nav text-label-nav font-bold text-primary">4</span>
+</div>
+<div class="pt-1 pb-2">
+<h3 class="font-body-lg text-body-lg text-on-surface">Уход и защита</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Нанесение успокаивающей маски и крема с SPF для защиты обновленной кожи.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Contextual Bottom Action Bar (Replaces global BottomNavBar for transactional flow) -->
+<div class="fixed bottom-0 left-0 w-full bg-surface/85 backdrop-blur-xl border-t border-outline-variant/20 px-margin-page py-4 pb-safe flex items-center justify-between z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.03)]">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface leading-tight">4 500 ₽</span>
+<span class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span>
+                40 мин
+            </span>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3.5 rounded-full font-body-lg text-body-lg hover:bg-surface-tint active:scale-95 transition-all duration-200 shadow-sm">
+            Записаться
+        </button>
+</div>
+<!-- Safe area padding for standard devices -->
+<style>
+        .pb-safe { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+    </style>
+</body></html>

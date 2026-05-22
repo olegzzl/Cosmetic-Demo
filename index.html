@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Natalia Aesthetics — Косметолог Наталья</title>
+  <meta name="description" content="Профессиональный косметолог Наталья. Чистка лица, пилинги, инъекции, массаж лица, лазерная эпиляция. Записаться на консультацию.">
+  
+  <!-- Google Fonts: Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== APP SHELL ===== -->
+  <div id="app">
+    <!-- Screen Container - pages slide in/out here -->
+    <div id="screen-container">
+
+      <!-- ==================== HOME PAGE ==================== -->
+      <div class="screen active" id="page-home" data-page="home">
+        <!-- Header -->
+        <header class="home-header">
+          <div class="home-header__content">
+            <div class="home-header__left">
+              <div class="home-header__avatar">
+                <img src="avatar.jpg" alt="Наталья Косметолог">
+              </div>
+              <div class="home-header__text">
+                <h1 class="home-header__title">Здравствуйте, я<br>Косметолог Наталья ✨</h1>
+                <p class="home-header__subtitle">Забота о вашей коже — моя профессия. Красота начинается с уверенности.</p>
+              </div>
+            </div>
+            <button class="home-header__bell" aria-label="Уведомления" id="bell-btn">
+              <span class="material-symbols-outlined">notifications</span>
+            </button>
+          </div>
+        </header>
+
+        <main class="home-main">
+          <!-- About Me Button -->
+          <div class="home-about-btn-wrap animate-on-scroll">
+            <button class="btn-pill btn-beige" onclick="navigateTo('about')">
+              Обо мне
+              <span class="material-symbols-outlined btn-icon">arrow_forward</span>
+            </button>
+          </div>
+
+          <!-- Hero Banner -->
+          <section class="hero-banner animate-on-scroll" onclick="navigateTo('natural-beauty')">
+            <div class="hero-banner__text">
+              <h2 class="hero-banner__title">Откройте свою<br>естественную красоту</h2>
+              <p class="hero-banner__desc">Профессиональный уход<br>и индивидуальный подход<br>к вашей коже</p>
+              <div class="hero-banner__link">
+                Узнать больше
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </div>
+            </div>
+            <div class="hero-banner__image">
+              <img src="https://lh3.googleusercontent.com/aida/ADBb0uhMBjmWhyQD1dPO_gTLUB-2cY7bV5ap6BSIbxjZ6uKWTT_hT542e9OD5nn_hf2RvzqotaY_veu_rEQaET-KoY3udfhCabwGCMl1Hu_0Wi7BoAZBvy288PzJCHaebee6s19ksXzcnr-Kgt6kWSUETfJ2Lq59K9n2x7jlN2CkdU0NCB0aDM4t6FmMUWY1uUUok0lBGtHHNrccq0R9o7JgFy7eyqLF1EhL_6eqWg1kh1eb_z2Ura1CcRLFTXo" alt="Естественная красота">
+            </div>
+          </section>
+
+          <!-- Grid: Services & About -->
+          <section class="home-grid animate-on-scroll">
+            <div class="home-grid__services" onclick="navigateTo('services')">
+              <img src="https://lh3.googleusercontent.com/aida/ADBb0ugTCbpdkBZm_9rNs0MUuMwQi_U0nqNJO4pMTIxQobmS0vhmrWAG5y9CEtfeUexxzBOgfBRxHdzJmUtn9NPmr6AslTQI3HNHw3zdhvSiVAxYK_imXQqFc_RABo_V0wJB4BFxg2IKTrm2Cl-jzocdQOEXd7CXnYps61sxR0JeOAZBw9JGoATCeUuJJs7hY1DhSokzXCmg5mH6kwcUJ-D3ytZCJIbGPtK3tco6HTY2W0rmY-SON6nxCW9sOP4" alt="Услуги">
+              <div class="home-grid__overlay"></div>
+              <div class="home-grid__services-text">
+                <h3>Услуги</h3>
+                <p>Все процедуры<br>для вашей красоты</p>
+                <div class="home-grid__arrow"><span class="material-symbols-outlined">arrow_forward</span></div>
+              </div>
+            </div>
+            <div class="home-grid__right">
+              <div class="home-grid__about" onclick="navigateTo('about')">
+                <img src="avatar.jpg" alt="Обо мне">
+                <div class="home-grid__overlay-dark"></div>
+                <div class="home-grid__about-icon"><span class="material-symbols-outlined">person</span></div>
+                <div class="home-grid__about-text">
+                  <h3>Обо мне</h3>
+                  <p>Мой подход<br>и опыт</p>
+                </div>
+              </div>
+              <div class="home-grid__contacts">
+                <div class="home-grid__contacts-icon"><span class="material-symbols-outlined">call</span></div>
+                <div class="home-grid__contacts-text">
+                  <h3>Контакты</h3>
+                  <p>Свяжитесь со мной удобным способом</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Popular Services -->
+          <section class="popular-services animate-on-scroll">
+            <div class="popular-services__header">
+              <h2>Популярные услуги</h2>
+              <button onclick="navigateTo('services')" aria-label="Все услуги">
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </button>
+            </div>
+            <div class="popular-services__list">
+              <div class="service-list-item" onclick="navigateTo('chistka')">
+                <div><h3>Чистка лица</h3><p>Глубокое очищение и уход</p></div>
+                <div class="service-list-item__price">3 500 ₴</div>
+              </div>
+              <div class="service-list-item" onclick="navigateTo('peeling')">
+                <div><h3>Пилинг PRX-T33</h3><p>Омоложение без реабилитации</p></div>
+                <div class="service-list-item__price">4 000 ₴</div>
+              </div>
+              <div class="service-list-item" onclick="navigateTo('massage')">
+                <div><h3>Массаж лица</h3><p>Лифтинг и расслабление мышц</p></div>
+                <div class="service-list-item__price">3 800 ₴</div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <!-- ==================== SERVICES LIST (Grid) ==================== -->
+      <div class="screen" id="page-services" data-page="services">
+        <header class="top-bar">
+          <div class="top-bar__content">
+            <div class="top-bar__podcast" onclick="navigateTo('home')">
+              <div class="podcast-icon"><span class="material-symbols-outlined">headphones</span></div>
+              <div class="podcast-text">
+                <h2>Подкаст косметолога</h2>
+                <p>Советы, уход и ответы на вопросы</p>
+              </div>
+              <span class="material-symbols-outlined podcast-arrow">chevron_right</span>
+            </div>
+          </div>
+        </header>
+        <main class="services-main">
+          <h1 class="services-title animate-on-scroll">Услуги косметолога</h1>
+          <div class="services-grid">
+            <a class="service-card animate-on-scroll" onclick="navigateTo('chistka')">
+              <div class="service-card__img">
+                <img src="https://lh3.googleusercontent.com/aida/ADBb0uhy9oQBzbH4Wd5rCEeIKd2SRtsBMat-Ht_6gPEIROjQnin1QZlCr0K3HzbEVz1NoXWuF9lSXMr7qckk2oyMqhViQUa5R4BRz5nlDLNm8t7qe5i1WYFs86Q18WdEmt3Fu-ZLhXd3iI-We_llCE_h83NwV5ymdl5u1H7dOWLe_C11oy_OhG4fQh7dqEryoWoInBHvSLY_U4fr1nP6oEBSO2dIqfAplZCW6DJ8T7LU6OFb1DgLW3YsDTEYkUw" alt="Чистка лица">
+              </div>
+              <div class="service-card__label service-card__label--lavender">
+                <div><h3>Чистка лица</h3><p>Глубокое очищение<br>и уход</p></div>
+                <span class="material-symbols-outlined service-card__arrow">arrow_forward</span>
+              </div>
+            </a>
+            <a class="service-card animate-on-scroll" onclick="navigateTo('ultrasound')">
+              <div class="service-card__img">
+                <img src="https://lh3.googleusercontent.com/aida/ADBb0uhMBjmWhyQD1dPO_gTLUB-2cY7bV5ap6BSIbxjZ6uKWTT_hT542e9OD5nn_hf2RvzqotaY_veu_rEQaET-KoY3udfhCabwGCMl1Hu_0Wi7BoAZBvy288PzJCHaebee6s19ksXzcnr-Kgt6kWSUETfJ2Lq59K9n2x7jlN2CkdU0NCB0aDM4t6FmMUWY1uUUok0lBGtHHNrccq0R9o7JgFy7eyqLF1EhL_6eqWg1kh1eb_z2Ura1CcRLFTXo" alt="Ультразвуковая чистка">
+              </div>
+              <div class="service-card__label service-card__label--lavender-light">
+                <div><h3>Ультразвуковая<br>чистка</h3><p>Мягкое и деликатное<br>очищение</p></div>
+                <span class="material-symbols-outlined service-card__arrow">arrow_forward</span>
+              </div>
+            </a>
+            <a class="service-card animate-on-scroll" onclick="navigateTo('injections')">
+              <div class="service-card__img">
+                <img src="https://lh3.googleusercontent.com/aida/ADBb0ugTCbpdkBZm_9rNs0MUuMwQi_U0nqNJO4pMTIxQobmS0vhmrWAG5y9CEtfeUexxzBOgfBRxHdzJmUtn9NPmr6AslTQI3HNHw3zdhvSiVAxYK_imXQqFc_RABo_V0wJB4BFxg2IKTrm2Cl-jzocdQOEXd7CXnYps61sxR0JeOAZBw9JGoATCeUuJJs7hY1DhSokzXCmg5mH6kwcUJ-D3ytZCJIbGPtK3tco6HTY2W0rmY-SON6nxCW9sOP4" alt="Инъекции">
+              </div>
+              <div class="service-card__label service-card__label--lavender">
+                <div><h3>Инъекции</h3><p>Ботокс, филлеры<br>и биоревитализация</p></div>
+                <span class="material-symbols-outlined service-card__arrow">arrow_forward</span>
+              </div>
+            </a>
+            <a class="service-card animate-on-scroll" onclick="navigateTo('peeling')">
+              <div class="service-card__img">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcIAUOxlnihp5y-WtgsH1XVSJCF8aNkxvbZg5IK1e4b-hgMHuz9m5_9UpKUGDR-FJAjQvy_J5c4hapv5mhXY102SB6kHviaMILIWQvzMevJVU7egMYlK_7wp_pCXz68U98xImtAoETyy26c4iRWMnILfTRSMcILNOMxxvb9CRFMxd_ImV_yXz2vHvFCIpgq_bGHZ1KNTpsHSucZ6BO1T7hrYonUYXJ9IswNokzajOsVqd6w6NbwJzBSIbTcp4BOwtELrBfrD4jAqc" alt="Пилинги">
+              </div>
+              <div class="service-card__label service-card__label--lavender">
+                <div><h3>Пилинги</h3><p>Обновление и сияние<br>кожи</p></div>
+                <span class="material-symbols-outlined service-card__arrow">arrow_forward</span>
+              </div>
+            </a>
+            <a class="service-card animate-on-scroll" onclick="navigateTo('laser')">
+              <div class="service-card__img">
+                <img src="https://lh3.googleusercontent.com/aida/ADBb0ug5zbBrDqBp2wjfIFHIFqCCcTF2oZncE1nEv3-HTWZfV2h-fp6qHWyDZaUo4RyE_sTLG0Ls9UrY4XGty8Lw0XVguVGyb_TOHCbPBcyMQEDfmMBXetjTTW_SRhhqHEwczTeOmRJQam5y_4o6c-OwPX-gSQDlqHpNhxUk-jXLt8aujYj-G6MP6iUlXcTQDcripsZlgVWKCPfy1pOW16bDOYNpToOeR0Zqq6CtbXQhnnxnuD8J5aXx3L-XLQ" alt="Лазерная эпиляция">
+              </div>
+              <div class="service-card__label service-card__label--lavender">
+                <div><h3>Лазерная эпиляция</h3><p>Гладкая кожа надолго</p></div>
+                <span class="material-symbols-outlined service-card__arrow">arrow_forward</span>
+              </div>
+            </a>
+            <a class="service-card animate-on-scroll" onclick="navigateTo('massage')">
+              <div class="service-card__img">
+                <img src="https://lh3.googleusercontent.com/aida/ADBb0uhMBjmWhyQD1dPO_gTLUB-2cY7bV5ap6BSIbxjZ6uKWTT_hT542e9OD5nn_hf2RvzqotaY_veu_rEQaET-KoY3udfhCabwGCMl1Hu_0Wi7BoAZBvy288PzJCHaebee6s19ksXzcnr-Kgt6kWSUETfJ2Lq59K9n2x7jlN2CkdU0NCB0aDM4t6FmMUWY1uUUok0lBGtHHNrccq0R9o7JgFy7eyqLF1EhL_6eqWg1kh1eb_z2Ura1CcRLFTXo" alt="Массаж лица">
+              </div>
+              <div class="service-card__label service-card__label--lavender-light">
+                <div><h3>Массаж лица</h3><p>Лифтинг и расслабление<br>мышц</p></div>
+                <span class="material-symbols-outlined service-card__arrow">arrow_forward</span>
+              </div>
+            </a>
+          </div>
+          <!-- Consultation Block -->
+          <div class="consultation-block animate-on-scroll">
+            <div class="consultation-block__text">
+              <h2>Консультация<br>косметолога</h2>
+              <p>Определим потребности<br>и подберём уход</p>
+              <button class="btn-pill btn-glass">
+                Записаться
+                <span class="material-symbols-outlined btn-icon">arrow_forward</span>
+              </button>
+            </div>
+            <div class="consultation-block__image">
+              <img src="avatar.jpg" alt="Косметолог">
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <!-- ==================== NATURAL BEAUTY PAGE ==================== -->
+      <div class="screen" id="page-natural-beauty" data-page="natural-beauty">
+        <header class="detail-header">
+          <button class="detail-header__back" onclick="goBack()"><span class="material-symbols-outlined">arrow_back</span></button>
+          <h1 class="detail-header__title">Естественная красота</h1>
+          <div class="detail-header__avatar">
+            <img src="avatar.jpg" alt="Natalia">
+          </div>
+        </header>
+        <main class="detail-main">
+          <section class="beauty-hero animate-on-scroll">
+            <div class="beauty-hero__img">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtcIdS8T1etyUOpl1peBFjvCnK7lVnXmptdBJdOnj6EF6tZ2nJGYT46ktlh4r1l8qrXwvuvevzy8du02liwBwj4mT_zcUUODwuuiz3ZoGayElYwkX3F_xG0yWsOG1Tyr95wwZw2TAGRrQlgWM7JYPGvwIQRERXPw1s5GOaUUr0zafCkhJASCIjFkkriEJEzjZB46KXtvMC8gDGzaKhHcF34QW6Rj2dj6i5LZ6Qg1letkroMXjQbWhO9NiFcJb5iRHCnId_wKKD8mA" alt="Красота">
+            </div>
+          </section>
+          <section class="values-grid animate-on-scroll">
+            <div class="value-card">
+              <div class="value-card__icon"><span class="material-symbols-outlined">water_drop</span></div>
+              <h3>Чистота</h3>
+              <p>Только проверенные, безопасные составы, бережно относящиеся к вашей коже.</p>
+            </div>
+            <div class="value-card value-card--accent">
+              <div class="value-card__icon"><span class="material-symbols-outlined">science</span></div>
+              <h3>Наука</h3>
+              <p>Передовые технологии и доказательная медицина для видимого результата.</p>
+            </div>
+            <div class="value-card value-card--full">
+              <div class="value-card__icon-row">
+                <div class="value-card__icon"><span class="material-symbols-outlined">self_improvement</span></div>
+                <h3>Индивидуальность</h3>
+              </div>
+              <p>Каждая процедура адаптируется под уникальные потребности вашей кожи и ваше текущее состояние.</p>
+            </div>
+          </section>
+          <section class="beauty-cta animate-on-scroll">
+            <button class="btn-primary" onclick="navigateTo('services')">
+              Узнать о процедурах
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+          </section>
+        </main>
+      </div>
+
+      <!-- ==================== ABOUT PAGE ==================== -->
+      <div class="screen" id="page-about" data-page="about">
+        <header class="detail-header">
+          <button class="detail-header__back" onclick="goBack()"><span class="material-symbols-outlined">arrow_back</span></button>
+          <h1 class="detail-header__title">Обо мне</h1>
+          <div class="detail-header__spacer"></div>
+        </header>
+        <main class="detail-main about-main">
+          <section class="about-hero animate-on-scroll">
+            <div class="about-hero__photo">
+              <img src="avatar.jpg" alt="Наталья">
+            </div>
+            <h2>Наталья</h2>
+            <p class="about-hero__role">Профессиональный косметолог</p>
+          </section>
+          <section class="about-philosophy glass-card animate-on-scroll">
+            <div class="about-section-header"><span class="material-symbols-outlined filled">spa</span><h3>Философия</h3></div>
+            <p>Мой подход к красоте основан на здоровье кожи и естественности. Я верю, что каждая уникальна, и моя цель — подчеркнуть вашу природную красоту, а не изменить её. Истинное сияние начинается с правильного ухода и любви к себе.</p>
+          </section>
+          <section class="about-expertise animate-on-scroll">
+            <h3 class="section-title">Мой опыт</h3>
+            <div class="expertise-grid">
+              <div class="expertise-card">
+                <div class="expertise-card__icon"><span class="material-symbols-outlined">workspace_premium</span></div>
+                <h4>Высшее медицинское</h4>
+                <p>Врач-дерматовенеролог, косметолог. Более 7 лет непрерывной практики.</p>
+              </div>
+              <div class="expertise-card">
+                <div class="expertise-card__icon"><span class="material-symbols-outlined">school</span></div>
+                <h4>Сертификации</h4>
+                <p>Регулярное повышение квалификации в Европе и Украине. Топовые аппаратные методики.</p>
+              </div>
+              <div class="expertise-card expertise-card--full">
+                <div class="expertise-card__icon"><span class="material-symbols-outlined">science</span></div>
+                <h4>Инновационные подходы</h4>
+                <p>Использование только сертифицированных препаратов и современного оборудования с доказанной эффективностью.</p>
+              </div>
+            </div>
+          </section>
+          <section class="about-approach animate-on-scroll">
+            <div class="about-section-header"><span class="material-symbols-outlined">favorite</span><h3>Мой подход</h3></div>
+            <p>Я не использую шаблонные протоколы. Каждая процедура подбирается строго индивидуально после детальной диагностики состояния кожи. В работе я применяю премиальные космецевтические бренды, гарантирующие видимый и долгий результат.</p>
+          </section>
+          <section class="about-cta animate-on-scroll">
+            <button class="btn-outline-pill" onclick="navigateTo('home')">
+              Записаться на консультацию
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+          </section>
+        </main>
+      </div>
+
+      <!-- ==================== SERVICE DETAIL: Чистка лица ==================== -->
+      <div class="screen" id="page-chistka" data-page="chistka">
+        <header class="detail-header">
+          <button class="detail-header__back" onclick="goBack()"><span class="material-symbols-outlined">arrow_back</span></button>
+          <h1 class="detail-header__title">Natalia Aesthetics</h1>
+          <div class="detail-header__avatar-small"><span class="material-symbols-outlined">person</span></div>
+        </header>
+        <main class="detail-main detail-main--no-pad-top">
+          <div class="service-hero">
+            <img src="https://lh3.googleusercontent.com/aida/ADBb0uhy9oQBzbH4Wd5rCEeIKd2SRtsBMat-Ht_6gPEIROjQnin1QZlCr0K3HzbEVz1NoXWuF9lSXMr7qckk2oyMqhViQUa5R4BRz5nlDLNm8t7qe5i1WYFs86Q18WdEmt3Fu-ZLhXd3iI-We_llCE_h83NwV5ymdl5u1H7dOWLe_C11oy_OhG4fQh7dqEryoWoInBHvSLY_U4fr1nP6oEBSO2dIqfAplZCW6DJ8T7LU6OFb1DgLW3YsDTEYkUw" alt="Чистка лица">
+            <div class="service-hero__gradient"></div>
+            <div class="service-hero__text"><span class="service-hero__badge">PREMIUM CARE</span><h2>Чистка лица</h2></div>
+          </div>
+          <div class="service-content">
+            <section class="glass-panel animate-on-scroll"><h3 class="section-label">О процедуре</h3><p>Глубокое очищение кожи, направленное на удаление комедонов, излишков себума и ороговевших клеток. Процедура восстанавливает дыхание кожи, улучшает микроциркуляцию и подготавливает лицо к дальнейшему уходу, придавая здоровое сияние.</p></section>
+            <section class="animate-on-scroll"><h3 class="section-heading">Преимущества</h3>
+              <div class="benefits-grid">
+                <div class="benefit-card"><span class="material-symbols-outlined">water_drop</span><span>Глубокое очищение</span></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">spa</span><span>Улучшение текстуры</span></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">flare</span><span>Здоровое сияние</span></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">check_circle</span><span>Сужение пор</span></div>
+              </div>
+            </section>
+            <section class="animate-on-scroll"><h3 class="section-heading">Этапы процедуры</h3>
+              <div class="steps-timeline">
+                <div class="step"><div class="step__dot step__dot--active"></div><div class="step__content"><h4>1. Демакияж и подготовка</h4><p>Мягкое удаление косметики и поверхностных загрязнений.</p></div></div>
+                <div class="step"><div class="step__dot step__dot--active"></div><div class="step__content"><h4>2. Распаривание или холодное гидрирование</h4><p>Открытие пор для облегчения глубокой чистки.</p></div></div>
+                <div class="step"><div class="step__dot step__dot--active"></div><div class="step__content"><h4>3. Экстракция</h4><p>Бережное удаление комедонов и сальных пробок.</p></div></div>
+                <div class="step"><div class="step__dot"></div><div class="step__content"><h4>4. Успокаивающая маска</h4><p>Снятие покраснений и сужение пор.</p></div></div>
+              </div>
+            </section>
+          </div>
+          <div class="booking-bar"><div class="booking-bar__price"><span class="price">3 500 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 60 мин</span></div><button class="btn-primary">Записаться</button></div>
+        </main>
+      </div>
+
+      <!-- ==================== SERVICE DETAIL: Массаж лица ==================== -->
+      <div class="screen" id="page-massage" data-page="massage">
+        <header class="detail-header">
+          <button class="detail-header__back" onclick="goBack()"><span class="material-symbols-outlined">arrow_back</span></button>
+          <h1 class="detail-header__title">Natalia Aesthetics</h1>
+          <div class="detail-header__avatar">
+            <img src="avatar.jpg" alt="Natalia">
+          </div>
+        </header>
+        <main class="detail-main detail-main--no-pad-top">
+          <div class="service-hero service-hero--tall">
+            <img src="https://lh3.googleusercontent.com/aida/ADBb0uhMBjmWhyQD1dPO_gTLUB-2cY7bV5ap6BSIbxjZ6uKWTT_hT542e9OD5nn_hf2RvzqotaY_veu_rEQaET-KoY3udfhCabwGCMl1Hu_0Wi7BoAZBvy288PzJCHaebee6s19ksXzcnr-Kgt6kWSUETfJ2Lq59K9n2x7jlN2CkdU0NCB0aDM4t6FmMUWY1uUUok0lBGtHHNrccq0R9o7JgFy7eyqLF1EhL_6eqWg1kh1eb_z2Ura1CcRLFTXo" alt="Массаж лица">
+            <div class="service-hero__gradient service-hero__gradient--soft"></div>
+            <div class="service-hero__text"><span class="service-hero__badge service-hero__badge--lavender"><span class="material-symbols-outlined" style="font-size:14px">spa</span> WELLNESS</span><h2>Массаж лица</h2><p class="service-hero__sub">Лифтинг и расслабление мышц</p></div>
+          </div>
+          <div class="service-content">
+            <section class="overview-card animate-on-scroll">
+              <div class="overview-card__icon"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">info</span></div>
+              <div><h3>Обзор</h3><p>Глубокий мануальный массаж, сочетающий скульптурные и расслабляющие техники. Направлен на проработку мышц лица, шеи и зоны декольте для достижения видимого эффекта омоложения и снятия напряжения.</p></div>
+            </section>
+            <section class="animate-on-scroll"><h3 class="section-heading">Преимущества</h3>
+              <div class="benefits-grid">
+                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">water_drop</span><h4>Лимфодренаж</h4><p>Устранение отеков</p></div>
+                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">face_retouching_natural</span><h4>Лифтинг</h4><p>Естественная подтяжка</p></div>
+                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">self_improvement</span><h4>Антистресс</h4><p>Снятие зажимов</p></div>
+                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">vital_signs</span><h4>Кровоток</h4><p>Здоровое сияние</p></div>
+              </div>
+            </section>
+            <section class="steps-card animate-on-scroll"><h3 class="section-heading">Этапы процедуры</h3>
+              <div class="steps-numbered">
+                <div class="step-n"><div class="step-n__num">1</div><div><h4>Глубокое очищение</h4><p>Подготовка кожи к массажу с использованием мягких средств.</p></div></div>
+                <div class="step-n"><div class="step-n__num step-n__num--active">2</div><div><h4>Скульптурная техника</h4><p>Интенсивная проработка мышц каркаса лица.</p></div></div>
+                <div class="step-n"><div class="step-n__num">3</div><div><h4>Мануальное расслабление</h4><p>Снятие гипертонуса и спазмов в зонах напряжения.</p></div></div>
+                <div class="step-n"><div class="step-n__num">4</div><div><h4>Успокаивающая маска</h4><p>Завершающий этап для увлажнения и закрепления результата.</p></div></div>
+              </div>
+            </section>
+          </div>
+          <div class="booking-bar"><div class="booking-bar__price"><span class="price">3 800 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 50 мин</span></div><button class="btn-primary">Записаться</button></div>
+        </main>
+      </div>
+
+      <!-- ==================== SERVICE DETAIL: Лазерная эпиляция ==================== -->
+      <div class="screen" id="page-laser" data-page="laser">
+        <header class="detail-header">
+          <button class="detail-header__back" onclick="goBack()"><span class="material-symbols-outlined">arrow_back</span></button>
+          <h1 class="detail-header__title" id="laser-header-title" style="opacity:0;transition:opacity .3s">Лазерная эпиляция</h1>
+          <div class="detail-header__spacer"></div>
+        </header>
+        <main class="detail-main detail-main--no-pad-top">
+          <div class="service-hero service-hero--dark">
+            <img src="https://lh3.googleusercontent.com/aida/ADBb0ug5zbBrDqBp2wjfIFHIFqCCcTF2oZncE1nEv3-HTWZfV2h-fp6qHWyDZaUo4RyE_sTLG0Ls9UrY4XGty8Lw0XVguVGyb_TOHCbPBcyMQEDfmMBXetjTTW_SRhhqHEwczTeOmRJQam5y_4o6c-OwPX-gSQDlqHpNhxUk-jXLt8aujYj-G6MP6iUlXcTQDcripsZlgVWKCPfy1pOW16bDOYNpToOeR0Zqq6CtbXQhnnxnuD8J5aXx3L-XLQ" alt="Лазерная эпиляция">
+            <div class="service-hero__gradient service-hero__gradient--dark"></div>
+            <div class="service-hero__text service-hero__text--white"><span class="service-hero__badge service-hero__badge--glass"><span class="material-symbols-outlined" style="font-size:16px;font-variation-settings:'FILL' 1">star</span> Premium</span><h2>Лазерная эпиляция</h2><p class="service-hero__sub">Гладкая кожа надолго</p></div>
+          </div>
+          <div class="service-content">
+            <section class="overview-simple animate-on-scroll"><h3>Обзор</h3><p>Инновационная технология диодного лазера обеспечивает безболезненное и эффективное удаление нежелательных волос. Процедура комфортна благодаря встроенной системе охлаждения и подходит для чувствительных зон.</p></section>
+            <section class="animate-on-scroll"><h3 class="section-heading">Преимущества</h3>
+              <div class="benefits-grid">
+                <div class="benefit-card"><span class="material-symbols-outlined">schedule</span><span>Долгий эффект</span></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">spa</span><span>Без боли</span></div>
+                <div class="benefit-card benefit-card--tinted"><span class="material-symbols-outlined">face</span><span>Все типы кожи</span></div>
+                <div class="benefit-card benefit-card--tinted"><span class="material-symbols-outlined">verified_user</span><span>Безопасно</span></div>
+              </div>
+            </section>
+            <section class="overview-simple animate-on-scroll"><h3>Как проходит процедура</h3>
+              <div class="steps-numbered">
+                <div class="step-n"><div class="step-n__num step-n__num--active">1</div><div><h4>Настройка параметров</h4><p>Специалист подбирает индивидуальные настройки лазера.</p></div></div>
+                <div class="step-n"><div class="step-n__num">2</div><div><h4>Охлаждающий гель</h4><p>Нанесение специального геля для защиты кожи и лучшего скольжения.</p></div></div>
+                <div class="step-n"><div class="step-n__num">3</div><div><h4>Обработка лазером</h4><p>Непосредственное воздействие диодного лазера на волосяные фолликулы.</p></div></div>
+                <div class="step-n"><div class="step-n__num">4</div><div><h4>Пост-уход</h4><p>Очищение кожи и нанесение успокаивающего крема.</p></div></div>
+              </div>
+            </section>
+          </div>
+          <div class="booking-bar"><div class="booking-bar__price"><span class="price-label">Стоимость</span><span class="price">от 2 500 ₴</span><span class="duration"><span class="material-symbols-outlined">timer</span> 30 мин</span></div><button class="btn-primary">Записаться</button></div>
+        </main>
+      </div>
+
+      <!-- ==================== SERVICE DETAIL: Пилинги ==================== -->
+      <div class="screen" id="page-peeling" data-page="peeling">
+        <header class="detail-header">
+          <button class="detail-header__back" onclick="goBack()"><span class="material-symbols-outlined">arrow_back</span></button>
+          <h1 class="detail-header__title">Natalia Aesthetics</h1>
+          <div class="detail-header__avatar">
+            <img src="avatar.jpg" alt="Natalia">
+          </div>
+        </header>
+        <main class="detail-main detail-main--no-pad-top">
+          <div class="service-hero service-hero--dark">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcIAUOxlnihp5y-WtgsH1XVSJCF8aNkxvbZg5IK1e4b-hgMHuz9m5_9UpKUGDR-FJAjQvy_J5c4hapv5mhXY102SB6kHviaMILIWQvzMevJVU7egMYlK_7wp_pCXz68U98xImtAoETyy26c4iRWMnILfTRSMcILNOMxxvb9CRFMxd_ImV_yXz2vHvFCIpgq_bGHZ1KNTpsHSucZ6BO1T7hrYonUYXJ9IswNokzajOsVqd6w6NbwJzBSIbTcp4BOwtELrBfrD4jAqc" alt="Пилинги">
+            <div class="service-hero__gradient service-hero__gradient--dark"></div>
+            <div class="service-hero__text service-hero__text--white"><span class="service-hero__badge service-hero__badge--glass"><span class="material-symbols-outlined" style="font-size:14px">spa</span> КОСМЕТОЛОГИЯ</span><h2>Пилинги</h2><p class="service-hero__sub">Обновление и сияние кожи</p></div>
+          </div>
+          <div class="service-content">
+            <section class="animate-on-scroll"><p class="body-text">Профессиональные химические и органические пилинги для глубокого обновления кожи. Процедура деликатно отшелушивает ороговевший слой, стимулирует клеточную регенерацию и выработку коллагена, возвращая лицу здоровое сияние и свежесть.</p></section>
+            <section class="animate-on-scroll"><h3 class="section-heading">Эффект</h3>
+              <div class="benefits-grid">
+                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined">water_drop</span><span>Ровный тон</span></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">auto_awesome</span><span>Уменьшение пигментации</span></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">flare</span><span>Эффект сияния</span></div>
+                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined">lens_blur</span><span>Сужение пор</span></div>
+              </div>
+            </section>
+            <section class="animate-on-scroll"><h3 class="section-heading">Этапы процедуры</h3>
+              <div class="steps-numbered">
+                <div class="step-n"><div class="step-n__num">1</div><div><h4>Очищение и подготовка</h4><p>Демакияж и мягкое очищение кожи перед нанесением активного состава.</p></div></div>
+                <div class="step-n"><div class="step-n__num step-n__num--active">2</div><div><h4>Нанесение кислот</h4><p>Индивидуальный подбор и нанесение пилингового состава в зависимости от типа кожи.</p></div></div>
+                <div class="step-n"><div class="step-n__num">3</div><div><h4>Нейтрализация</h4><p>Снятие состава специальным нейтрализатором для остановки реакции.</p></div></div>
+                <div class="step-n"><div class="step-n__num">4</div><div><h4>Уход и защита</h4><p>Нанесение успокаивающей маски и крема с SPF для защиты обновленной кожи.</p></div></div>
+              </div>
+            </section>
+          </div>
+          <div class="booking-bar"><div class="booking-bar__price"><span class="price">4 500 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 40 мин</span></div><button class="btn-primary">Записаться</button></div>
+        </main>
+      </div>
+
+      <!-- ==================== SERVICE DETAIL: Инъекции ==================== -->
+      <div class="screen" id="page-injections" data-page="injections">
+        <header class="detail-header">
+          <button class="detail-header__back" onclick="goBack()"><span class="material-symbols-outlined">arrow_back</span></button>
+          <h1 class="detail-header__title">Natalia Aesthetics</h1>
+          <div class="detail-header__avatar-small" style="background:var(--secondary-container);color:var(--on-secondary-container)">A</div>
+        </header>
+        <main class="detail-main detail-main--no-pad-top">
+          <div class="service-hero service-hero--tall">
+            <img src="https://lh3.googleusercontent.com/aida/ADBb0ugTCbpdkBZm_9rNs0MUuMwQi_U0nqNJO4pMTIxQobmS0vhmrWAG5y9CEtfeUexxzBOgfBRxHdzJmUtn9NPmr6AslTQI3HNHw3zdhvSiVAxYK_imXQqFc_RABo_V0wJB4BFxg2IKTrm2Cl-jzocdQOEXd7CXnYps61sxR0JeOAZBw9JGoATCeUuJJs7hY1DhSokzXCmg5mH6kwcUJ-D3ytZCJIbGPtK3tco6HTY2W0rmY-SON6nxCW9sOP4" alt="Инъекции">
+            <div class="service-hero__gradient"></div>
+          </div>
+          <div class="service-content" style="margin-top:-3rem;position:relative;z-index:10">
+            <section class="info-card animate-on-scroll">
+              <div class="info-card__badge"><span class="material-symbols-outlined">science</span><span>MEDICAL AESTHETIC</span></div>
+              <h2 class="info-card__title">Инъекции</h2>
+              <p class="info-card__desc">Ботокс, филлеры и биоревитализация</p>
+              <div class="info-card__meta">
+                <div><span class="meta-label">Длительность</span><span class="meta-value">~60 мин</span></div>
+                <div><span class="meta-label">Эффект</span><span class="meta-value">До 12 мес</span></div>
+              </div>
+            </section>
+            <section class="animate-on-scroll"><h3 class="section-heading">Overview</h3><p class="body-text">Professional anti-aging and hydration treatments designed to restore youthful contours, smooth wrinkles, and deeply nourish the skin. We use only premium, certified injectables tailored to your unique facial anatomy for natural-looking results.</p></section>
+            <section class="animate-on-scroll"><h3 class="section-heading">Benefits</h3>
+              <div class="benefits-grid">
+                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined">bolt</span><span>Immediate Result</span></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">update</span><span>Long Lasting</span></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">medical_services</span><span>Physician-led</span></div>
+                <div class="benefit-card benefit-card--tinted"><span class="material-symbols-outlined">verified</span><span>Certified Products</span></div>
+              </div>
+            </section>
+            <section class="animate-on-scroll"><h3 class="section-heading">Procedure Steps</h3>
+              <div class="steps-timeline">
+                <div class="step"><div class="step__dot step__dot--active"></div><div class="step__content"><h4>1. Consultation</h4><p>Detailed facial assessment and goal setting.</p></div></div>
+                <div class="step"><div class="step__dot"></div><div class="step__content"><h4>2. Anesthesia</h4><p>Application of numbing cream for comfort.</p></div></div>
+                <div class="step"><div class="step__dot"></div><div class="step__content"><h4>3. Administration</h4><p>Precise injection of selected products.</p></div></div>
+                <div class="step"><div class="step__dot"></div><div class="step__content"><h4>4. Recovery</h4><p>Post-care recommendations and soothing mask.</p></div></div>
+              </div>
+            </section>
+          </div>
+          <div class="booking-bar"><div class="booking-bar__price"><span class="price-label">Price from</span><span class="price">12 000 ₴</span></div><button class="btn-dark">Book Appointment <span class="material-symbols-outlined">arrow_forward</span></button></div>
+        </main>
+      </div>
+
+      <!-- ==================== SERVICE DETAIL: Ультразвуковая чистка ==================== -->
+      <div class="screen" id="page-ultrasound" data-page="ultrasound">
+        <header class="detail-header">
+          <button class="detail-header__back" onclick="goBack()"><span class="material-symbols-outlined">arrow_back</span></button>
+          <h1 class="detail-header__title">Natalia Aesthetics</h1>
+          <div class="detail-header__avatar">
+            <img src="avatar.jpg" alt="Natalia">
+          </div>
+        </header>
+        <main class="detail-main detail-main--no-pad-top">
+          <div class="service-hero service-hero--tall">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAInsOujGc-OWA6K_q1bNOTIW_Xbq2VEjZjCjd0vl62hdWU_1_kGeuVCcDPO_sEyEgDTrgukFP8f7GDvxh443huo8oVdwYEuzRNFUlIru6ijlR91EG7GOb2gAag7sPc5N1lDIOQb_YkMJWoreorjLKYC9Dlzd1ZudpUZilJdSVR4QXFdatRTZgtSgriXI_OymcacCI4rufzbHPsnm76e8po6004GlkdQeKhb-7eZlYVhlc4W40y5kcJK0av5zAPjO2jL3fwGvDhKDI" alt="Ультразвуковая чистка">
+            <div class="service-hero__gradient"></div>
+            <div class="service-hero__text-glass">
+              <div class="glass-panel">
+                <span class="service-hero__badge service-hero__badge--lavender"><span class="material-symbols-outlined" style="font-size:14px">spa</span> Аппаратная косметология</span>
+                <h2>Ультразвуковая чистка</h2>
+                <p>Мягкое и деликатное очищение</p>
+              </div>
+            </div>
+          </div>
+          <div class="service-content">
+            <section class="animate-on-scroll"><h3 class="section-heading">Описание процедуры</h3>
+              <div class="overview-simple"><p>Ультразвуковая чистка лица — это аппаратная процедура, направленная на глубокое, но при этом максимально бережное очищение кожи от ороговевших клеток, излишков кожного сала и поверхностных загрязнений. Процедура абсолютно безболезненна, не оставляет покраснений и подходит для любого типа кожи, включая чувствительную.</p></div>
+            </section>
+            <section class="animate-on-scroll"><h3 class="section-heading">Преимущества</h3>
+              <div class="benefits-grid">
+                <div class="benefit-card"><span class="material-symbols-outlined">flight</span><h4>Атравматичность</h4><p>Кожа не повреждается</p></div>
+                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined">air</span><h4>Дыхание кожи</h4><p>Глубокое очищение пор</p></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">texture</span><h4>Рельеф</h4><p>Улучшение текстуры</p></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">timelapse</span><h4>Без реабилитации</h4><p>Сразу после процедуры</p></div>
+              </div>
+            </section>
+            <section class="animate-on-scroll"><h3 class="section-heading">Этапы процедуры</h3>
+              <div class="steps-timeline steps-timeline--cards">
+                <div class="step step--card"><div class="step__dot step__dot--active"></div><div class="step__content"><span class="step__label">Этап 1</span><h4>Очищение и демакияж</h4><p>Тщательное удаление поверхностных загрязнений и макияжа мягкими средствами.</p></div></div>
+                <div class="step step--card"><div class="step__dot step__dot--active"></div><div class="step__content"><span class="step__label">Этап 2</span><h4>Ультразвуковой пилинг</h4><p>Обработка кожи скрабером по гелю-дезинкрустанту.</p></div></div>
+                <div class="step step--card"><div class="step__dot step__dot--active"></div><div class="step__content"><span class="step__label">Этап 3</span><h4>Тонизация и увлажнение</h4><p>Восстановление pH-баланса кожи и нанесение активной сыворотки.</p></div></div>
+                <div class="step step--card"><div class="step__dot"></div><div class="step__content"><span class="step__label">Этап 4</span><h4>Финальный уход</h4><p>Нанесение защитного крема с SPF-фактором.</p></div></div>
+              </div>
+            </section>
+          </div>
+          <div class="booking-bar"><div class="booking-bar__price"><span class="price price--gradient">3 000 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 45 мин.</span></div><button class="btn-primary">Записаться <span class="material-symbols-outlined">arrow_forward</span></button></div>
+        </main>
+      </div>
+
+    </div><!-- /screen-container -->
+
+    <!-- ===== BOTTOM NAVIGATION ===== -->
+    <nav class="bottom-nav" id="bottom-nav">
+      <a class="nav-item active" data-nav="home" onclick="navigateTo('home')">
+        <span class="material-symbols-outlined">home</span>
+        <span>Главная</span>
+      </a>
+      <a class="nav-item" data-nav="services" onclick="navigateTo('services')">
+        <span class="material-symbols-outlined">assignment</span>
+        <span>Услуги</span>
+      </a>
+      <a class="nav-item" data-nav="appointment" onclick="return false">
+        <span class="material-symbols-outlined">chat_bubble</span>
+        <span>Запись</span>
+      </a>
+      <a class="nav-item" data-nav="more" onclick="navigateTo('about')">
+        <span class="material-symbols-outlined">more_horiz</span>
+        <span>Ещё</span>
+      </a>
+    </nav>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

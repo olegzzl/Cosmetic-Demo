@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="ru"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+<title>Обо мне - Anna Aesthetics</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts: Manrope -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config injected from instructions -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#48464b",
+                    "on-background": "#1b1c1c",
+                    "surface-container-highest": "#e4e2e2",
+                    "on-tertiary-container": "#656767",
+                    "on-secondary-container": "#666462",
+                    "surface-variant": "#e4e2e2",
+                    "surface-bright": "#fbf9f8",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#1d1a23",
+                    "tertiary-container": "#e6e6e6",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#69646f",
+                    "on-primary": "#ffffff",
+                    "surface": "#fbf9f8",
+                    "primary-fixed-dim": "#cac4d1",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#f2f0f0",
+                    "outline": "#79767c",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "surface-container-low": "#f5f3f3",
+                    "primary": "#615c67",
+                    "surface-tint": "#615c67",
+                    "surface-container": "#efeded",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#cac4d1",
+                    "secondary-fixed": "#e6e2df",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "tertiary": "#5d5f5f",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#49454f",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-secondary-fixed-variant": "#484644",
+                    "on-secondary-fixed": "#1c1b1a",
+                    "inverse-surface": "#303031",
+                    "surface-container-high": "#e9e8e7",
+                    "secondary-container": "#e6e2df",
+                    "secondary-fixed-dim": "#cac6c3",
+                    "primary-container": "#eae3f0",
+                    "on-surface": "#1b1c1c",
+                    "background": "#fbf9f8",
+                    "surface-dim": "#dbdad9",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#605e5c",
+                    "primary-fixed": "#e7e0ed",
+                    "outline-variant": "#cac5cb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1.375rem", // 22px matching request
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "0.5rem",
+                    "margin-page": "1.25rem",
+                    "stack-lg": "1.5rem",
+                    "stack-md": "1rem",
+                    "gutter-grid": "0.75rem"
+            },
+            "fontFamily": {
+                    "body-md": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "label-nav": ["Manrope"],
+                    "caption": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-md": ["20px", {"lineHeight": "26px", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+                    "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-nav": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "caption": ["11px", {"lineHeight": "14px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .material-symbols-outlined.filled {
+        font-variation-settings: 'FILL' 1;
+      }
+      /* Custom soft shadow for cards */
+      .shadow-soft {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-20 pb-24 selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl shadow-sm dark:shadow-none transition-colors">
+<div class="flex justify-between items-center w-full px-margin-page h-16">
+<!-- Leading Icon -->
+<button class="w-10 h-10 flex items-center justify-center text-primary dark:text-primary-fixed-dim hover:opacity-80 transition-opacity rounded-full hover:bg-surface-variant/50">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<!-- Headline -->
+<h1 class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface truncate px-4">
+                Обо мне
+            </h1>
+<!-- Trailing Avatar (using placeholder or empty space to balance flex) -->
+<div class="w-10 h-10 flex items-center justify-center">
+<!-- Empty div to balance the back button for absolute centering of title -->
+</div>
+</div>
+</header>
+<main class="px-margin-page flex flex-col gap-stack-lg max-w-2xl mx-auto">
+<!-- Hero Section -->
+<section class="flex flex-col items-center mt-4">
+<div class="w-40 h-40 rounded-full overflow-hidden mb-stack-md shadow-soft border-4 border-surface-container-lowest relative">
+<img alt="Anna - Cosmetologist" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPyf1cl3nhLnszNmQ48cp6GdZlCkJ2pIEZycXWf9pss8vpSOQ-lh-5b5bFlc_wW7xG32DqZO462llhp-C1mOxoBeOhIQYKkaUUx9yUJpQPGrLD0-D3L024lfZYwRw5WCwJA1qLX0gRcMDENx0OQ16KXimaUV2PK4WuZgZoBfvfX3_wUYrjjbD0TFFr1RFgkAzLm6I1IYJePGDPdfvW_Fjz5BYjGOZlLbqg5MZJXqxFiing5-epjoKSGA7tEfMjOnSZrnJDreJr9U8">
+</div>
+<h2 class="font-headline-lg text-headline-lg text-center mb-1">Анна</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant text-center">Профессиональный косметолог</p>
+</section>
+<!-- Philosophy Section -->
+<section class="glass-card rounded-2xl p-6 shadow-soft">
+<div class="flex items-center gap-2 mb-stack-sm text-primary">
+<span class="material-symbols-outlined filled">spa</span>
+<h3 class="font-headline-md text-headline-md">Философия</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Мой подход к красоте основан на здоровье кожи и естественности. Я верю, что каждая уникальна, и моя цель — подчеркнуть вашу природную красоту, а не изменить её. Истинное сияние начинается с правильного ухода и любви к себе.
+            </p>
+</section>
+<!-- Expertise Section -->
+<section>
+<h3 class="font-headline-md text-headline-md mb-stack-md px-2 text-on-surface">Мой опыт</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-grid">
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-soft border border-surface-variant/50 flex flex-col gap-2">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-primary mb-1">
+<span class="material-symbols-outlined">workspace_premium</span>
+</div>
+<h4 class="font-body-lg text-body-lg font-bold">Высшее медицинское</h4>
+<p class="font-caption text-caption text-on-surface-variant">Врач-дерматовенеролог, косметолог. Более 7 лет непрерывной практики.</p>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-soft border border-surface-variant/50 flex flex-col gap-2">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-primary mb-1">
+<span class="material-symbols-outlined">school</span>
+</div>
+<h4 class="font-body-lg text-body-lg font-bold">Сертификации</h4>
+<p class="font-caption text-caption text-on-surface-variant">Регулярное повышение квалификации в Европе и России. Топовые аппаратные методики.</p>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-soft border border-surface-variant/50 flex flex-col gap-2 md:col-span-2">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-primary mb-1">
+<span class="material-symbols-outlined">science</span>
+</div>
+<h4 class="font-body-lg text-body-lg font-bold">Инновационные подходы</h4>
+<p class="font-caption text-caption text-on-surface-variant">Использование только сертифицированных препаратов и современного оборудования с доказанной эффективностью.</p>
+</div>
+</div>
+</section>
+<!-- Approach Section -->
+<section class="bg-primary-container/30 rounded-2xl p-6 shadow-soft">
+<div class="flex items-center gap-2 mb-stack-sm text-primary">
+<span class="material-symbols-outlined">favorite</span>
+<h3 class="font-headline-md text-headline-md">Мой подход</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Я не использую шаблонные протоколы. Каждая процедура подбирается строго индивидуально после детальной диагностики состояния кожи. В работе я применяю премиальные космецевтические бренды, гарантирующие видимый и долгий результат.
+            </p>
+</section>
+<!-- CTA Section -->
+<section class="flex justify-center mt-4">
+<button class="bg-surface-container-lowest text-on-surface border border-outline-variant font-body-lg text-body-lg font-bold py-4 px-8 rounded-full shadow-soft hover:bg-surface-variant transition-colors flex items-center gap-2 w-full max-w-sm justify-center">
+<span>Записаться на консультацию</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</section>
+</main>
+<!-- BottomNavBar (Hidden on desktop, logic dictates not rendering if strict back button page, but prompt requested it for navigation) -->
+<nav class="fixed bottom-0 left-0 w-full bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.04)] z-50 md:hidden pb-safe">
+<div class="flex justify-around items-center px-4 py-3">
+<!-- Inactive: Home -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 rounded-xl transition-colors p-2 w-16" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-label-nav text-label-nav">Главная</span>
+</a>
+<!-- Inactive: Services -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 rounded-xl transition-colors p-2 w-16" href="#">
+<span class="material-symbols-outlined mb-1">spa</span>
+<span class="font-label-nav text-label-nav">Услуги</span>
+</a>
+<!-- Inactive: Appointment -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 rounded-xl transition-colors p-2 w-16" href="#">
+<span class="material-symbols-outlined mb-1">calendar_today</span>
+<span class="font-label-nav text-label-nav">Запись</span>
+</a>
+<!-- Active: More (Assuming "About Me" falls under More/Profile) -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim font-bold hover:bg-primary-container/20 dark:hover:bg-primary-fixed-dim/10 rounded-xl transition-colors p-2 w-16 scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined filled mb-1">more_horiz</span>
+<span class="font-label-nav text-label-nav">Ещё</span>
+</a>
+</div>
+</nav>
+<!-- Safe area spacing for iOS -->
+<style>
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+    </style>
+</body></html>

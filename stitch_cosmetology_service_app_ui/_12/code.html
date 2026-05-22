@@ -1,0 +1,293 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+<title>Инъекции - Anna Aesthetics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-container": "#656767",
+                      "inverse-surface": "#303031",
+                      "error-container": "#ffdad6",
+                      "secondary-container": "#e6e2df",
+                      "on-tertiary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "surface": "#fbf9f8",
+                      "primary-fixed": "#e7e0ed",
+                      "on-primary-fixed-variant": "#49454f",
+                      "on-primary": "#ffffff",
+                      "on-secondary-container": "#666462",
+                      "surface-tint": "#615c67",
+                      "surface-bright": "#fbf9f8",
+                      "on-surface-variant": "#48464b",
+                      "on-background": "#1b1c1c",
+                      "on-secondary-fixed": "#1c1b1a",
+                      "on-surface": "#1b1c1c",
+                      "surface-container-highest": "#e4e2e2",
+                      "secondary-fixed-dim": "#cac6c3",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "surface-container-high": "#e9e8e7",
+                      "on-primary-fixed": "#1d1a23",
+                      "primary-container": "#eae3f0",
+                      "outline-variant": "#cac5cb",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "surface-dim": "#dbdad9",
+                      "surface-container-low": "#f5f3f3",
+                      "on-primary-container": "#69646f",
+                      "surface-container": "#efeded",
+                      "error": "#ba1a1a",
+                      "surface-variant": "#e4e2e2",
+                      "inverse-primary": "#cac4d1",
+                      "outline": "#79767c",
+                      "on-error": "#ffffff",
+                      "tertiary": "#5d5f5f",
+                      "primary": "#615c67",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "secondary": "#605e5c",
+                      "background": "#fbf9f8",
+                      "on-secondary-fixed-variant": "#484644",
+                      "secondary-fixed": "#e6e2df",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed-dim": "#cac4d1",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed": "#e2e2e2",
+                      "tertiary-container": "#e6e6e6",
+                      "inverse-on-surface": "#f2f0f0"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px",
+                      "2xl": "1rem",
+                      "3xl": "1.5rem",
+              },
+              "spacing": {
+                      "stack-lg": "1.5rem",
+                      "gutter-grid": "0.75rem",
+                      "stack-md": "1rem",
+                      "stack-sm": "0.5rem",
+                      "margin-page": "1.25rem"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Manrope"
+                      ],
+                      "body-lg": [
+                              "Manrope"
+                      ],
+                      "label-nav": [
+                              "Manrope"
+                      ],
+                      "headline-lg": [
+                              "Manrope"
+                      ],
+                      "caption": [
+                              "Manrope"
+                      ],
+                      "body-md": [
+                              "Manrope"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "26px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-nav": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "11px",
+                              {
+                                      "lineHeight": "14px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .soft-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+        .glass-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background pb-[100px]">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl shadow-sm dark:shadow-none flex justify-between items-center px-margin-page h-16 transition-all duration-300" id="topAppBar">
+<button aria-label="Go back" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-on-surface" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-on-surface">Anna Aesthetics</h1>
+<div class="w-10 h-10 rounded-full bg-secondary-container overflow-hidden">
+<!-- Avatar placeholder or image could go here -->
+<div class="w-full h-full flex items-center justify-center text-on-secondary-container">A</div>
+</div>
+</header>
+<main class="pt-16">
+<!-- Hero Section with Image -->
+<div class="relative w-full h-[45vh] md:h-[60vh] max-h-[600px] bg-surface-variant">
+<img alt="Cosmetic injections procedure" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ugTCbpdkBZm_9rNs0MUuMwQi_U0nqNJO4pMTIxQobmS0vhmrWAG5y9CEtfeUexxzBOgfBRxHdzJmUtn9NPmr6AslTQI3HNHw3zdhvSiVAxYK_imXQqFc_RABo_V0wJB4BFxg2IKTrm2Cl-jzocdQOEXd7CXnYps61sxR0JeOAZBw9JGoATCeUuJJs7hY1DhSokzXCmg5mH6kwcUJ-D3ytZCJIbGPtK3tco6HTY2W0rmY-SON6nxCW9sOP4">
+<!-- Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
+</div>
+<!-- Content Container -->
+<div class="px-margin-page relative -mt-12 z-10 space-y-stack-lg max-w-3xl mx-auto">
+<!-- Header Info -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 soft-shadow border border-surface-variant/50">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="science">science</span>
+<span class="font-label-nav text-label-nav text-primary uppercase tracking-wider">Medical Aesthetic</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Инъекции</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Ботокс, филлеры и биоревитализация</p>
+<div class="flex gap-4 mt-4 pt-4 border-t border-surface-variant/50">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant">Длительность</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">~60 мин</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant">Эффект</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">До 12 мес</span>
+</div>
+</div>
+</div>
+<!-- Overview Section -->
+<section class="space-y-stack-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Overview</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    Professional anti-aging and hydration treatments designed to restore youthful contours, smooth wrinkles, and deeply nourish the skin. We use only premium, certified injectables tailored to your unique facial anatomy for natural-looking results.
+                </p>
+</section>
+<!-- Benefits Bento Grid -->
+<section class="space-y-stack-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Benefits</h3>
+<div class="grid grid-cols-2 gap-gutter-grid">
+<div class="bg-primary-container/30 p-4 rounded-2xl flex flex-col gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]" data-icon="bolt">bolt</span>
+</div>
+<span class="font-body-md text-body-md font-medium text-on-surface">Immediate Result</span>
+</div>
+<div class="bg-secondary-container/30 p-4 rounded-2xl flex flex-col gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]" data-icon="update">update</span>
+</div>
+<span class="font-body-md text-body-md font-medium text-on-surface">Long Lasting</span>
+</div>
+<div class="bg-tertiary-container/30 p-4 rounded-2xl flex flex-col gap-2">
+<div class="w-8 h-8 rounded-full bg-tertiary-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]" data-icon="medical_services">medical_services</span>
+</div>
+<span class="font-body-md text-body-md font-medium text-on-surface">Physician-led</span>
+</div>
+<div class="bg-surface-container-high p-4 rounded-2xl flex flex-col gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]" data-icon="verified">verified</span>
+</div>
+<span class="font-body-md text-body-md font-medium text-on-surface">Certified Products</span>
+</div>
+</div>
+</section>
+<!-- Procedure Steps -->
+<section class="space-y-stack-md">
+<h3 class="font-headline-md text-headline-md text-on-surface">Procedure Steps</h3>
+<div class="relative pl-6 border-l-2 border-surface-variant space-y-6">
+<div class="relative">
+<div class="absolute -left-[31px] w-4 h-4 bg-primary rounded-full border-4 border-background"></div>
+<h4 class="font-body-lg text-body-lg text-on-surface">1. Consultation</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Detailed facial assessment and goal setting.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[31px] w-4 h-4 bg-surface-variant rounded-full border-4 border-background"></div>
+<h4 class="font-body-lg text-body-lg text-on-surface">2. Anesthesia</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Application of numbing cream for comfort.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[31px] w-4 h-4 bg-surface-variant rounded-full border-4 border-background"></div>
+<h4 class="font-body-lg text-body-lg text-on-surface">3. Administration</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Precise injection of selected products.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[31px] w-4 h-4 bg-surface-variant rounded-full border-4 border-background"></div>
+<h4 class="font-body-lg text-body-lg text-on-surface">4. Recovery</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Post-care recommendations and soothing mask.</p>
+</div>
+</div>
+</section>
+<!-- Spacer for bottom bar -->
+<div class="h-8"></div>
+</div>
+</main>
+<!-- Bottom Action Bar (Transaction specific, replacing standard nav) -->
+<div class="fixed bottom-0 left-0 w-full bg-surface/90 glass-blur border-t border-surface-variant/30 px-margin-page py-4 pb-safe z-50">
+<div class="max-w-3xl mx-auto flex justify-between items-center gap-4">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant">Price from</span>
+<span class="font-headline-md text-headline-md text-on-surface">12 000 ₽</span>
+</div>
+<button class="flex-1 bg-on-surface text-surface py-3 px-6 rounded-full font-body-lg text-body-lg flex items-center justify-center gap-2 hover:bg-on-surface/90 transition-colors">
+                Book Appointment
+                <span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<script>
+        // Simple scroll effect for TopAppBar
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('topAppBar');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-sm');
+                header.classList.remove('bg-transparent');
+            } else {
+                header.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body></html>
