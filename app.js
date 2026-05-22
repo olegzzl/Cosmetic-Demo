@@ -17,7 +17,7 @@ const navigationHistory = ['home'];
 let currentPage = 'home';
 
 // --- Page Navigation ---
-function navigateTo(pageName) {
+function navigateTo(pageName, isPopState = false) {
   if (pageName === currentPage) return;
 
   const currentScreen = document.querySelector('.screen.active');
@@ -26,10 +26,13 @@ function navigateTo(pageName) {
   if (!targetScreen) return;
 
   // Push to history
-  navigationHistory.push(pageName);
+  if (!isPopState) {
+    navigationHistory.push(pageName);
+    history.pushState({ page: pageName }, '', '#' + pageName);
+  }
 
   // Animate transition
-  animateTransition(currentScreen, targetScreen, 'forward');
+  animateTransition(currentScreen, targetScreen, isPopState ? 'back' : 'forward');
 
   currentPage = pageName;
   updateNav(pageName);
@@ -41,20 +44,10 @@ function goBack() {
     navigateTo('home');
     return;
   }
-
-  navigationHistory.pop();
-  const previousPage = navigationHistory[navigationHistory.length - 1];
-
-  const currentScreen = document.querySelector('.screen.active');
-  const targetScreen = document.getElementById('page-' + previousPage);
-
-  if (!targetScreen) return;
-
-  animateTransition(currentScreen, targetScreen, 'back');
-
-  currentPage = previousPage;
-  updateNav(previousPage);
-  updateBottomNavVisibility(previousPage);
+  
+  // Just tell the browser to go back.
+  // The popstate event will handle the actual transition.
+  history.back();
 }
 
 function animateTransition(fromScreen, toScreen, direction) {
@@ -222,9 +215,29 @@ document.addEventListener('DOMContentLoaded', () => {
   initTapFeedback();
   initContactForm();
 
-  // Handle browser back button
-  window.addEventListener('popstate', () => {
-    goBack();
+  // Initialize history state
+  if (!history.state) {
+    history.replaceState({ page: 'home' }, '', '#home');
+  }
+
+  // Handle browser back button (and swipe back)
+  window.addEventListener('popstate', (event) => {
+    if (navigationHistory.length > 1) {
+      navigationHistory.pop();
+    }
+    
+    const targetPage = (event.state && event.state.page) ? event.state.page : 'home';
+    
+    const currentScreen = document.querySelector('.screen.active');
+    const targetScreen = document.getElementById('page-' + targetPage);
+    
+    if (!targetScreen || targetPage === currentPage) return;
+
+    animateTransition(currentScreen, targetScreen, 'back');
+    
+    currentPage = targetPage;
+    updateNav(targetPage);
+    updateBottomNavVisibility(targetPage);
   });
 });
 
