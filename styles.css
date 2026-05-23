@@ -1003,6 +1003,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .about-section-header h3 { font-size: 20px; font-weight: 700; }
+.about-philosophy {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(228, 226, 226, 0.5);
+}
 .about-philosophy p,
 .about-approach p { font-size: 14px; color: var(--on-surface-variant); line-height: 1.6; }
 
