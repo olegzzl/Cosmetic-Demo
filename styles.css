@@ -2267,7 +2267,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    ============================================ */
 .portfolio-carousel-section {
   margin-top: 0.5rem;
-  width: 100%;
+  margin-left: calc(-1 * var(--page-margin));
+  margin-right: calc(-1 * var(--page-margin));
+  width: calc(100% + 2 * var(--page-margin));
 }
 
 .portfolio-carousel-section .home-section-title {
