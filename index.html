@@ -23,14 +23,20 @@
     <!-- Fixed Global Header -->
     <header class="global-header" id="global-header">
       <div class="global-header__content">
-        <span class="global-header__logo" onclick="navigateTo('home')">Natalia Aesthetics</span>
-        <div class="global-header__actions">
-          <button class="global-header__theme" aria-label="Перемкнути тему" id="theme-toggle-btn">
-            <span class="material-symbols-outlined">light_mode</span>
-          </button>
-          <button class="global-header__menu" aria-label="Меню" id="menu-btn" onclick="openDrawer()">
-            <span class="material-symbols-outlined">menu</span>
-          </button>
+        <div class="global-header__top-row">
+          <span class="global-header__logo" onclick="navigateTo('home')">Natalia Aesthetics</span>
+          <div class="global-header__actions">
+            <button class="global-header__theme" aria-label="Перемкнути тему" id="theme-toggle-btn">
+              <span class="material-symbols-outlined">light_mode</span>
+            </button>
+            <button class="global-header__menu" aria-label="Відкрити меню" id="menu-toggle-btn" onclick="openDrawer()">
+              <span class="material-symbols-outlined">menu</span>
+            </button>
+          </div>
+        </div>
+        <div class="global-header__info-row">
+          <span><span class="material-symbols-outlined info-icon">location_on</span>м. Київ, вул. Хрещатик, 1</span>
+          <span><span class="material-symbols-outlined info-icon">call</span>тел. <a href="tel:+3800000000">+3800000000</a></span>
         </div>
       </div>
     </header>
@@ -83,7 +89,7 @@
                 <img src="avatar.jpg" alt="Наталія Косметолог">
               </div>
               <div class="home-header__text">
-                <h1 class="home-header__title">Вітаю, я<br>Косметолог Наталія</h1>
+                <h1 class="home-header__title">Косметолог Наталія</h1>
                 <p class="home-header__subtitle">Турбота про вашу шкіру — моя професія. Краса починається з впевненості.</p>
               </div>
             </div>
@@ -110,7 +116,7 @@
               </div>
             </div>
             <div class="hero-banner__image">
-              <img src="fresh_face_woman.png" alt="Природна краса">
+              <img src="fresh_face_woman.jpg" alt="Природна краса">
             </div>
           </section>
 
@@ -325,7 +331,7 @@
           </div>
           
           <div class="contact-socials">
-            <a href="tel:" class="social-btn" aria-label="Телефон">
+            <a href="tel:+3800000000" class="social-btn" aria-label="Телефон">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             </a>
             <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
@@ -361,6 +367,18 @@
             <span id="toast-text" class="toast-text">Повідомлення успішно надіслано!</span>
           </div>
         </section>
+
+        <!-- Footer -->
+        <footer class="home-footer animate-on-scroll">
+          <div class="footer-info">
+            <p class="footer-info__item"><span class="material-symbols-outlined">location_on</span>м. Київ, вул. Хрещатик, 1</p>
+            <p class="footer-info__item"><span class="material-symbols-outlined">call</span>тел. <a href="tel:+3800000000">+3800000000</a></p>
+          </div>
+          <div class="footer-bottom">
+            <p class="footer-copy">Copyright &copy; 2026 Natalia Aesthetics. Усі права захищено.</p>
+            <p class="footer-design">Design by <a href="https://www.instagram.com/olegzzl/" target="_blank" rel="noopener noreferrer" class="footer-link">olegzz-</a></p>
+          </div>
+        </footer>
 </main>
       </div>
 
@@ -377,7 +395,7 @@
         <main class="detail-main">
           <section class="beauty-hero animate-on-scroll">
             <div class="beauty-hero__img">
-              <img src="fresh_face_woman.png" alt="Краса">
+              <img src="fresh_face_woman.jpg" alt="Краса">
             </div>
           </section>
           <section class="values-grid animate-on-scroll">
@@ -758,15 +776,14 @@
           <div class="service-hero service-hero--tall">
             <img src="ultrasound_scrub.png" alt="Ультразвукова чистка">
             <div class="service-hero__gradient"></div>
-            <div class="service-hero__text-glass">
-              <div class="glass-panel">
-                <span class="service-hero__badge service-hero__badge--lavender"><span class="material-symbols-outlined" style="font-size:14px">spa</span> Апаратна косметологія</span>
-                <h2>Ультразвукова чистка</h2>
-                <p>М'яке та делікатне очищення</p>
-              </div>
-            </div>
           </div>
           <div class="service-content">
+            <div class="glass-panel animate-on-scroll" style="margin-bottom: var(--stack-md);">
+              <span class="service-hero__badge service-hero__badge--lavender"><span class="material-symbols-outlined" style="font-size:14px">spa</span> Апаратна косметологія</span>
+              <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 4px; color: var(--on-surface);">Ультразвукова чистка</h2>
+              <p style="font-size: 14px; color: var(--on-surface-variant);">М'яке та делікатне очищення</p>
+            </div>
+            
             <section class="animate-on-scroll"><h3 class="section-heading">Опис процедури</h3>
               <div class="overview-simple"><p>Ультразвукова чистка обличчя — це апаратна процедура, спрямована на глибоке, але при цьому максимально дбайливе очищення шкіри від ороговілих клітин, надлишків шкірного сала та поверхневих забруднень. Процедура абсолютно безболісна, не залишає почервонінь і підходить для будь-якого типу шкіри, включаючи чутливу.</p></div>
             </section>
