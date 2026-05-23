@@ -2368,7 +2368,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   gap: 12px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding: 0.5rem var(--page-margin) 1.5rem;
+  padding: 0.5rem 0 1.5rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
   transform-style: preserve-3d;
@@ -2379,7 +2379,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .portfolio-slide {
-  flex: 0 0 86%;
+  flex: 0 0 calc(100% - 2 * var(--page-margin));
   scroll-snap-align: center;
   background: rgba(44, 44, 44, 0.55);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -2396,6 +2396,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   box-sizing: border-box;
   transform-style: preserve-3d;
   transition: opacity 0.1s ease-out, transform 0.1s ease-out, background var(--transition-fast);
+}
+
+.portfolio-slide:first-child {
+  margin-left: var(--page-margin);
+}
+
+.portfolio-slide:last-child {
+  margin-right: var(--page-margin);
 }
 
 [data-theme="light"] .portfolio-slide {
