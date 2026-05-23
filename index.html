@@ -498,15 +498,30 @@
             <h3 class="section-title">Данные для записи</h3>
             <div class="form-group">
               <label for="calendar-service">Выберите услугу</label>
-              <select id="calendar-service" name="service" required>
-                <option value="" disabled selected>Выберите процедуру</option>
-                <option value="Чистка лица">Чистка лица (3 500 ₴)</option>
-                <option value="Ультразвуковая чистка">Ультразвуковая чистка (2 500 ₴)</option>
-                <option value="Инъекции">Инъекции (от 12 000 ₴)</option>
-                <option value="Пилинги">Пилинг PRX-T33 (4 000 ₴)</option>
-                <option value="Лазерная эпиляция">Лазерная эпиляция (от 2 500 ₴)</option>
-                <option value="Массаж лица">Массаж лица (3 800 ₴)</option>
-              </select>
+              <div class="custom-dropdown" id="calendar-service-dropdown">
+                <div class="custom-dropdown__trigger">
+                  <span class="custom-dropdown__selected">Выберите процедуру</span>
+                  <span class="material-symbols-outlined custom-dropdown__arrow">expand_more</span>
+                </div>
+                <div class="custom-dropdown__options">
+                  <div class="custom-dropdown__option disabled selected" data-value="">Выберите процедуру</div>
+                  <div class="custom-dropdown__option" data-value="Чистка лица">Чистка лица (3 500 ₴)</div>
+                  <div class="custom-dropdown__option" data-value="Ультразвуковая чистка">Ультразвуковая чистка (2 500 ₴)</div>
+                  <div class="custom-dropdown__option" data-value="Инъекции">Инъекции (от 12 000 ₴)</div>
+                  <div class="custom-dropdown__option" data-value="Пилинги">Пилинг PRX-T33 (4 000 ₴)</div>
+                  <div class="custom-dropdown__option" data-value="Лазерная эпиляция">Лазерная эпиляция (от 2 500 ₴)</div>
+                  <div class="custom-dropdown__option" data-value="Массаж лица">Массаж лица (3 800 ₴)</div>
+                </div>
+                <select id="calendar-service" name="service" required style="display: none;">
+                  <option value="" disabled selected>Выберите процедуру</option>
+                  <option value="Чистка лица">Чистка лица</option>
+                  <option value="Ультразвуковая чистка">Ультразвуковая чистка</option>
+                  <option value="Инъекции">Инъекции</option>
+                  <option value="Пилинги">Пилинги</option>
+                  <option value="Лазерная эпиляция">Лазерная эпиляция</option>
+                  <option value="Массаж лица">Массаж лица</option>
+                </select>
+              </div>
             </div>
             <div class="form-group">
               <label for="calendar-name">Ваше имя</label>

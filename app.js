@@ -761,6 +761,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   updateGlobalHeaderVisibility('home');
   initPortfolioCarousel();
+  initCustomDropdown();
 });
 
 // --- Drawer Sidebar & Global Header Helpers ---
@@ -845,6 +846,60 @@ function scrollPortfolio(direction) {
   } else {
     carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
   }
+}
+
+// --- Custom Dropdown Helper ---
+function initCustomDropdown() {
+  const dropdown = document.getElementById('calendar-service-dropdown');
+  if (!dropdown) return;
+
+  const trigger = dropdown.querySelector('.custom-dropdown__trigger');
+  const selectedText = dropdown.querySelector('.custom-dropdown__selected');
+  const optionsContainer = dropdown.querySelector('.custom-dropdown__options');
+  const optionsList = dropdown.querySelectorAll('.custom-dropdown__option');
+  const hiddenSelect = document.getElementById('calendar-service');
+
+  // Toggle dropdown on trigger click
+  trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle('active');
+  });
+
+  // Select option on option click
+  optionsList.forEach((option) => {
+    option.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const val = option.getAttribute('data-value');
+      const text = option.textContent;
+
+      // Update hidden select
+      if (hiddenSelect) {
+        hiddenSelect.value = val;
+        hiddenSelect.dispatchEvent(new Event('change'));
+      }
+
+      // Update trigger visual state
+      selectedText.textContent = text;
+      
+      // Update color and selected styling
+      if (val === '') {
+        trigger.style.color = 'var(--on-surface-variant)';
+      } else {
+        trigger.style.color = 'var(--on-surface)';
+      }
+
+      optionsList.forEach(opt => opt.classList.remove('selected'));
+      option.classList.add('selected');
+
+      // Close dropdown
+      dropdown.classList.remove('active');
+    });
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', () => {
+    dropdown.classList.remove('active');
+  });
 }
 
 
