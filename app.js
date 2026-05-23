@@ -46,6 +46,7 @@ function navigateTo(pageName, isPopState = false) {
   currentPage = pageName;
   updateNav(pageName);
   updateBottomNavVisibility(pageName);
+  updateGlobalHeaderVisibility(pageName);
 }
 
 function goBack() {
@@ -273,6 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentPage = targetPage;
     updateNav(targetPage);
     updateBottomNavVisibility(targetPage);
+    updateGlobalHeaderVisibility(targetPage);
   });
 });
 
@@ -753,5 +755,33 @@ function updateThemeIcon() {
 // Call on init
 document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
+  updateGlobalHeaderVisibility('home');
 });
+
+// --- Drawer Sidebar & Global Header Helpers ---
+function updateGlobalHeaderVisibility(pageName) {
+  const globalHeader = document.getElementById('global-header');
+  if (globalHeader) {
+    if (pageName === 'home') {
+      globalHeader.classList.remove('hidden');
+    } else {
+      globalHeader.classList.add('hidden');
+    }
+  }
+}
+
+function openDrawer() {
+  const drawer = document.getElementById('drawer-menu');
+  if (drawer) {
+    drawer.classList.add('active');
+  }
+}
+
+function closeDrawer() {
+  const drawer = document.getElementById('drawer-menu');
+  if (drawer) {
+    drawer.classList.remove('active');
+  }
+}
+
 

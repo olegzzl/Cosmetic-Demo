@@ -20,6 +20,56 @@
 
   <!-- ===== APP SHELL ===== -->
   <div id="app">
+    <!-- Fixed Global Header -->
+    <header class="global-header" id="global-header">
+      <div class="global-header__content">
+        <span class="global-header__logo" onclick="navigateTo('home')">Natalia Aesthetics</span>
+        <div class="global-header__actions">
+          <button class="global-header__theme" aria-label="Переключить тему" id="theme-toggle-btn">
+            <span class="material-symbols-outlined">light_mode</span>
+          </button>
+          <button class="global-header__menu" aria-label="Меню" id="menu-btn" onclick="openDrawer()">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Drawer Sidebar -->
+    <div id="drawer-menu" class="drawer-menu">
+      <div class="drawer-menu__overlay" id="drawer-overlay" onclick="closeDrawer()"></div>
+      <div class="drawer-menu__content">
+        <div class="drawer-menu__header">
+          <span class="drawer-menu__logo">Меню</span>
+          <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Закрыть меню" onclick="closeDrawer()">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <nav class="drawer-menu__nav">
+          <a class="drawer-menu__link" onclick="navigateTo('about'); closeDrawer();">
+            <span class="material-symbols-outlined">person</span>
+            Обо мне
+          </a>
+          <a class="drawer-menu__link" onclick="scrollToServices(); closeDrawer();">
+            <span class="material-symbols-outlined">spa</span>
+            Услуги
+          </a>
+          <a class="drawer-menu__link" onclick="navigateTo('price'); closeDrawer();">
+            <span class="material-symbols-outlined">payments</span>
+            Прайс
+          </a>
+          <a class="drawer-menu__link" onclick="navigateTo('portfolio'); closeDrawer();">
+            <span class="material-symbols-outlined">photo_library</span>
+            Портфолио
+          </a>
+          <a class="drawer-menu__link" onclick="scrollToContacts(); closeDrawer();">
+            <span class="material-symbols-outlined">mail</span>
+            Контакты
+          </a>
+        </nav>
+      </div>
+    </div>
+
     <!-- Screen Container - pages slide in/out here -->
     <div id="screen-container">
 
@@ -36,14 +86,6 @@
                 <h1 class="home-header__title">Здравствуйте, я<br>Косметолог Наталья</h1>
                 <p class="home-header__subtitle">Забота о вашей коже — моя профессия. Красота начинается с уверенности.</p>
               </div>
-            </div>
-            <div class="home-header__actions" style="display:flex; align-items:center; gap:0.25rem;">
-              <button class="home-header__theme" aria-label="Переключить тему" id="theme-toggle-btn">
-                <span class="material-symbols-outlined">light_mode</span>
-              </button>
-              <button class="home-header__bell" aria-label="Уведомления" id="bell-btn">
-                <span class="material-symbols-outlined">notifications</span>
-              </button>
             </div>
           </div>
         </header>
@@ -673,6 +715,169 @@
             </section>
           </div>
           <div class="booking-bar"><div class="booking-bar__price"><span class="price price--gradient">3 000 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 45 мин.</span></div><button class="btn-primary" onclick="scrollToContacts()">Записаться <span class="material-symbols-outlined">arrow_forward</span></button></div>
+      <!-- ==================== PRICE PAGE ==================== -->
+      <div class="screen" id="page-price" data-page="price">
+        <header class="detail-header">
+          <button class="detail-header__back" onclick="goBack()"><span class="material-symbols-outlined">arrow_back</span></button>
+          <h1 class="detail-header__title">Прайс-лист</h1>
+          <div class="detail-header__spacer"></div>
+        </header>
+        <main class="detail-main price-main">
+          <div class="price-list-wrapper animate-on-scroll">
+            
+            <div class="price-category">
+              <h3 class="price-category__title">Чистка лица</h3>
+              <div class="price-items">
+                <div class="price-item" onclick="navigateTo('chistka')">
+                  <div class="price-item__info">
+                    <h4>Комбинированная чистка лица</h4>
+                    <p>60 мин</p>
+                  </div>
+                  <div class="price-item__value">3 500 ₴</div>
+                </div>
+                <div class="price-item" onclick="navigateTo('ultrasound')">
+                  <div class="price-item__info">
+                    <h4>Ультразвуковая чистка лица</h4>
+                    <p>45 мин</p>
+                  </div>
+                  <div class="price-item__value">2 500 ₴</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="price-category">
+              <h3 class="price-category__title">Пилинги и Уход</h3>
+              <div class="price-items">
+                <div class="price-item" onclick="navigateTo('peeling')">
+                  <div class="price-item__info">
+                    <h4>Пилинг PRX-T33</h4>
+                    <p>40 мин</p>
+                  </div>
+                  <div class="price-item__value">4 000 ₴</div>
+                </div>
+                <div class="price-item" onclick="scrollToContacts()">
+                  <div class="price-item__info">
+                    <h4>Карбокситерапия</h4>
+                    <p>45 мин</p>
+                  </div>
+                  <div class="price-item__value">3 000 ₴</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="price-category">
+              <h3 class="price-category__title">Инъекционные методики</h3>
+              <div class="price-items">
+                <div class="price-item" onclick="navigateTo('injections')">
+                  <div class="price-item__info">
+                    <h4>Контурная пластика губ</h4>
+                    <p>60 мин</p>
+                  </div>
+                  <div class="price-item__value">от 12 000 ₴</div>
+                </div>
+                <div class="price-item" onclick="scrollToContacts()">
+                  <div class="price-item__info">
+                    <h4>Биоревитализация</h4>
+                    <p>60 мин</p>
+                  </div>
+                  <div class="price-item__value">от 6 000 ₴</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="price-category">
+              <h3 class="price-category__title">Массаж & Эпиляция</h3>
+              <div class="price-items">
+                <div class="price-item" onclick="navigateTo('massage')">
+                  <div class="price-item__info">
+                    <h4>Скульптурный массаж лица</h4>
+                    <p>50 мин</p>
+                  </div>
+                  <div class="price-item__value">3 800 ₴</div>
+                </div>
+                <div class="price-item" onclick="navigateTo('laser')">
+                  <div class="price-item__info">
+                    <h4>Лазерная эпиляция (комплекс)</h4>
+                    <p>30 мин</p>
+                  </div>
+                  <div class="price-item__value">от 2 500 ₴</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          
+          <section class="price-cta animate-on-scroll">
+            <button class="btn-primary" onclick="navigateTo('calendar')">
+              Перейти к записи
+              <span class="material-symbols-outlined">calendar_today</span>
+            </button>
+          </section>
+        </main>
+      </div>
+
+      <!-- ==================== PORTFOLIO PAGE ==================== -->
+      <div class="screen" id="page-portfolio" data-page="portfolio">
+        <header class="detail-header">
+          <button class="detail-header__back" onclick="goBack()"><span class="material-symbols-outlined">arrow_back</span></button>
+          <h1 class="detail-header__title">Портфолио</h1>
+          <div class="detail-header__spacer"></div>
+        </header>
+        <main class="detail-main portfolio-main">
+          <div class="portfolio-grid animate-on-scroll">
+            
+            <div class="portfolio-card glass-card">
+              <div class="portfolio-card__badge">Чистка + Пилинг</div>
+              <div class="portfolio-card__visual" style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);">
+                <span class="material-symbols-outlined">face</span>
+              </div>
+              <div class="portfolio-card__text">
+                <h4>Результат после комбинированной чистки</h4>
+                <p>Выравнивание рельефа кожи, очищение пор от комедонов и здоровый цвет лица уже после одной процедуры.</p>
+              </div>
+            </div>
+
+            <div class="portfolio-card glass-card">
+              <div class="portfolio-card__badge">Лифтинг</div>
+              <div class="portfolio-card__visual" style="background: linear-gradient(135deg, #cfd9df 0%, #e2ebf0 100%);">
+                <span class="material-symbols-outlined">spa</span>
+              </div>
+              <div class="portfolio-card__text">
+                <h4>Скульптурный массаж (курс 5 процедур)</h4>
+                <p>Заметный лифтинг-эффект, уменьшение отечности, выраженная линия челюсти и тонус мимических мышц.</p>
+              </div>
+            </div>
+
+            <div class="portfolio-card glass-card">
+              <div class="portfolio-card__badge">Инъекции</div>
+              <div class="portfolio-card__visual" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                <span class="material-symbols-outlined">water_drop</span>
+              </div>
+              <div class="portfolio-card__text">
+                <h4>Контурная пластика губ</h4>
+                <p>Увеличение объема и коррекция формы губ гиалуроновой кислотой. Естественный объем и четкий контур.</p>
+              </div>
+            </div>
+
+            <div class="portfolio-card glass-card">
+              <div class="portfolio-card__badge">Лазерная эпиляция</div>
+              <div class="portfolio-card__visual" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);">
+                <span class="material-symbols-outlined">flare</span>
+              </div>
+              <div class="portfolio-card__text">
+                <h4>Лазерная эпиляция (после 3 сеансов)</h4>
+                <p>Замедление роста волос на 70%, удаление вросших волос и гладкая кожа без раздражения.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <section class="portfolio-cta animate-on-scroll">
+            <button class="btn-primary" onclick="scrollToContacts()">
+              Консультация
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+          </section>
         </main>
       </div>
 
