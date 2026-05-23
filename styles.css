@@ -1357,22 +1357,23 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* Booking Bar */
 .booking-bar {
   position: fixed;
-  bottom: calc(62px + env(safe-area-inset-bottom, 12px));
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   max-width: 480px;
-  background: var(--surface-container-lowest);
+  background: linear-gradient(to bottom, var(--surface-container-lowest) 35%, transparent 100%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid var(--surface-variant);
+  border-radius: 24px 24px 0 0;
   padding: 1rem var(--page-margin);
-  padding-bottom: 1rem;
+  padding-bottom: calc(62px + env(safe-area-inset-bottom, 12px) + 1rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 90;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .booking-bar__price { display: flex; flex-direction: column; }
