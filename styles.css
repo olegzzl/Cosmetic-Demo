@@ -1834,6 +1834,19 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background-size: 16px;
 }
 
+.calendar-booking-form select:required:invalid {
+  color: var(--on-surface-variant);
+}
+
+.calendar-booking-form select option {
+  background-color: var(--surface-container-lowest);
+  color: var(--on-surface);
+}
+
+.calendar-booking-form select option:disabled {
+  color: var(--on-surface-variant);
+}
+
 [data-theme="light"] .calendar-booking-form select {
   background: var(--surface-container-lowest);
   border: 1px solid var(--outline-variant);
