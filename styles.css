@@ -2138,6 +2138,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   gap: 0.5rem;
 }
 
+.global-header__phone,
 .global-header__theme,
 .global-header__menu {
   background: none;
@@ -2152,18 +2153,22 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   cursor: pointer;
   transition: background var(--transition-fast);
   -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
 }
 
+.global-header__phone:hover,
 .global-header__theme:hover,
 .global-header__menu:hover {
   background: rgba(0, 0, 0, 0.04);
 }
 
+[data-theme="dark"] .global-header__phone:hover,
 [data-theme="dark"] .global-header__theme:hover,
 [data-theme="dark"] .global-header__menu:hover {
   background: rgba(255, 255, 255, 0.08);
 }
 
+.global-header__phone .material-symbols-outlined,
 .global-header__theme .material-symbols-outlined,
 .global-header__menu .material-symbols-outlined {
   font-size: 22px;
