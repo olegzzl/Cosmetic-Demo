@@ -1979,10 +1979,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   height: 100%;
   z-index: 1000;
   pointer-events: none;
+  visibility: hidden;
+  transition: visibility 0.35s;
 }
 
 .drawer-menu.active {
   pointer-events: auto;
+  visibility: visible;
 }
 
 .drawer-menu__overlay {
@@ -2008,7 +2011,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 280px;
   height: 100%;
   background: var(--surface);
-  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.25);
   transform: translateX(100%);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 999;
@@ -2020,6 +2022,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .drawer-menu.active .drawer-menu__content {
   transform: translateX(0);
+  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.25);
 }
 
 .drawer-menu__header {
