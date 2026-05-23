@@ -723,8 +723,8 @@ function initThemeToggle() {
   if (savedTheme) {
     document.documentElement.setAttribute('data-theme', savedTheme);
   } else {
-    // Default to dark since this is COSMETIC Black project
-    document.documentElement.setAttribute('data-theme', 'dark');
+    // Default to light
+    document.documentElement.setAttribute('data-theme', 'light');
   }
   
   updateThemeIcon();

@@ -1428,13 +1428,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #1e1e1e;
-  color: #ffffff;
+  background: #ffffff;
+  color: #121212;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all var(--transition-fast);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: none;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
@@ -1442,12 +1442,30 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: #1e1e1e;
   color: #ffffff;
   border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .social-btn:hover {
   transform: translateY(-2px) scale(1.05);
-  background: #2e2e2e;
+  background: #e2e2e2;
+  color: #121212;
   box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+[data-theme="light"] .social-btn:hover {
+  background: #333333;
+  color: #ffffff;
+}
+
+.social-btn:active {
+  transform: translateY(0) scale(0.95);
+  background: #a8a8a8;
+  color: #121212;
+}
+
+[data-theme="light"] .social-btn:active {
+  background: #000000;
+  color: #ffffff;
 }
 
 .social-btn svg {
