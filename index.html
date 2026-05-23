@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="light">
+<html lang="uk" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta name="referrer" content="no-referrer">
-  <title>Natalia Aesthetics — Косметолог Наталья</title>
-  <meta name="description" content="Профессиональный косметолог Наталья. Чистка лица, пилинги, инъекции, массаж лица, лазерная эпиляция. Записаться на консультацию.">
+  <title>Natalia Aesthetics — Косметолог Наталія</title>
+  <meta name="description" content="Професійний косметолог Наталія. Чистка обличчя, пілінги, ін'єкції, масаж обличчя, лазерна епіляція. Записатися на консультацію.">
   
   <!-- Google Fonts: Manrope -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,7 @@
       <div class="global-header__content">
         <span class="global-header__logo" onclick="navigateTo('home')">Natalia Aesthetics</span>
         <div class="global-header__actions">
-          <button class="global-header__theme" aria-label="Переключить тему" id="theme-toggle-btn">
+          <button class="global-header__theme" aria-label="Перемкнути тему" id="theme-toggle-btn">
             <span class="material-symbols-outlined">light_mode</span>
           </button>
           <button class="global-header__menu" aria-label="Меню" id="menu-btn" onclick="openDrawer()">
@@ -41,18 +41,18 @@
       <div class="drawer-menu__content">
         <div class="drawer-menu__header">
           <span class="drawer-menu__logo">Меню</span>
-          <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Закрыть меню" onclick="closeDrawer()">
+          <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Закрити меню" onclick="closeDrawer()">
             <span class="material-symbols-outlined">close</span>
           </button>
         </div>
         <nav class="drawer-menu__nav">
           <a class="drawer-menu__link" onclick="navigateTo('about'); closeDrawer();">
             <span class="material-symbols-outlined">person</span>
-            Обо мне
+            Про мене
           </a>
           <a class="drawer-menu__link" onclick="scrollToServices(); closeDrawer();">
             <span class="material-symbols-outlined">spa</span>
-            Услуги
+            Послуги
           </a>
           <a class="drawer-menu__link" onclick="navigateTo('price'); closeDrawer();">
             <span class="material-symbols-outlined">payments</span>
@@ -60,11 +60,11 @@
           </a>
           <a class="drawer-menu__link" onclick="navigateTo('portfolio'); closeDrawer();">
             <span class="material-symbols-outlined">photo_library</span>
-            Портфолио
+            Портфоліо
           </a>
           <a class="drawer-menu__link" onclick="scrollToContacts(); closeDrawer();">
             <span class="material-symbols-outlined">mail</span>
-            Контакты
+            Контакти
           </a>
         </nav>
       </div>
@@ -80,11 +80,11 @@
           <div class="home-header__content">
             <div class="home-header__left">
               <div class="home-header__avatar">
-                <img src="avatar.jpg" alt="Наталья Косметолог">
+                <img src="avatar.jpg" alt="Наталія Косметолог">
               </div>
               <div class="home-header__text">
-                <h1 class="home-header__title">Здравствуйте, я<br>Косметолог Наталья</h1>
-                <p class="home-header__subtitle">Забота о вашей коже — моя профессия. Красота начинается с уверенности.</p>
+                <h1 class="home-header__title">Вітаю, я<br>Косметолог Наталія</h1>
+                <p class="home-header__subtitle">Турбота про вашу шкіру — моя професія. Краса починається з впевненості.</p>
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@
           <!-- About Me Button -->
           <div class="home-about-btn-wrap animate-on-scroll">
             <button class="btn-pill btn-beige" onclick="navigateTo('about')">
-              Обо мне
+              Про мене
               <span class="material-symbols-outlined btn-icon">arrow_forward</span>
             </button>
           </div>
@@ -102,26 +102,26 @@
           <!-- Hero Banner -->
           <section class="hero-banner animate-on-scroll" onclick="navigateTo('natural-beauty')">
             <div class="hero-banner__text">
-              <h2 class="hero-banner__title">Откройте свою<br>естественную красоту</h2>
-              <p class="hero-banner__desc">Профессиональный уход<br>и индивидуальный подход<br>к вашей коже</p>
+              <h2 class="hero-banner__title">Відкрийте свою<br>природну красу</h2>
+              <p class="hero-banner__desc">Професійний догляд<br>та індивідуальний підхід<br>до вашої шкіри</p>
               <div class="hero-banner__link">
-                Узнать больше
+                Дізнатися більше
                 <span class="material-symbols-outlined">arrow_forward</span>
               </div>
             </div>
             <div class="hero-banner__image">
-              <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&q=80&w=600&h=600" alt="Естественная красота">
+              <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&q=80&w=600&h=600" alt="Природна краса">
             </div>
           </section>
 
           <!-- Portfolio Carousel Section -->
           <section class="portfolio-carousel-section animate-on-scroll">
-            <h3 class="home-section-title">Портфолио работ</h3>
+            <h3 class="home-section-title">Портфоліо робіт</h3>
             <div class="portfolio-carousel-wrapper">
-              <button class="portfolio-arrow portfolio-arrow--left" id="portfolio-arrow-left" aria-label="Предыдущий слайд" onclick="scrollPortfolio('left')">
+              <button class="portfolio-arrow portfolio-arrow--left" id="portfolio-arrow-left" aria-label="Попередній слайд" onclick="scrollPortfolio('left')">
                 <span class="material-symbols-outlined">chevron_left</span>
               </button>
-              <button class="portfolio-arrow portfolio-arrow--right" id="portfolio-arrow-right" aria-label="Следующий слайд" onclick="scrollPortfolio('right')">
+              <button class="portfolio-arrow portfolio-arrow--right" id="portfolio-arrow-right" aria-label="Наступний слайд" onclick="scrollPortfolio('right')">
                 <span class="material-symbols-outlined">chevron_right</span>
               </button>
               <div class="portfolio-carousel" id="portfolio-carousel">
@@ -130,12 +130,12 @@
                 <div class="portfolio-slide">
                   <div class="portfolio-slide__text">
                     <div>
-                      <span class="portfolio-slide__badge">Чистка лица</span>
-                      <h4 class="portfolio-slide__title">Комбинированная чистка</h4>
+                      <span class="portfolio-slide__badge">Чистка обличчя</span>
+                      <h4 class="portfolio-slide__title">Комбінована чистка</h4>
                     </div>
-                    <p class="portfolio-slide__desc">Сужение пор, ровный тон и здоровое сияние кожи.</p>
+                    <p class="portfolio-slide__desc">Звуження пор, рівний тон та здорове сяйво шкіри.</p>
                     <div class="portfolio-slide__link">
-                      Смотреть кейс
+                      Дивитися кейс
                       <span class="material-symbols-outlined">arrow_forward</span>
                     </div>
                   </div>
@@ -148,17 +148,17 @@
                 <div class="portfolio-slide">
                   <div class="portfolio-slide__text">
                     <div>
-                      <span class="portfolio-slide__badge">Массаж</span>
-                      <h4 class="portfolio-slide__title">Скульптурный массаж</h4>
+                      <span class="portfolio-slide__badge">Масаж</span>
+                      <h4 class="portfolio-slide__title">Скульптурний масаж</h4>
                     </div>
-                    <p class="portfolio-slide__desc">Выраженный лифтинг-эффект и снятие отечности.</p>
+                    <p class="portfolio-slide__desc">Виражений ліфтинг-ефект та зняття набряклості.</p>
                     <div class="portfolio-slide__link">
-                      Смотреть кейс
+                      Дивитися кейс
                       <span class="material-symbols-outlined">arrow_forward</span>
                     </div>
                   </div>
                   <div class="portfolio-slide__image">
-                    <img src="https://lh3.googleusercontent.com/aida/ADBb0uhMBjmWhyQD1dPO_gTLUB-2cY7bV5ap6BSIbxjZ6uKWTT_hT542e9OD5nn_hf2RvzqotaY_veu_rEQaET-KoY3udfhCabwGCMl1Hu_0Wi7BoAZBvy288PzJCHaebee6s19ksXzcnr-Kgt6kWSUETfJ2Lq59K9n2x7jlN2CkdU0NCB0aDM4t6FmMUWY1uUUok0lBGtHHNrccq0R9o7JgFy7eyqLF1EhL_6eqWg1kh1eb_z2Ura1CcRLFTXo" alt="Массаж">
+                    <img src="https://lh3.googleusercontent.com/aida/ADBb0uhMBjmWhyQD1dPO_gTLUB-2cY7bV5ap6BSIbxjZ6uKWTT_hT542e9OD5nn_hf2RvzqotaY_veu_rEQaET-KoY3udfhCabwGCMl1Hu_0Wi7BoAZBvy288PzJCHaebee6s19ksXzcnr-Kgt6kWSUETfJ2Lq59K9n2x7jlN2CkdU0NCB0aDM4t6FmMUWY1uUUok0lBGtHHNrccq0R9o7JgFy7eyqLF1EhL_6eqWg1kh1eb_z2Ura1CcRLFTXo" alt="Масаж">
                   </div>
                 </div>
 
@@ -166,17 +166,17 @@
                 <div class="portfolio-slide">
                   <div class="portfolio-slide__text">
                     <div>
-                      <span class="portfolio-slide__badge">Инъекции</span>
+                      <span class="portfolio-slide__badge">Ін'єкції</span>
                       <h4 class="portfolio-slide__title">Пластика губ</h4>
                     </div>
-                    <p class="portfolio-slide__desc">Естественное увеличение объема гиалуроновой кислотой.</p>
+                    <p class="portfolio-slide__desc">Природне збільшення об'єму гіалуроновою кислотою.</p>
                     <div class="portfolio-slide__link">
-                      Смотреть кейс
+                      Дивитися кейс
                       <span class="material-symbols-outlined">arrow_forward</span>
                     </div>
                   </div>
                   <div class="portfolio-slide__image">
-                    <img src="https://lh3.googleusercontent.com/aida/ADBb0ugTCbpdkBZm_9rNs0MUuMwQi_U0nqNJO4pMTIxQobmS0vhmrWAG5y9CEtfeUexxzBOgfBRxHdzJmUtn9NPmr6AslTQI3HNHw3zdhvSiVAxYK_imXQqFc_RABo_V0wJB4BFxg2IKTrm2Cl-jzocdQOEXd7CXnYps61sxR0JeOAZBw9JGoATCeUuJJs7hY1DhSokzXCmg5mH6kwcUJ-D3ytZCJIbGPtK3tco6HTY2W0rmY-SON6nxCW9sOP4" alt="Инъекции">
+                    <img src="https://lh3.googleusercontent.com/aida/ADBb0ugTCbpdkBZm_9rNs0MUuMwQi_U0nqNJO4pMTIxQobmS0vhmrWAG5y9CEtfeUexxzBOgfBRxHdzJmUtn9NPmr6AslTQI3HNHw3zdhvSiVAxYK_imXQqFc_RABo_V0wJB4BFxg2IKTrm2Cl-jzocdQOEXd7CXnYps61sxR0JeOAZBw9JGoATCeUuJJs7hY1DhSokzXCmg5mH6kwcUJ-D3ytZCJIbGPtK3tco6HTY2W0rmY-SON6nxCW9sOP4" alt="Ін'єкції">
                   </div>
                 </div>
 
@@ -187,29 +187,29 @@
           <!-- Grid: Services & About -->
           <section class="home-grid animate-on-scroll">
             <div class="home-grid__services" onclick="scrollToServices()">
-              <img src="https://lh3.googleusercontent.com/aida/ADBb0ugTCbpdkBZm_9rNs0MUuMwQi_U0nqNJO4pMTIxQobmS0vhmrWAG5y9CEtfeUexxzBOgfBRxHdzJmUtn9NPmr6AslTQI3HNHw3zdhvSiVAxYK_imXQqFc_RABo_V0wJB4BFxg2IKTrm2Cl-jzocdQOEXd7CXnYps61sxR0JeOAZBw9JGoATCeUuJJs7hY1DhSokzXCmg5mH6kwcUJ-D3ytZCJIbGPtK3tco6HTY2W0rmY-SON6nxCW9sOP4" alt="Услуги">
+              <img src="https://lh3.googleusercontent.com/aida/ADBb0ugTCbpdkBZm_9rNs0MUuMwQi_U0nqNJO4pMTIxQobmS0vhmrWAG5y9CEtfeUexxzBOgfBRxHdzJmUtn9NPmr6AslTQI3HNHw3zdhvSiVAxYK_imXQqFc_RABo_V0wJB4BFxg2IKTrm2Cl-jzocdQOEXd7CXnYps61sxR0JeOAZBw9JGoATCeUuJJs7hY1DhSokzXCmg5mH6kwcUJ-D3ytZCJIbGPtK3tco6HTY2W0rmY-SON6nxCW9sOP4" alt="Послуги">
               <div class="home-grid__overlay"></div>
               <div class="home-grid__services-text">
-                <h3>Услуги</h3>
-                <p>Все процедуры<br>для вашей красоты</p>
+                <h3>Послуги</h3>
+                <p>Усі процедури<br>для вашої краси</p>
                 <div class="home-grid__arrow"><span class="material-symbols-outlined">arrow_forward</span></div>
               </div>
             </div>
             <div class="home-grid__right">
               <div class="home-grid__about" onclick="navigateTo('about')">
-                <img src="avatar.jpg" alt="Обо мне">
+                <img src="avatar.jpg" alt="Про мене">
                 <div class="home-grid__overlay-dark"></div>
                 <div class="home-grid__about-icon"><span class="material-symbols-outlined">person</span></div>
                 <div class="home-grid__about-text">
-                  <h3>Обо мне</h3>
-                  <p>Мой подход<br>и опыт</p>
+                  <h3>Про мене</h3>
+                  <p>Мій підхід<br>та досвід</p>
                 </div>
               </div>
               <div class="home-grid__contacts" onclick="scrollToContacts()">
                 <div class="home-grid__contacts-icon"><span class="material-symbols-outlined">call</span></div>
                 <div class="home-grid__contacts-text">
-                  <h3>Контакты</h3>
-                  <p>Свяжитесь со мной удобным способом</p>
+                  <h3>Контакти</h3>
+                  <p>Зв'яжіться зі мною зручним способом</p>
                 </div>
               </div>
             </div>
@@ -218,22 +218,22 @@
           <!-- Popular Services -->
           <section class="popular-services animate-on-scroll">
             <div class="popular-services__header">
-              <h2>Популярные услуги</h2>
-              <button onclick="scrollToServices()" aria-label="Все услуги">
+              <h2>Популярні послуги</h2>
+              <button onclick="scrollToServices()" aria-label="Усі послуги">
                 <span class="material-symbols-outlined">arrow_forward</span>
               </button>
             </div>
             <div class="popular-services__list">
               <div class="service-list-item" onclick="navigateTo('chistka')">
-                <div><h3>Чистка лица</h3><p>Глубокое очищение и уход</p></div>
+                <div><h3>Чистка обличчя</h3><p>Глибоке очищення та догляд</p></div>
                 <div class="service-list-item__price">3 500 ₴</div>
               </div>
               <div class="service-list-item" onclick="navigateTo('peeling')">
-                <div><h3>Пилинг PRX-T33</h3><p>Омоложение без реабилитации</p></div>
+                <div><h3>Пілінг PRX-T33</h3><p>Омолодження без реабілітації</p></div>
                 <div class="service-list-item__price">4 000 ₴</div>
               </div>
               <div class="service-list-item" onclick="navigateTo('massage')">
-                <div><h3>Массаж лица</h3><p>Лифтинг и расслабление мышц</p></div>
+                <div><h3>Масаж обличчя</h3><p>Ліфтинг та розслаблення м'язів</p></div>
                 <div class="service-list-item__price">3 800 ₴</div>
               </div>
             </div>
@@ -242,59 +242,59 @@
         <!-- Services Section Appended -->
         <section id="services-section" style="padding-bottom: 2rem;">
         <main class="services-main">
-          <h1 class="services-title animate-on-scroll">Услуги косметолога</h1>
+          <h1 class="services-title animate-on-scroll">Послуги косметолога</h1>
           <div class="services-grid">
             <a class="service-card animate-on-scroll" onclick="navigateTo('chistka')">
               <div class="service-card__img">
-                <img src="https://lh3.googleusercontent.com/aida/ADBb0uhy9oQBzbH4Wd5rCEeIKd2SRtsBMat-Ht_6gPEIROjQnin1QZlCr0K3HzbEVz1NoXWuF9lSXMr7qckk2oyMqhViQUa5R4BRz5nlDLNm8t7qe5i1WYFs86Q18WdEmt3Fu-ZLhXd3iI-We_llCE_h83NwV5ymdl5u1H7dOWLe_C11oy_OhG4fQh7dqEryoWoInBHvSLY_U4fr1nP6oEBSO2dIqfAplZCW6DJ8T7LU6OFb1DgLW3YsDTEYkUw" alt="Чистка лица">
+                <img src="https://lh3.googleusercontent.com/aida/ADBb0uhy9oQBzbH4Wd5rCEeIKd2SRtsBMat-Ht_6gPEIROjQnin1QZlCr0K3HzbEVz1NoXWuF9lSXMr7qckk2oyMqhViQUa5R4BRz5nlDLNm8t7qe5i1WYFs86Q18WdEmt3Fu-ZLhXd3iI-We_llCE_h83NwV5ymdl5u1H7dOWLe_C11oy_OhG4fQh7dqEryoWoInBHvSLY_U4fr1nP6oEBSO2dIqfAplZCW6DJ8T7LU6OFb1DgLW3YsDTEYkUw" alt="Чистка обличчя">
               </div>
               <div class="service-card__label service-card__label--lavender">
-                <div><h3>Чистка лица</h3><p>Глубокое очищение<br>и уход</p></div>
+                <div><h3>Чистка обличчя</h3><p>Глибоке очищення<br>та догляд</p></div>
                 <span class="material-symbols-outlined service-card__arrow">arrow_forward</span>
               </div>
             </a>
             <a class="service-card animate-on-scroll" onclick="navigateTo('ultrasound')">
               <div class="service-card__img">
-                <img src="https://lh3.googleusercontent.com/aida/ADBb0uhMBjmWhyQD1dPO_gTLUB-2cY7bV5ap6BSIbxjZ6uKWTT_hT542e9OD5nn_hf2RvzqotaY_veu_rEQaET-KoY3udfhCabwGCMl1Hu_0Wi7BoAZBvy288PzJCHaebee6s19ksXzcnr-Kgt6kWSUETfJ2Lq59K9n2x7jlN2CkdU0NCB0aDM4t6FmMUWY1uUUok0lBGtHHNrccq0R9o7JgFy7eyqLF1EhL_6eqWg1kh1eb_z2Ura1CcRLFTXo" alt="Ультразвуковая чистка">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAInsOujGc-OWA6K_q1bNOTIW_Xbq2VEjZjCjd0vl62hdWU_1_kGeuVCcDPO_sEyEgDTrgukFP8f7GDvxh443huo8oVdwYEuzRNFUlIru6ijlR91EG7GOb2gAag7sPc5N1lDIOQb_YkMJWoreorjLKYC9Dlzd1ZudpUZilJdSVR4QXFdatRTZgtSgriXI_OymcacCI4rufzbHPsnm76e8po6004GlkdQeKhb-7eZlYVhlc4W40y5kcJK0av5zAPjO2jL3fwGvDhKDI" alt="Ультразвукова чистка">
               </div>
               <div class="service-card__label service-card__label--lavender-light">
-                <div><h3>Ультразвуковая<br>чистка</h3><p>Мягкое и деликатное<br>очищение</p></div>
+                <div><h3>Ультразвукова<br>чистка</h3><p>М'яке та делікатне<br>очищення</p></div>
                 <span class="material-symbols-outlined service-card__arrow">arrow_forward</span>
               </div>
             </a>
             <a class="service-card animate-on-scroll" onclick="navigateTo('injections')">
               <div class="service-card__img">
-                <img src="https://lh3.googleusercontent.com/aida/ADBb0ugTCbpdkBZm_9rNs0MUuMwQi_U0nqNJO4pMTIxQobmS0vhmrWAG5y9CEtfeUexxzBOgfBRxHdzJmUtn9NPmr6AslTQI3HNHw3zdhvSiVAxYK_imXQqFc_RABo_V0wJB4BFxg2IKTrm2Cl-jzocdQOEXd7CXnYps61sxR0JeOAZBw9JGoATCeUuJJs7hY1DhSokzXCmg5mH6kwcUJ-D3ytZCJIbGPtK3tco6HTY2W0rmY-SON6nxCW9sOP4" alt="Инъекции">
+                <img src="https://lh3.googleusercontent.com/aida/ADBb0ugTCbpdkBZm_9rNs0MUuMwQi_U0nqNJO4pMTIxQobmS0vhmrWAG5y9CEtfeUexxzBOgfBRxHdzJmUtn9NPmr6AslTQI3HNHw3zdhvSiVAxYK_imXQqFc_RABo_V0wJB4BFxg2IKTrm2Cl-jzocdQOEXd7CXnYps61sxR0JeOAZBw9JGoATCeUuJJs7hY1DhSokzXCmg5mH6kwcUJ-D3ytZCJIbGPtK3tco6HTY2W0rmY-SON6nxCW9sOP4" alt="Ін'єкції">
               </div>
               <div class="service-card__label service-card__label--lavender">
-                <div><h3>Инъекции</h3><p>Ботокс, филлеры<br>и биоревитализация</p></div>
+                <div><h3>Ін'єкції</h3><p>Ботокс, філери<br>та біоревіталізація</p></div>
                 <span class="material-symbols-outlined service-card__arrow">arrow_forward</span>
               </div>
             </a>
             <a class="service-card animate-on-scroll" onclick="navigateTo('peeling')">
               <div class="service-card__img">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcIAUOxlnihp5y-WtgsH1XVSJCF8aNkxvbZg5IK1e4b-hgMHuz9m5_9UpKUGDR-FJAjQvy_J5c4hapv5mhXY102SB6kHviaMILIWQvzMevJVU7egMYlK_7wp_pCXz68U98xImtAoETyy26c4iRWMnILfTRSMcILNOMxxvb9CRFMxd_ImV_yXz2vHvFCIpgq_bGHZ1KNTpsHSucZ6BO1T7hrYonUYXJ9IswNokzajOsVqd6w6NbwJzBSIbTcp4BOwtELrBfrD4jAqc" alt="Пилинги">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcIAUOxlnihp5y-WtgsH1XVSJCF8aNkxvbZg5IK1e4b-hgMHuz9m5_9UpKUGDR-FJAjQvy_J5c4hapv5mhXY102SB6kHviaMILIWQvzMevJVU7egMYlK_7wp_pCXz68U98xImtAoETyy26c4iRWMnILfTRSMcILNOMxxvb9CRFMxd_ImV_yXz2vHvFCIpgq_bGHZ1KNTpsHSucZ6BO1T7hrYonUYXJ9IswNokzajOsVqd6w6NbwJzBSIbTcp4BOwtELrBfrD4jAqc" alt="Пілінги">
               </div>
               <div class="service-card__label service-card__label--lavender">
-                <div><h3>Пилинги</h3><p>Обновление и сияние<br>кожи</p></div>
+                <div><h3>Пілінги</h3><p>Оновлення та сяйво<br>шкіри</p></div>
                 <span class="material-symbols-outlined service-card__arrow">arrow_forward</span>
               </div>
             </a>
             <a class="service-card animate-on-scroll" onclick="navigateTo('laser')">
               <div class="service-card__img">
-                <img src="https://lh3.googleusercontent.com/aida/ADBb0ug5zbBrDqBp2wjfIFHIFqCCcTF2oZncE1nEv3-HTWZfV2h-fp6qHWyDZaUo4RyE_sTLG0Ls9UrY4XGty8Lw0XVguVGyb_TOHCbPBcyMQEDfmMBXetjTTW_SRhhqHEwczTeOmRJQam5y_4o6c-OwPX-gSQDlqHpNhxUk-jXLt8aujYj-G6MP6iUlXcTQDcripsZlgVWKCPfy1pOW16bDOYNpToOeR0Zqq6CtbXQhnnxnuD8J5aXx3L-XLQ" alt="Лазерная эпиляция">
+                <img src="https://lh3.googleusercontent.com/aida/ADBb0ug5zbBrDqBp2wjfIFHIFqCCcTF2oZncE1nEv3-HTWZfV2h-fp6qHWyDZaUo4RyE_sTLG0Ls9UrY4XGty8Lw0XVguVGyb_TOHCbPBcyMQEDfmMBXetjTTW_SRhhqHEwczTeOmRJQam5y_4o6c-OwPX-gSQDlqHpNhxUk-jXLt8aujYj-G6MP6iUlXcTQDcripsZlgVWKCPfy1pOW16bDOYNpToOeR0Zqq6CtbXQhnnxnuD8J5aXx3L-XLQ" alt="Лазерна епіляція">
               </div>
               <div class="service-card__label service-card__label--lavender">
-                <div><h3>Лазерная эпиляция</h3><p>Гладкая кожа надолго</p></div>
+                <div><h3>Лазерна епіляція</h3><p>Гладенька шкіра надовго</p></div>
                 <span class="material-symbols-outlined service-card__arrow">arrow_forward</span>
               </div>
             </a>
             <a class="service-card animate-on-scroll" onclick="navigateTo('massage')">
               <div class="service-card__img">
-                <img src="https://lh3.googleusercontent.com/aida/ADBb0uhMBjmWhyQD1dPO_gTLUB-2cY7bV5ap6BSIbxjZ6uKWTT_hT542e9OD5nn_hf2RvzqotaY_veu_rEQaET-KoY3udfhCabwGCMl1Hu_0Wi7BoAZBvy288PzJCHaebee6s19ksXzcnr-Kgt6kWSUETfJ2Lq59K9n2x7jlN2CkdU0NCB0aDM4t6FmMUWY1uUUok0lBGtHHNrccq0R9o7JgFy7eyqLF1EhL_6eqWg1kh1eb_z2Ura1CcRLFTXo" alt="Массаж лица">
+                <img src="https://lh3.googleusercontent.com/aida/ADBb0uhMBjmWhyQD1dPO_gTLUB-2cY7bV5ap6BSIbxjZ6uKWTT_hT542e9OD5nn_hf2RvzqotaY_veu_rEQaET-KoY3udfhCabwGCMl1Hu_0Wi7BoAZBvy288PzJCHaebee6s19ksXzcnr-Kgt6kWSUETfJ2Lq59K9n2x7jlN2CkdU0NCB0aDM4t6FmMUWY1uUUok0lBGtHHNrccq0R9o7JgFy7eyqLF1EhL_6eqWg1kh1eb_z2Ura1CcRLFTXo" alt="Масаж обличчя">
               </div>
               <div class="service-card__label service-card__label--lavender-light">
-                <div><h3>Массаж лица</h3><p>Лифтинг и расслабление<br>мышц</p></div>
+                <div><h3>Масаж обличчя</h3><p>Ліфтинг та розслаблення<br>м'язів</p></div>
                 <span class="material-symbols-outlined service-card__arrow">arrow_forward</span>
               </div>
             </a>
@@ -302,10 +302,10 @@
           <!-- Consultation Block -->
           <div class="consultation-block animate-on-scroll">
             <div class="consultation-block__text">
-              <h2>Консультация<br>косметолога</h2>
-              <p>Определим потребности<br>и подберём уход</p>
+              <h2>Консультація<br>косметолога</h2>
+              <p>Визначимо потреби<br>та підберемо догляд</p>
               <button class="btn-pill btn-glass" onclick="scrollToContacts()">
-                Записаться
+                Записатися
                 <span class="material-symbols-outlined btn-icon">arrow_forward</span>
               </button>
             </div>
@@ -320,8 +320,8 @@
         <!-- Contacts Section -->
         <section id="contacts-section" class="contacts-section animate-on-scroll">
           <div class="contacts-section__header">
-            <h2>Контакты & Запись</h2>
-            <p>Оставьте сообщение или свяжитесь напрямую</p>
+            <h2>Контакти та запис</h2>
+            <p>Залиште повідомлення або зв'яжіться напряму</p>
           </div>
           
           <div class="contact-socials">
@@ -338,27 +338,27 @@
 
           <form id="contact-form" class="contact-form">
             <div class="form-group">
-              <label for="contact-name">Ваше имя</label>
-              <input type="text" id="contact-name" name="name" required placeholder="Введите ваше имя">
+              <label for="contact-name">Ваше ім'я</label>
+              <input type="text" id="contact-name" name="name" required placeholder="Введіть ваше ім'я">
             </div>
             <div class="form-group">
-              <label for="contact-phone">Напишите ваш телефон</label>
-              <input type="text" id="contact-phone" name="phone" required placeholder="Введите ваш телефон">
+              <label for="contact-phone">Напишіть ваш телефон</label>
+              <input type="text" id="contact-phone" name="phone" required placeholder="Введіть ваш телефон">
             </div>
             <div class="form-group">
-              <label for="contact-message">Сообщение</label>
-              <textarea id="contact-message" name="message" required placeholder="Какая услуга или вопрос вас интересует?" rows="4"></textarea>
+              <label for="contact-message">Повідомлення</label>
+              <textarea id="contact-message" name="message" required placeholder="Яка послуга або питання вас цікавить?" rows="4"></textarea>
             </div>
             
             <button type="submit" id="contact-submit" class="btn-primary btn-submit">
-              <span>Отправить сообщение</span>
+              <span>Надіслати повідомлення</span>
               <span class="material-symbols-outlined btn-icon">arrow_forward</span>
             </button>
           </form>
 
           <div id="form-toast" class="toast-message hidden">
             <span class="material-symbols-outlined toast-icon">check_circle</span>
-            <span id="toast-text" class="toast-text">Сообщение успешно отправлено!</span>
+            <span id="toast-text" class="toast-text">Повідомлення успішно надіслано!</span>
           </div>
         </section>
 </main>
@@ -369,7 +369,7 @@
       <div class="screen" id="page-natural-beauty" data-page="natural-beauty">
         <header class="detail-header">
           <button class="detail-header__back" onclick="goBack()"><span class="material-symbols-outlined">arrow_back</span></button>
-          <h1 class="detail-header__title">Естественная красота</h1>
+          <h1 class="detail-header__title">Природна краса</h1>
           <div class="detail-header__avatar">
             <img src="avatar.jpg" alt="Natalia">
           </div>
@@ -377,31 +377,31 @@
         <main class="detail-main">
           <section class="beauty-hero animate-on-scroll">
             <div class="beauty-hero__img">
-              <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&q=80&w=1000&h=600" alt="Красота">
+              <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&q=80&w=1000&h=600" alt="Краса">
             </div>
           </section>
           <section class="values-grid animate-on-scroll">
             <div class="value-card">
               <div class="value-card__icon"><span class="material-symbols-outlined">water_drop</span></div>
               <h3>Чистота</h3>
-              <p>Только проверенные, безопасные составы, бережно относящиеся к вашей коже.</p>
+              <p>Тільки перевірені, безпечні засоби, що дбайливо ставляться до вашої шкіри.</p>
             </div>
             <div class="value-card value-card--accent">
               <div class="value-card__icon"><span class="material-symbols-outlined">science</span></div>
               <h3>Наука</h3>
-              <p>Передовые технологии и доказательная медицина для видимого результата.</p>
+              <p>Передові технології та доказова медицина для видимого результату.</p>
             </div>
             <div class="value-card value-card--full">
               <div class="value-card__icon-row">
                 <div class="value-card__icon"><span class="material-symbols-outlined">self_improvement</span></div>
-                <h3>Индивидуальность</h3>
+                <h3>Індивідуальність</h3>
               </div>
-              <p>Каждая процедура адаптируется под уникальные потребности вашей кожи и ваше текущее состояние.</p>
+              <p>Кожна процедура адаптується під унікальні потреби вашої шкіри та ваш поточний стан.</p>
             </div>
           </section>
           <section class="beauty-cta animate-on-scroll">
             <button class="btn-primary" onclick="scrollToServices()">
-              Узнать о процедурах
+              Дізнатися про процедури
               <span class="material-symbols-outlined">arrow_forward</span>
             </button>
           </section>
@@ -412,48 +412,48 @@
       <div class="screen" id="page-about" data-page="about">
         <header class="detail-header">
           <button class="detail-header__back" onclick="goBack()"><span class="material-symbols-outlined">arrow_back</span></button>
-          <h1 class="detail-header__title">Обо мне</h1>
+          <h1 class="detail-header__title">Про мене</h1>
           <div class="detail-header__spacer"></div>
         </header>
         <main class="detail-main about-main">
           <section class="about-hero animate-on-scroll">
             <div class="about-hero__photo">
-              <img src="avatar.jpg" alt="Наталья">
+              <img src="avatar.jpg" alt="Наталія">
             </div>
-            <h2>Наталья</h2>
-            <p class="about-hero__role">Профессиональный косметолог</p>
+            <h2>Наталія</h2>
+            <p class="about-hero__role">Професійний косметолог</p>
           </section>
           <section class="about-philosophy animate-on-scroll">
-            <div class="about-section-header"><span class="material-symbols-outlined filled">spa</span><h3>Философия</h3></div>
-            <p>Мой подход к красоте основан на здоровье кожи и естественности. Я верю, что каждая уникальна, и моя цель — подчеркнуть вашу природную красоту, а не изменить её. Истинное сияние начинается с правильного ухода и любви к себе.</p>
+            <div class="about-section-header"><span class="material-symbols-outlined filled">spa</span><h3>Філософія</h3></div>
+            <p>Мій підхід до краси ґрунтується на здоров'ї шкіри та природності. Я вірю, що кожна людина унікальна, і моя мета — підкреслити вашу природну красу, а не змінити її. Справжнє сяйво починається з правильного догляду та любові до себе.</p>
           </section>
           <section class="about-expertise animate-on-scroll">
-            <h3 class="section-title">Мой опыт</h3>
+            <h3 class="section-title">Мій досвід</h3>
             <div class="expertise-grid">
               <div class="expertise-card">
                 <div class="expertise-card__icon"><span class="material-symbols-outlined">workspace_premium</span></div>
-                <h4>Высшее медицинское</h4>
-                <p>Врач-дерматовенеролог, косметолог. Более 7 лет непрерывной практики.</p>
+                <h4>Вища медична</h4>
+                <p>Лікар-дерматовенеролог, косметолог. Більше 7 років безперервної практики.</p>
               </div>
               <div class="expertise-card">
                 <div class="expertise-card__icon"><span class="material-symbols-outlined">school</span></div>
-                <h4>Сертификации</h4>
-                <p>Регулярное повышение квалификации в Европе и Украине. Топовые аппаратные методики.</p>
+                <h4>Сертифікації</h4>
+                <p>Регулярне підвищення кваліфікації в Європі та Україні. Топові апаратні методики.</p>
               </div>
               <div class="expertise-card expertise-card--full">
                 <div class="expertise-card__icon"><span class="material-symbols-outlined">science</span></div>
-                <h4>Инновационные подходы</h4>
-                <p>Использование только сертифицированных препаратов и современного оборудования с доказанной эффективностью.</p>
+                <h4>Інноваційні підходи</h4>
+                <p>Використання тільки сертифікованих препаратів та сучасного обладнання з доведеною ефективністю.</p>
               </div>
             </div>
           </section>
           <section class="about-approach animate-on-scroll">
-            <div class="about-section-header"><span class="material-symbols-outlined">favorite</span><h3>Мой подход</h3></div>
-            <p>Я не использую шаблонные протоколы. Каждая процедура подбирается строго индивидуально после детальной диагностики состояния кожи. В работе я применяю премиальные космецевтические бренды, гарантирующие видимый и долгий результат.</p>
+            <div class="about-section-header"><span class="material-symbols-outlined">favorite</span><h3>Мій підхід</h3></div>
+            <p>Я не використовую шаблонних протоколів. Кожна процедура підбирається суворо індивідуально після детальної діагностики стану шкіри. У роботі я застосовую преміальні космецевтичні бренды, які гарантують видимий та тривалий результат.</p>
           </section>
           <section class="about-cta animate-on-scroll">
             <button class="btn-outline-pill" onclick="scrollToContacts()">
-              Записаться на консультацию
+              Записатися на консультацію
               <span class="material-symbols-outlined">arrow_forward</span>
             </button>
           </section>
@@ -464,21 +464,21 @@
       <div class="screen" id="page-calendar" data-page="calendar">
         <header class="detail-header">
           <button class="detail-header__back" onclick="goBack()"><span class="material-symbols-outlined">arrow_back</span></button>
-          <h1 class="detail-header__title">Календарь записи</h1>
+          <h1 class="detail-header__title">Календар запису</h1>
           <div class="detail-header__spacer"></div>
         </header>
         <main class="detail-main calendar-main">
           <!-- Month selector -->
           <div class="calendar-month-selector">
-            <button id="prev-month-btn" class="calendar-month-btn" aria-label="Предыдущий месяц"><span class="material-symbols-outlined">chevron_left</span></button>
-            <h3 id="calendar-month-year">Май 2026</h3>
-            <button id="next-month-btn" class="calendar-month-btn" aria-label="Следующий месяц"><span class="material-symbols-outlined">chevron_right</span></button>
+            <button id="prev-month-btn" class="calendar-month-btn" aria-label="Попередній місяць"><span class="material-symbols-outlined">chevron_left</span></button>
+            <h3 id="calendar-month-year">Травень 2026</h3>
+            <button id="next-month-btn" class="calendar-month-btn" aria-label="Наступний місяць"><span class="material-symbols-outlined">chevron_right</span></button>
           </div>
 
           <!-- Calendar Grid -->
           <div class="calendar-grid-wrapper">
             <div class="calendar-weekdays">
-              <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+              <span>Пн</span><span>Вв</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Нд</span>
             </div>
             <div id="calendar-days" class="calendar-days">
               <!-- Dynamically populated -->
@@ -487,7 +487,7 @@
 
           <!-- Time slots -->
           <div class="calendar-slots-section animate-on-scroll">
-            <h3 class="section-title">Доступное время</h3>
+            <h3 class="section-title">Доступний час</h3>
             <div id="calendar-time-slots" class="time-slots-grid">
               <!-- Dynamically populated -->
             </div>
@@ -495,57 +495,57 @@
 
           <!-- Form to book -->
           <form id="calendar-booking-form" class="calendar-booking-form animate-on-scroll">
-            <h3 class="section-title">Данные для записи</h3>
+            <h3 class="section-title">Дані для запису</h3>
             <div class="form-group">
-              <label for="calendar-service">Выберите услугу</label>
+              <label for="calendar-service">Виберіть послугу</label>
               <div class="custom-dropdown" id="calendar-service-dropdown">
                 <div class="custom-dropdown__trigger">
-                  <span class="custom-dropdown__selected">Выберите процедуру</span>
+                  <span class="custom-dropdown__selected">Виберіть процедуру</span>
                   <span class="material-symbols-outlined custom-dropdown__arrow">expand_more</span>
                 </div>
                 <div class="custom-dropdown__options">
-                  <div class="custom-dropdown__option disabled selected" data-value="">Выберите процедуру</div>
-                  <div class="custom-dropdown__option" data-value="Чистка лица">Чистка лица (3 500 ₴)</div>
-                  <div class="custom-dropdown__option" data-value="Ультразвуковая чистка">Ультразвуковая чистка (2 500 ₴)</div>
-                  <div class="custom-dropdown__option" data-value="Инъекции">Инъекции (от 12 000 ₴)</div>
-                  <div class="custom-dropdown__option" data-value="Пилинги">Пилинг PRX-T33 (4 000 ₴)</div>
-                  <div class="custom-dropdown__option" data-value="Лазерная эпиляция">Лазерная эпиляция (от 2 500 ₴)</div>
-                  <div class="custom-dropdown__option" data-value="Массаж лица">Массаж лица (3 800 ₴)</div>
+                  <div class="custom-dropdown__option disabled selected" data-value="">Виберіть процедуру</div>
+                  <div class="custom-dropdown__option" data-value="Чистка обличчя">Чистка обличчя (3 500 ₴)</div>
+                  <div class="custom-dropdown__option" data-value="Ультразвукова чистка">Ультразвукова чистка (2 500 ₴)</div>
+                  <div class="custom-dropdown__option" data-value="Ін'єкції">Ін'єкції (від 12 000 ₴)</div>
+                  <div class="custom-dropdown__option" data-value="Пілінги">Пілінг PRX-T33 (4 000 ₴)</div>
+                  <div class="custom-dropdown__option" data-value="Лазерна епіляція">Лазерна епіляція (від 2 500 ₴)</div>
+                  <div class="custom-dropdown__option" data-value="Масаж обличчя">Масаж обличчя (3 800 ₴)</div>
                 </div>
                 <select id="calendar-service" name="service" required style="display: none;">
-                  <option value="" disabled selected>Выберите процедуру</option>
-                  <option value="Чистка лица">Чистка лица</option>
-                  <option value="Ультразвуковая чистка">Ультразвуковая чистка</option>
-                  <option value="Инъекции">Инъекции</option>
-                  <option value="Пилинги">Пилинги</option>
-                  <option value="Лазерная эпиляция">Лазерная эпиляция</option>
-                  <option value="Массаж лица">Массаж лица</option>
+                  <option value="" disabled selected>Виберіть процедуру</option>
+                  <option value="Чистка обличчя">Чистка обличчя</option>
+                  <option value="Ультразвукова чистка">Ультразвукова чистка</option>
+                  <option value="Ін'єкції">Ін'єкції</option>
+                  <option value="Пілінги">Пілінги</option>
+                  <option value="Лазерна епіляція">Лазерна епіляція</option>
+                  <option value="Масаж обличчя">Масаж обличчя</option>
                 </select>
               </div>
             </div>
             <div class="form-group">
-              <label for="calendar-name">Ваше имя</label>
-              <input type="text" id="calendar-name" name="name" required placeholder="Введите ваше имя">
+              <label for="calendar-name">Ваше ім'я</label>
+              <input type="text" id="calendar-name" name="name" required placeholder="Введіть ваше ім'я">
             </div>
             <div class="form-group">
-              <label for="calendar-phone">Напишите ваш телефон</label>
-              <input type="text" id="calendar-phone" name="phone" required placeholder="Введите ваш телефон">
+              <label for="calendar-phone">Напишіть ваш телефон</label>
+              <input type="text" id="calendar-phone" name="phone" required placeholder="Введіть ваш телефон">
             </div>
 
             <!-- Selected info summary -->
             <div class="booking-summary hidden" id="booking-summary">
-              Выбрано: <span id="summary-date-time" class="summary-highlight"></span>
+              Вибрано: <span id="summary-date-time" class="summary-highlight"></span>
             </div>
 
             <button type="submit" id="calendar-submit" class="btn-primary btn-submit">
-              <span>Забронировать</span>
+              <span>Забронювати</span>
               <span class="material-symbols-outlined btn-icon">event_available</span>
             </button>
           </form>
 
           <div id="calendar-toast" class="toast-message hidden">
             <span class="material-symbols-outlined toast-icon">check_circle</span>
-            <span id="calendar-toast-text" class="toast-text">Вы успешно записаны!</span>
+            <span id="calendar-toast-text" class="toast-text">Вас успішно записано!</span>
           </div>
         </main>
       </div>
@@ -559,30 +559,30 @@
         </header>
         <main class="detail-main detail-main--no-pad-top">
           <div class="service-hero">
-            <img src="https://lh3.googleusercontent.com/aida/ADBb0uhy9oQBzbH4Wd5rCEeIKd2SRtsBMat-Ht_6gPEIROjQnin1QZlCr0K3HzbEVz1NoXWuF9lSXMr7qckk2oyMqhViQUa5R4BRz5nlDLNm8t7qe5i1WYFs86Q18WdEmt3Fu-ZLhXd3iI-We_llCE_h83NwV5ymdl5u1H7dOWLe_C11oy_OhG4fQh7dqEryoWoInBHvSLY_U4fr1nP6oEBSO2dIqfAplZCW6DJ8T7LU6OFb1DgLW3YsDTEYkUw" alt="Чистка лица">
+            <img src="https://lh3.googleusercontent.com/aida/ADBb0uhy9oQBzbH4Wd5rCEeIKd2SRtsBMat-Ht_6gPEIROjQnin1QZlCr0K3HzbEVz1NoXWuF9lSXMr7qckk2oyMqhViQUa5R4BRz5nlDLNm8t7qe5i1WYFs86Q18WdEmt3Fu-ZLhXd3iI-We_llCE_h83NwV5ymdl5u1H7dOWLe_C11oy_OhG4fQh7dqEryoWoInBHvSLY_U4fr1nP6oEBSO2dIqfAplZCW6DJ8T7LU6OFb1DgLW3YsDTEYkUw" alt="Чистка обличчя">
             <div class="service-hero__gradient"></div>
-            <div class="service-hero__text service-hero__text--white"><h2>Чистка лица</h2></div>
+            <div class="service-hero__text service-hero__text--white"><h2>Чистка обличчя</h2></div>
           </div>
           <div class="service-content">
-            <section class="glass-panel animate-on-scroll"><h3 class="section-label">О процедуре</h3><p>Глубокое очищение кожи, направленное на удаление комедонов, излишков себума и ороговевших клеток. Процедура восстанавливает дыхание кожи, улучшает микроциркуляцию и подготавливает лицо к дальнейшему уходу, придавая здоровое сияние.</p></section>
-            <section class="animate-on-scroll"><h3 class="section-heading">Преимущества</h3>
+            <section class="glass-panel animate-on-scroll"><h3 class="section-label">Про процедуру</h3><p>Глибоке очищення шкіри, спрямоване на видалення комедонів, надлишків себуму та ороговілих клітин. Процедура відновлює дихання шкіри, покращує мікроциркуляцію та готує обличчя до подальшого догляду, надаючи здорового сяйва.</p></section>
+            <section class="animate-on-scroll"><h3 class="section-heading">Переваги</h3>
               <div class="benefits-grid">
-                <div class="benefit-card"><span class="material-symbols-outlined">water_drop</span><span>Глубокое очищение</span></div>
-                <div class="benefit-card"><span class="material-symbols-outlined">spa</span><span>Улучшение текстуры</span></div>
-                <div class="benefit-card"><span class="material-symbols-outlined">flare</span><span>Здоровое сияние</span></div>
-                <div class="benefit-card"><span class="material-symbols-outlined">check_circle</span><span>Сужение пор</span></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">water_drop</span><span>Глибоке очищення</span></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">spa</span><span>Покращення текстури</span></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">flare</span><span>Здорове сяйво</span></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">check_circle</span><span>Звуження пор</span></div>
               </div>
             </section>
-            <section class="animate-on-scroll"><h3 class="section-heading">Этапы процедуры</h3>
+            <section class="animate-on-scroll"><h3 class="section-heading">Етапи процедури</h3>
               <div class="steps-timeline">
-                <div class="step"><div class="step__dot step__dot--active"></div><div class="step__content"><h4>1. Демакияж и подготовка</h4><p>Мягкое удаление косметики и поверхностных загрязнений.</p></div></div>
-                <div class="step"><div class="step__dot step__dot--active"></div><div class="step__content"><h4>2. Распаривание или холодное гидрирование</h4><p>Открытие пор для облегчения глубокой чистки.</p></div></div>
-                <div class="step"><div class="step__dot step__dot--active"></div><div class="step__content"><h4>3. Экстракция</h4><p>Бережное удаление комедонов и сальных пробок.</p></div></div>
-                <div class="step"><div class="step__dot"></div><div class="step__content"><h4>4. Успокаивающая маска</h4><p>Снятие покраснений и сужение пор.</p></div></div>
+                <div class="step"><div class="step__dot step__dot--active"></div><div class="step__content"><h4>1. Демакіяж та підготовка</h4><p>М'яке видалення косметики та поверхневих забруднень.</p></div></div>
+                <div class="step"><div class="step__dot step__dot--active"></div><div class="step__content"><h4>2. Розпарювання або холодне гідрування</h4><p>Відкриття пор для полегшення глибокої чистки.</p></div></div>
+                <div class="step"><div class="step__dot step__dot--active"></div><div class="step__content"><h4>3. Екстракція</h4><p>Дбайливе видалення комедонів та сальних пробок.</p></div></div>
+                <div class="step"><div class="step__dot"></div><div class="step__content"><h4>4. Заспокійлива маска</h4><p>Зняття почервонінь та звуження пор.</p></div></div>
               </div>
             </section>
           </div>
-          <div class="booking-bar"><div class="booking-bar__price"><span class="price">3 500 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 60 мин</span></div><button class="btn-primary" onclick="scrollToContacts()">Записаться</button></div>
+          <div class="booking-bar"><div class="booking-bar__price"><span class="price">3 500 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 60 хв</span></div><button class="btn-primary" onclick="scrollToContacts()">Записатися</button></div>
         </main>
       </div>
 
@@ -597,33 +597,33 @@
         </header>
         <main class="detail-main detail-main--no-pad-top">
           <div class="service-hero service-hero--tall">
-            <img src="https://lh3.googleusercontent.com/aida/ADBb0uhMBjmWhyQD1dPO_gTLUB-2cY7bV5ap6BSIbxjZ6uKWTT_hT542e9OD5nn_hf2RvzqotaY_veu_rEQaET-KoY3udfhCabwGCMl1Hu_0Wi7BoAZBvy288PzJCHaebee6s19ksXzcnr-Kgt6kWSUETfJ2Lq59K9n2x7jlN2CkdU0NCB0aDM4t6FmMUWY1uUUok0lBGtHHNrccq0R9o7JgFy7eyqLF1EhL_6eqWg1kh1eb_z2Ura1CcRLFTXo" alt="Массаж лица">
+            <img src="https://lh3.googleusercontent.com/aida/ADBb0uhMBjmWhyQD1dPO_gTLUB-2cY7bV5ap6BSIbxjZ6uKWTT_hT542e9OD5nn_hf2RvzqotaY_veu_rEQaET-KoY3udfhCabwGCMl1Hu_0Wi7BoAZBvy288PzJCHaebee6s19ksXzcnr-Kgt6kWSUETfJ2Lq59K9n2x7jlN2CkdU0NCB0aDM4t6FmMUWY1uUUok0lBGtHHNrccq0R9o7JgFy7eyqLF1EhL_6eqWg1kh1eb_z2Ura1CcRLFTXo" alt="Масаж обличчя">
             <div class="service-hero__gradient service-hero__gradient--soft"></div>
-            <div class="service-hero__text"><span class="service-hero__badge service-hero__badge--lavender"><span class="material-symbols-outlined" style="font-size:14px">spa</span> WELLNESS</span><h2>Массаж лица</h2><p class="service-hero__sub">Лифтинг и расслабление мышц</p></div>
+            <div class="service-hero__text"><span class="service-hero__badge service-hero__badge--lavender"><span class="material-symbols-outlined" style="font-size:14px">spa</span> WELLNESS</span><h2>Масаж обличчя</h2><p class="service-hero__sub">Ліфтинг та розслаблення м'язів</p></div>
           </div>
           <div class="service-content">
             <section class="overview-card animate-on-scroll">
               <div class="overview-card__icon"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">info</span></div>
-              <div><h3>Обзор</h3><p>Глубокий мануальный массаж, сочетающий скульптурные и расслабляющие техники. Направлен на проработку мышц лица, шеи и зоны декольте для достижения видимого эффекта омоложения и снятия напряжения.</p></div>
+              <div><h3>Огляд</h3><p>Глибокий мануальний масаж, що поєднує скульптурні та розслаблювальні техніки. Спрямований на опрацювання м'язів обличчя, шиї та зони декольте для досягнення видимого ефекту омолодження та зняття напруги.</p></div>
             </section>
-            <section class="animate-on-scroll"><h3 class="section-heading">Преимущества</h3>
+            <section class="animate-on-scroll"><h3 class="section-heading">Переваги</h3>
               <div class="benefits-grid">
-                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">water_drop</span><h4>Лимфодренаж</h4><p>Устранение отеков</p></div>
-                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">face_retouching_natural</span><h4>Лифтинг</h4><p>Естественная подтяжка</p></div>
-                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">self_improvement</span><h4>Антистресс</h4><p>Снятие зажимов</p></div>
-                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">vital_signs</span><h4>Кровоток</h4><p>Здоровое сияние</p></div>
+                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">water_drop</span><h4>Лімфодренаж</h4><p>Усунення набряків</p></div>
+                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">face_retouching_natural</span><h4>Ліфтинг</h4><p>Природна підтяжка</p></div>
+                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">self_improvement</span><h4>Антистрес</h4><p>Зняття затисків</p></div>
+                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">vital_signs</span><h4>Кровотік</h4><p>Здорове сяйво</p></div>
               </div>
             </section>
-            <section class="steps-card animate-on-scroll"><h3 class="section-heading">Этапы процедуры</h3>
+            <section class="steps-card animate-on-scroll"><h3 class="section-heading">Етапи процедури</h3>
               <div class="steps-numbered">
-                <div class="step-n"><div class="step-n__num">1</div><div><h4>Глубокое очищение</h4><p>Подготовка кожи к массажу с использованием мягких средств.</p></div></div>
-                <div class="step-n"><div class="step-n__num step-n__num--active">2</div><div><h4>Скульптурная техника</h4><p>Интенсивная проработка мышц каркаса лица.</p></div></div>
-                <div class="step-n"><div class="step-n__num">3</div><div><h4>Мануальное расслабление</h4><p>Снятие гипертонуса и спазмов в зонах напряжения.</p></div></div>
-                <div class="step-n"><div class="step-n__num">4</div><div><h4>Успокаивающая маска</h4><p>Завершающий этап для увлажнения и закрепления результата.</p></div></div>
+                <div class="step-n"><div class="step-n__num">1</div><div><h4>Глибоке очищення</h4><p>Підготовка шкіри до масажу з використанням м'яких засобів.</p></div></div>
+                <div class="step-n"><div class="step-n__num step-n__num--active">2</div><div><h4>Скульптурна техніка</h4><p>Інтенсивне опрацювання каркасних м'язів обличчя.</p></div></div>
+                <div class="step-n"><div class="step-n__num">3</div><div><h4>Мануальне розслаблення</h4><p>Зняття гіпертонусу та спазмів у зонах напруги.</p></div></div>
+                <div class="step-n"><div class="step-n__num">4</div><div><h4>Заспокійлива маска</h4><p>Завершальний етап для зволоження та закріплення результату.</p></div></div>
               </div>
             </section>
           </div>
-          <div class="booking-bar"><div class="booking-bar__price"><span class="price">3 800 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 50 мин</span></div><button class="btn-primary" onclick="scrollToContacts()">Записаться</button></div>
+          <div class="booking-bar"><div class="booking-bar__price"><span class="price">3 800 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 50 хв</span></div><button class="btn-primary" onclick="scrollToContacts()">Записатися</button></div>
         </main>
       </div>
 
@@ -631,35 +631,35 @@
       <div class="screen" id="page-laser" data-page="laser">
         <header class="detail-header">
           <button class="detail-header__back" onclick="goBack()"><span class="material-symbols-outlined">arrow_back</span></button>
-          <h1 class="detail-header__title" id="laser-header-title" style="opacity:0;transition:opacity .3s">Лазерная эпиляция</h1>
+          <h1 class="detail-header__title" id="laser-header-title" style="opacity:0;transition:opacity .3s">Лазерна епіляція</h1>
           <div class="detail-header__spacer"></div>
         </header>
         <main class="detail-main detail-main--no-pad-top">
           <div class="service-hero service-hero--dark">
-            <img src="https://lh3.googleusercontent.com/aida/ADBb0ug5zbBrDqBp2wjfIFHIFqCCcTF2oZncE1nEv3-HTWZfV2h-fp6qHWyDZaUo4RyE_sTLG0Ls9UrY4XGty8Lw0XVguVGyb_TOHCbPBcyMQEDfmMBXetjTTW_SRhhqHEwczTeOmRJQam5y_4o6c-OwPX-gSQDlqHpNhxUk-jXLt8aujYj-G6MP6iUlXcTQDcripsZlgVWKCPfy1pOW16bDOYNpToOeR0Zqq6CtbXQhnnxnuD8J5aXx3L-XLQ" alt="Лазерная эпиляция">
+            <img src="https://lh3.googleusercontent.com/aida/ADBb0ug5zbBrDqBp2wjfIFHIFqCCcTF2oZncE1nEv3-HTWZfV2h-fp6qHWyDZaUo4RyE_sTLG0Ls9UrY4XGty8Lw0XVguVGyb_TOHCbPBcyMQEDfmMBXetjTTW_SRhhqHEwczTeOmRJQam5y_4o6c-OwPX-gSQDlqHpNhxUk-jXLt8aujYj-G6MP6iUlXcTQDcripsZlgVWKCPfy1pOW16bDOYNpToOeR0Zqq6CtbXQhnnxnuD8J5aXx3L-XLQ" alt="Лазерна епіляція">
             <div class="service-hero__gradient service-hero__gradient--dark"></div>
-            <div class="service-hero__text service-hero__text--white"><span class="service-hero__badge service-hero__badge--glass"><span class="material-symbols-outlined" style="font-size:16px;font-variation-settings:'FILL' 1">star</span> Premium</span><h2>Лазерная эпиляция</h2><p class="service-hero__sub">Гладкая кожа надолго</p></div>
+            <div class="service-hero__text service-hero__text--white"><span class="service-hero__badge service-hero__badge--glass"><span class="material-symbols-outlined" style="font-size:16px;font-variation-settings:'FILL' 1">star</span> Premium</span><h2>Лазерна епіляція</h2><p class="service-hero__sub">Гладенька шкіра надовго</p></div>
           </div>
           <div class="service-content">
-            <section class="overview-simple animate-on-scroll"><h3>Обзор</h3><p>Инновационная технология диодного лазера обеспечивает безболезненное и эффективное удаление нежелательных волос. Процедура комфортна благодаря встроенной системе охлаждения и подходит для чувствительных зон.</p></section>
-            <section class="animate-on-scroll"><h3 class="section-heading">Преимущества</h3>
+            <section class="overview-simple animate-on-scroll"><h3>Огляд</h3><p>Інноваційна технологія діодного лазера забезпечує безболісне та ефективне видалення небажаного волосся. Процедура є комфортною завдяки вбудованій системі охолодження і підходить для чутливих зон.</p></section>
+            <section class="animate-on-scroll"><h3 class="section-heading">Переваги</h3>
               <div class="benefits-grid">
-                <div class="benefit-card"><span class="material-symbols-outlined">schedule</span><span>Долгий эффект</span></div>
-                <div class="benefit-card"><span class="material-symbols-outlined">spa</span><span>Без боли</span></div>
-                <div class="benefit-card benefit-card--tinted"><span class="material-symbols-outlined">face</span><span>Все типы кожи</span></div>
-                <div class="benefit-card benefit-card--tinted"><span class="material-symbols-outlined">verified_user</span><span>Безопасно</span></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">schedule</span><span>Тривалий ефект</span></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">spa</span><span>Без болю</span></div>
+                <div class="benefit-card benefit-card--tinted"><span class="material-symbols-outlined">face</span><span>Усі типи шкіри</span></div>
+                <div class="benefit-card benefit-card--tinted"><span class="material-symbols-outlined">verified_user</span><span>Безпечно</span></div>
               </div>
             </section>
-            <section class="overview-simple animate-on-scroll"><h3>Как проходит процедура</h3>
+            <section class="overview-simple animate-on-scroll"><h3>Як проходить процедура</h3>
               <div class="steps-numbered">
-                <div class="step-n"><div class="step-n__num step-n__num--active">1</div><div><h4>Настройка параметров</h4><p>Специалист подбирает индивидуальные настройки лазера.</p></div></div>
-                <div class="step-n"><div class="step-n__num">2</div><div><h4>Охлаждающий гель</h4><p>Нанесение специального геля для защиты кожи и лучшего скольжения.</p></div></div>
-                <div class="step-n"><div class="step-n__num">3</div><div><h4>Обработка лазером</h4><p>Непосредственное воздействие диодного лазера на волосяные фолликулы.</p></div></div>
-                <div class="step-n"><div class="step-n__num">4</div><div><h4>Пост-уход</h4><p>Очищение кожи и нанесение успокаивающего крема.</p></div></div>
+                <div class="step-n"><div class="step-n__num step-n__num--active">1</div><div><h4>Налаштування параметрів</h4><p>Спеціаліст підбирає індивідуальні налаштування лазера.</p></div></div>
+                <div class="step-n"><div class="step-n__num">2</div><div><h4>Охолоджувальний гель</h4><p>Нанесення спеціального гелю для захисту шкіри та кращого ковзання.</p></div></div>
+                <div class="step-n"><div class="step-n__num">3</div><div><h4>Обробка лазером</h4><p>Безпосередній вплив діодного лазера на волосяні фолікули.</p></div></div>
+                <div class="step-n"><div class="step-n__num">4</div><div><h4>Пост-догляд</h4><p>Очищення шкіри та нанесення заспокійливого крему.</p></div></div>
               </div>
             </section>
           </div>
-          <div class="booking-bar"><div class="booking-bar__price"><span class="price-label">Стоимость</span><span class="price">от 2 500 ₴</span><span class="duration"><span class="material-symbols-outlined">timer</span> 30 мин</span></div><button class="btn-primary" onclick="scrollToContacts()">Записаться</button></div>
+          <div class="booking-bar"><div class="booking-bar__price"><span class="price-label">Вартість</span><span class="price">від 2 500 ₴</span><span class="duration"><span class="material-symbols-outlined">timer</span> 30 хв</span></div><button class="btn-primary" onclick="scrollToContacts()">Записатися</button></div>
         </main>
       </div>
 
@@ -674,30 +674,30 @@
         </header>
         <main class="detail-main detail-main--no-pad-top">
           <div class="service-hero service-hero--dark">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcIAUOxlnihp5y-WtgsH1XVSJCF8aNkxvbZg5IK1e4b-hgMHuz9m5_9UpKUGDR-FJAjQvy_J5c4hapv5mhXY102SB6kHviaMILIWQvzMevJVU7egMYlK_7wp_pCXz68U98xImtAoETyy26c4iRWMnILfTRSMcILNOMxxvb9CRFMxd_ImV_yXz2vHvFCIpgq_bGHZ1KNTpsHSucZ6BO1T7hrYonUYXJ9IswNokzajOsVqd6w6NbwJzBSIbTcp4BOwtELrBfrD4jAqc" alt="Пилинги">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcIAUOxlnihp5y-WtgsH1XVSJCF8aNkxvbZg5IK1e4b-hgMHuz9m5_9UpKUGDR-FJAjQvy_J5c4hapv5mhXY102SB6kHviaMILIWQvzMevJVU7egMYlK_7wp_pCXz68U98xImtAoETyy26c4iRWMnILfTRSMcILNOMxxvb9CRFMxd_ImV_yXz2vHvFCIpgq_bGHZ1KNTpsHSucZ6BO1T7hrYonUYXJ9IswNokzajOsVqd6w6NbwJzBSIbTcp4BOwtELrBfrD4jAqc" alt="Пілінги">
             <div class="service-hero__gradient service-hero__gradient--dark"></div>
-            <div class="service-hero__text service-hero__text--white"><span class="service-hero__badge service-hero__badge--glass"><span class="material-symbols-outlined" style="font-size:14px">spa</span> КОСМЕТОЛОГИЯ</span><h2>Пилинги</h2><p class="service-hero__sub">Обновление и сияние кожи</p></div>
+            <div class="service-hero__text service-hero__text--white"><span class="service-hero__badge service-hero__badge--glass"><span class="material-symbols-outlined" style="font-size:14px">spa</span> КОСМЕТОЛОГІЯ</span><h2>Пілінги</h2><p class="service-hero__sub">Оновлення та сяйво шкіри</p></div>
           </div>
           <div class="service-content">
-            <section class="animate-on-scroll"><p class="body-text">Профессиональные химические и органические пилинги для глубокого обновления кожи. Процедура деликатно отшелушивает ороговевший слой, стимулирует клеточную регенерацию и выработку коллагена, возвращая лицу здоровое сияние и свежесть.</p></section>
-            <section class="animate-on-scroll"><h3 class="section-heading">Эффект</h3>
+            <section class="animate-on-scroll"><p class="body-text">Професійні хімічні та органічні пілінги для глибокого оновлення шкіри. Процедура делікатно відлущує ороговілий шар, стимулює клітинну регенерацію та вироблення колагену, повертаючи обличчю здорове сяйво та свіжість.</p></section>
+            <section class="animate-on-scroll"><h3 class="section-heading">Ефект</h3>
               <div class="benefits-grid">
-                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined">water_drop</span><span>Ровный тон</span></div>
-                <div class="benefit-card"><span class="material-symbols-outlined">auto_awesome</span><span>Уменьшение пигментации</span></div>
-                <div class="benefit-card"><span class="material-symbols-outlined">flare</span><span>Эффект сияния</span></div>
-                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined">lens_blur</span><span>Сужение пор</span></div>
+                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined">water_drop</span><span>Рівний тон</span></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">auto_awesome</span><span>Зменшення пігментації</span></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">flare</span><span>Ефект сяйва</span></div>
+                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined">lens_blur</span><span>Звуження пор</span></div>
               </div>
             </section>
-            <section class="animate-on-scroll"><h3 class="section-heading">Этапы процедуры</h3>
+            <section class="animate-on-scroll"><h3 class="section-heading">Етапи процедури</h3>
               <div class="steps-numbered">
-                <div class="step-n"><div class="step-n__num">1</div><div><h4>Очищение и подготовка</h4><p>Демакияж и мягкое очищение кожи перед нанесением активного состава.</p></div></div>
-                <div class="step-n"><div class="step-n__num step-n__num--active">2</div><div><h4>Нанесение кислот</h4><p>Индивидуальный подбор и нанесение пилингового состава в зависимости от типа кожи.</p></div></div>
-                <div class="step-n"><div class="step-n__num">3</div><div><h4>Нейтрализация</h4><p>Снятие состава специальным нейтрализатором для остановки реакции.</p></div></div>
-                <div class="step-n"><div class="step-n__num">4</div><div><h4>Уход и защита</h4><p>Нанесение успокаивающей маски и крема с SPF для защиты обновленной кожи.</p></div></div>
+                <div class="step-n"><div class="step-n__num">1</div><div><h4>Очищення та підготовка</h4><p>Демакіяж та м'яке очищення шкіри перед нанесенням активного складу.</p></div></div>
+                <div class="step-n"><div class="step-n__num step-n__num--active">2</div><div><h4>Нанесення кислот</h4><p>Індівидуальний підбір та нанесення пілінгового складу залежно від типу шкіри.</p></div></div>
+                <div class="step-n"><div class="step-n__num">3</div><div><h4>Нейтралізація</h4><p>Зняття складу спеціальним нейтралізатором для зупинки реакції.</p></div></div>
+                <div class="step-n"><div class="step-n__num">4</div><div><h4>Догляд та захист</h4><p>Нанесення заспокійливої маски та крему з SPF для захисту оновленої шкіри.</p></div></div>
               </div>
             </section>
           </div>
-          <div class="booking-bar"><div class="booking-bar__price"><span class="price">4 500 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 40 мин</span></div><button class="btn-primary" onclick="scrollToContacts()">Записаться</button></div>
+          <div class="booking-bar"><div class="booking-bar__price"><span class="price">4 500 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 40 хв</span></div><button class="btn-primary" onclick="scrollToContacts()">Записатися</button></div>
         </main>
       </div>
 
@@ -710,38 +710,38 @@
         </header>
         <main class="detail-main detail-main--no-pad-top">
           <div class="service-hero service-hero--tall">
-            <img src="https://lh3.googleusercontent.com/aida/ADBb0ugTCbpdkBZm_9rNs0MUuMwQi_U0nqNJO4pMTIxQobmS0vhmrWAG5y9CEtfeUexxzBOgfBRxHdzJmUtn9NPmr6AslTQI3HNHw3zdhvSiVAxYK_imXQqFc_RABo_V0wJB4BFxg2IKTrm2Cl-jzocdQOEXd7CXnYps61sxR0JeOAZBw9JGoATCeUuJJs7hY1DhSokzXCmg5mH6kwcUJ-D3ytZCJIbGPtK3tco6HTY2W0rmY-SON6nxCW9sOP4" alt="Инъекции">
+            <img src="https://lh3.googleusercontent.com/aida/ADBb0ugTCbpdkBZm_9rNs0MUuMwQi_U0nqNJO4pMTIxQobmS0vhmrWAG5y9CEtfeUexxzBOgfBRxHdzJmUtn9NPmr6AslTQI3HNHw3zdhvSiVAxYK_imXQqFc_RABo_V0wJB4BFxg2IKTrm2Cl-jzocdQOEXd7CXnYps61sxR0JeOAZBw9JGoATCeUuJJs7hY1DhSokzXCmg5mH6kwcUJ-D3ytZCJIbGPtK3tco6HTY2W0rmY-SON6nxCW9sOP4" alt="Ін'єкції">
             <div class="service-hero__gradient"></div>
           </div>
           <div class="service-content" style="margin-top:-1rem;position:relative;z-index:10">
             <section class="info-card animate-on-scroll">
               <div class="info-card__badge"><span class="material-symbols-outlined">science</span><span>MEDICAL AESTHETIC</span></div>
-              <h2 class="info-card__title">Инъекции</h2>
-              <p class="info-card__desc">Ботокс, филлеры и биоревитализация</p>
+              <h2 class="info-card__title">Ін'єкції</h2>
+              <p class="info-card__desc">Ботокс, філери та біоревіталізація</p>
               <div class="info-card__meta">
-                <div><span class="meta-label">Длительность</span><span class="meta-value">~60 мин</span></div>
-                <div><span class="meta-label">Эффект</span><span class="meta-value">До 12 мес</span></div>
+                <div><span class="meta-label">Тривалість</span><span class="meta-value">~60 хв</span></div>
+                <div><span class="meta-label">Ефект</span><span class="meta-value">До 12 міс</span></div>
               </div>
             </section>
-            <section class="animate-on-scroll"><h3 class="section-heading">Overview</h3><p class="body-text">Professional anti-aging and hydration treatments designed to restore youthful contours, smooth wrinkles, and deeply nourish the skin. We use only premium, certified injectables tailored to your unique facial anatomy for natural-looking results.</p></section>
-            <section class="animate-on-scroll"><h3 class="section-heading">Benefits</h3>
+            <section class="animate-on-scroll"><h3 class="section-heading">Огляд</h3><p class="body-text">Професійні процедури для омолодження та зволоження, розроблені для відновлення молодості контурів, розгладження зморшок та глибокого живлення шкіри. Ми використовуємо лише преміальні сертифіковані ін'єкційні препарати, підібрані відповідно до вашої унікальної анатомії обличчя для отримання природного результату.</p></section>
+            <section class="animate-on-scroll"><h3 class="section-heading">Переваги</h3>
               <div class="benefits-grid">
-                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined">bolt</span><span>Immediate Result</span></div>
-                <div class="benefit-card"><span class="material-symbols-outlined">update</span><span>Long Lasting</span></div>
-                <div class="benefit-card"><span class="material-symbols-outlined">medical_services</span><span>Physician-led</span></div>
-                <div class="benefit-card benefit-card--tinted"><span class="material-symbols-outlined">verified</span><span>Certified Products</span></div>
+                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined">bolt</span><span>Миттєвий результат</span></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">update</span><span>Тривалий ефект</span></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">medical_services</span><span>Виконує лікар</span></div>
+                <div class="benefit-card benefit-card--tinted"><span class="material-symbols-outlined">verified</span><span>Сертифіковані препарати</span></div>
               </div>
             </section>
-            <section class="animate-on-scroll"><h3 class="section-heading">Procedure Steps</h3>
+            <section class="animate-on-scroll"><h3 class="section-heading">Етапи процедури</h3>
               <div class="steps-timeline">
-                <div class="step"><div class="step__dot step__dot--active"></div><div class="step__content"><h4>1. Consultation</h4><p>Detailed facial assessment and goal setting.</p></div></div>
-                <div class="step"><div class="step__dot"></div><div class="step__content"><h4>2. Anesthesia</h4><p>Application of numbing cream for comfort.</p></div></div>
-                <div class="step"><div class="step__dot"></div><div class="step__content"><h4>3. Administration</h4><p>Precise injection of selected products.</p></div></div>
-                <div class="step"><div class="step__dot"></div><div class="step__content"><h4>4. Recovery</h4><p>Post-care recommendations and soothing mask.</p></div></div>
+                <div class="step"><div class="step__dot step__dot--active"></div><div class="step__content"><h4>1. Консультація</h4><p>Детальна оцінка обличчя та визначення цілей.</p></div></div>
+                <div class="step"><div class="step__dot"></div><div class="step__content"><h4>2. Анестезія</h4><p>Нанесення крему-анестетика для комфорту.</p></div></div>
+                <div class="step"><div class="step__dot"></div><div class="step__content"><h4>3. Введення</h4><p>Точне введення обраних препаратів.</p></div></div>
+                <div class="step"><div class="step__dot"></div><div class="step__content"><h4>4. Відновлення</h4><p>Рекомендації щодо догляду та заспокійлива маска.</p></div></div>
               </div>
             </section>
           </div>
-          <div class="booking-bar"><div class="booking-bar__price"><span class="price-label">Price from</span><span class="price">12 000 ₴</span></div><button class="btn-dark" onclick="scrollToContacts()">Book Appointment <span class="material-symbols-outlined">arrow_forward</span></button></div>
+          <div class="booking-bar"><div class="booking-bar__price"><span class="price-label">Ціна від</span><span class="price">12 000 ₴</span></div><button class="btn-dark" onclick="scrollToContacts()">Записатися <span class="material-symbols-outlined">arrow_forward</span></button></div>
         </main>
       </div>
 
@@ -756,38 +756,40 @@
         </header>
         <main class="detail-main detail-main--no-pad-top">
           <div class="service-hero service-hero--tall">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAInsOujGc-OWA6K_q1bNOTIW_Xbq2VEjZjCjd0vl62hdWU_1_kGeuVCcDPO_sEyEgDTrgukFP8f7GDvxh443huo8oVdwYEuzRNFUlIru6ijlR91EG7GOb2gAag7sPc5N1lDIOQb_YkMJWoreorjLKYC9Dlzd1ZudpUZilJdSVR4QXFdatRTZgtSgriXI_OymcacCI4rufzbHPsnm76e8po6004GlkdQeKhb-7eZlYVhlc4W40y5kcJK0av5zAPjO2jL3fwGvDhKDI" alt="Ультразвуковая чистка">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAInsOujGc-OWA6K_q1bNOTIW_Xbq2VEjZjCjd0vl62hdWU_1_kGeuVCcDPO_sEyEgDTrgukFP8f7GDvxh443huo8oVdwYEuzRNFUlIru6ijlR91EG7GOb2gAag7sPc5N1lDIOQb_YkMJWoreorjLKYC9Dlzd1ZudpUZilJdSVR4QXFdatRTZgtSgriXI_OymcacCI4rufzbHPsnm76e8po6004GlkdQeKhb-7eZlYVhlc4W40y5kcJK0av5zAPjO2jL3fwGvDhKDI" alt="Ультразвукова чистка">
             <div class="service-hero__gradient"></div>
             <div class="service-hero__text-glass">
               <div class="glass-panel">
-                <span class="service-hero__badge service-hero__badge--lavender"><span class="material-symbols-outlined" style="font-size:14px">spa</span> Аппаратная косметология</span>
-                <h2>Ультразвуковая чистка</h2>
-                <p>Мягкое и деликатное очищение</p>
+                <span class="service-hero__badge service-hero__badge--lavender"><span class="material-symbols-outlined" style="font-size:14px">spa</span> Апаратна косметологія</span>
+                <h2>Ультразвукова чистка</h2>
+                <p>М'яке та делікатне очищення</p>
               </div>
             </div>
           </div>
           <div class="service-content">
-            <section class="animate-on-scroll"><h3 class="section-heading">Описание процедуры</h3>
-              <div class="overview-simple"><p>Ультразвуковая чистка лица — это аппаратная процедура, направленная на глубокое, но при этом максимально бережное очищение кожи от ороговевших клеток, излишков кожного сала и поверхностных загрязнений. Процедура абсолютно безболезненна, не оставляет покраснений и подходит для любого типа кожи, включая чувствительную.</p></div>
+            <section class="animate-on-scroll"><h3 class="section-heading">Опис процедури</h3>
+              <div class="overview-simple"><p>Ультразвукова чистка обличчя — це апаратна процедура, спрямована на глибоке, але при цьому максимально дбайливе очищення шкіри від ороговілих клітин, надлишків шкірного сала та поверхневих забруднень. Процедура абсолютно безболісна, не залишає почервонінь і підходить для будь-якого типу шкіри, включаючи чутливу.</p></div>
             </section>
-            <section class="animate-on-scroll"><h3 class="section-heading">Преимущества</h3>
+            <section class="animate-on-scroll"><h3 class="section-heading">Переваги</h3>
               <div class="benefits-grid">
-                <div class="benefit-card"><span class="material-symbols-outlined">flight</span><h4>Атравматичность</h4><p>Кожа не повреждается</p></div>
-                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined">air</span><h4>Дыхание кожи</h4><p>Глубокое очищение пор</p></div>
-                <div class="benefit-card"><span class="material-symbols-outlined">texture</span><h4>Рельеф</h4><p>Улучшение текстуры</p></div>
-                <div class="benefit-card"><span class="material-symbols-outlined">timelapse</span><h4>Без реабилитации</h4><p>Сразу после процедуры</p></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">flight</span><h4>Атравматичність</h4><p>Шкіра не пошкоджується</p></div>
+                <div class="benefit-card benefit-card--accent"><span class="material-symbols-outlined">air</span><h4>Дихання шкіри</h4><p>Глибоке очищення пор</p></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">texture</span><h4>Рельєф</h4><p>Покращення текстури</p></div>
+                <div class="benefit-card"><span class="material-symbols-outlined">timelapse</span><h4>Без реабілітації</h4><p>Одразу після процедури</p></div>
               </div>
             </section>
-            <section class="animate-on-scroll"><h3 class="section-heading">Этапы процедуры</h3>
+            <section class="animate-on-scroll"><h3 class="section-heading">Етапи процедури</h3>
               <div class="steps-timeline steps-timeline--cards">
-                <div class="step step--card"><div class="step__dot step__dot--active"></div><div class="step__content"><span class="step__label">Этап 1</span><h4>Очищение и демакияж</h4><p>Тщательное удаление поверхностных загрязнений и макияжа мягкими средствами.</p></div></div>
-                <div class="step step--card"><div class="step__dot step__dot--active"></div><div class="step__content"><span class="step__label">Этап 2</span><h4>Ультразвуковой пилинг</h4><p>Обработка кожи скрабером по гелю-дезинкрустанту.</p></div></div>
-                <div class="step step--card"><div class="step__dot step__dot--active"></div><div class="step__content"><span class="step__label">Этап 3</span><h4>Тонизация и увлажнение</h4><p>Восстановление pH-баланса кожи и нанесение активной сыворотки.</p></div></div>
-                <div class="step step--card"><div class="step__dot"></div><div class="step__content"><span class="step__label">Этап 4</span><h4>Финальный уход</h4><p>Нанесение защитного крема с SPF-фактором.</p></div></div>
+                <div class="step step--card"><div class="step__dot step__dot--active"></div><div class="step__content"><span class="step__label">Етап 1</span><h4>Очищення та демакіяж</h4><p>Ретельне видалення поверхневих забруднень та макіяжу м'якими засобами.</p></div></div>
+                <div class="step step--card"><div class="step__dot step__dot--active"></div><div class="step__content"><span class="step__label">Етап 2</span><h4>Ультразвуковий пілінг</h4><p>Обробка шкіри скрабером по гелю-дезинкрустанту.</p></div></div>
+                <div class="step step--card"><div class="step__dot step__dot--active"></div><div class="step__content"><span class="step__label">Етап 3</span><h4>Тонізація та зволоження</h4><p>Відновлення pH-балансу шкіри та нанесення активної сироватки.</p></div></div>
+                <div class="step step--card"><div class="step__dot"></div><div class="step__content"><span class="step__label">Етап 4</span><h4>Фінальний догляд</h4><p>Нанесення захитного крему з SPF-фактором.</p></div></div>
               </div>
             </section>
           </div>
-          <div class="booking-bar"><div class="booking-bar__price"><span class="price price--gradient">3 000 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 45 мин.</span></div><button class="btn-primary" onclick="scrollToContacts()">Записаться <span class="material-symbols-outlined">arrow_forward</span></button></div>
+          <div class="booking-bar"><div class="booking-bar__price"><span class="price price--gradient">3 000 ₴</span><span class="duration"><span class="material-symbols-outlined">schedule</span> 45 хв.</span></div><button class="btn-primary" onclick="scrollToContacts()">Записатися <span class="material-symbols-outlined">arrow_forward</span></button></div>
+        </main>
+      </div>
       <!-- ==================== PRICE PAGE ==================== -->
       <div class="screen" id="page-price" data-page="price">
         <header class="detail-header">
@@ -799,19 +801,19 @@
           <div class="price-list-wrapper animate-on-scroll">
             
             <div class="price-category">
-              <h3 class="price-category__title">Чистка лица</h3>
+              <h3 class="price-category__title">Чистка обличчя</h3>
               <div class="price-items">
                 <div class="price-item" onclick="navigateTo('chistka')">
                   <div class="price-item__info">
-                    <h4>Комбинированная чистка лица</h4>
-                    <p>60 мин</p>
+                    <h4>Комбінована чистка обличчя</h4>
+                    <p>60 хв</p>
                   </div>
                   <div class="price-item__value">3 500 ₴</div>
                 </div>
                 <div class="price-item" onclick="navigateTo('ultrasound')">
                   <div class="price-item__info">
-                    <h4>Ультразвуковая чистка лица</h4>
-                    <p>45 мин</p>
+                    <h4>Ультразвукова чистка обличчя</h4>
+                    <p>45 хв</p>
                   </div>
                   <div class="price-item__value">2 500 ₴</div>
                 </div>
@@ -819,19 +821,19 @@
             </div>
 
             <div class="price-category">
-              <h3 class="price-category__title">Пилинги и Уход</h3>
+              <h3 class="price-category__title">Пілінги та Догляд</h3>
               <div class="price-items">
                 <div class="price-item" onclick="navigateTo('peeling')">
                   <div class="price-item__info">
-                    <h4>Пилинг PRX-T33</h4>
-                    <p>40 мин</p>
+                    <h4>Пілінг PRX-T33</h4>
+                    <p>40 хв</p>
                   </div>
                   <div class="price-item__value">4 000 ₴</div>
                 </div>
                 <div class="price-item" onclick="scrollToContacts()">
                   <div class="price-item__info">
-                    <h4>Карбокситерапия</h4>
-                    <p>45 мин</p>
+                    <h4>Карбокситерапія</h4>
+                    <p>45 хв</p>
                   </div>
                   <div class="price-item__value">3 000 ₴</div>
                 </div>
@@ -839,41 +841,41 @@
             </div>
 
             <div class="price-category">
-              <h3 class="price-category__title">Инъекционные методики</h3>
+              <h3 class="price-category__title">Ін'єкційні методики</h3>
               <div class="price-items">
                 <div class="price-item" onclick="navigateTo('injections')">
                   <div class="price-item__info">
-                    <h4>Контурная пластика губ</h4>
-                    <p>60 мин</p>
+                    <h4>Контурна пластика губ</h4>
+                    <p>60 хв</p>
                   </div>
-                  <div class="price-item__value">от 12 000 ₴</div>
+                  <div class="price-item__value">від 12 000 ₴</div>
                 </div>
                 <div class="price-item" onclick="scrollToContacts()">
                   <div class="price-item__info">
-                    <h4>Биоревитализация</h4>
-                    <p>60 мин</p>
+                    <h4>Біоревіталізація</h4>
+                    <p>60 хв</p>
                   </div>
-                  <div class="price-item__value">от 6 000 ₴</div>
+                  <div class="price-item__value">від 6 000 ₴</div>
                 </div>
               </div>
             </div>
 
             <div class="price-category">
-              <h3 class="price-category__title">Массаж & Эпиляция</h3>
+              <h3 class="price-category__title">Масаж & Епіляція</h3>
               <div class="price-items">
                 <div class="price-item" onclick="navigateTo('massage')">
                   <div class="price-item__info">
-                    <h4>Скульптурный массаж лица</h4>
-                    <p>50 мин</p>
+                    <h4>Скульптурний масаж обличчя</h4>
+                    <p>50 хв</p>
                   </div>
                   <div class="price-item__value">3 800 ₴</div>
                 </div>
                 <div class="price-item" onclick="navigateTo('laser')">
                   <div class="price-item__info">
-                    <h4>Лазерная эпиляция (комплекс)</h4>
-                    <p>30 мин</p>
+                    <h4>Лазерна епіляція (комплекс)</h4>
+                    <p>30 хв</p>
                   </div>
-                  <div class="price-item__value">от 2 500 ₴</div>
+                  <div class="price-item__value">від 2 500 ₴</div>
                 </div>
               </div>
             </div>
@@ -882,7 +884,7 @@
           
           <section class="price-cta animate-on-scroll">
             <button class="btn-primary" onclick="navigateTo('calendar')">
-              Перейти к записи
+              Перейти до запису
               <span class="material-symbols-outlined">calendar_today</span>
             </button>
           </section>
@@ -893,53 +895,53 @@
       <div class="screen" id="page-portfolio" data-page="portfolio">
         <header class="detail-header">
           <button class="detail-header__back" onclick="goBack()"><span class="material-symbols-outlined">arrow_back</span></button>
-          <h1 class="detail-header__title">Портфолио</h1>
+          <h1 class="detail-header__title">Портфоліо</h1>
           <div class="detail-header__spacer"></div>
         </header>
         <main class="detail-main portfolio-main">
           <div class="portfolio-grid animate-on-scroll">
             
             <div class="portfolio-card glass-card">
-              <div class="portfolio-card__badge">Чистка + Пилинг</div>
+              <div class="portfolio-card__badge">Чистка + Пілінг</div>
               <div class="portfolio-card__visual" style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);">
                 <span class="material-symbols-outlined">face</span>
               </div>
               <div class="portfolio-card__text">
-                <h4>Результат после комбинированной чистки</h4>
-                <p>Выравнивание рельефа кожи, очищение пор от комедонов и здоровый цвет лица уже после одной процедуры.</p>
+                <h4>Результат після комбінованої чистки</h4>
+                <p>Вирівнювання рельєфу шкіри, очищення пор від комедонів та здоровий колір обличчя вже після однієї процедури.</p>
               </div>
             </div>
 
             <div class="portfolio-card glass-card">
-              <div class="portfolio-card__badge">Лифтинг</div>
+              <div class="portfolio-card__badge">Ліфтинг</div>
               <div class="portfolio-card__visual" style="background: linear-gradient(135deg, #cfd9df 0%, #e2ebf0 100%);">
                 <span class="material-symbols-outlined">spa</span>
               </div>
               <div class="portfolio-card__text">
-                <h4>Скульптурный массаж (курс 5 процедур)</h4>
-                <p>Заметный лифтинг-эффект, уменьшение отечности, выраженная линия челюсти и тонус мимических мышц.</p>
+                <h4>Скульптурний масаж (курс 5 процедур)</h4>
+                <p>Помітний ліфтинг-ефект, зменшення набряклості, виражена лінія щелепи та тонус мімічних м'язів.</p>
               </div>
             </div>
 
             <div class="portfolio-card glass-card">
-              <div class="portfolio-card__badge">Инъекции</div>
+              <div class="portfolio-card__badge">Ін'єкції</div>
               <div class="portfolio-card__visual" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
                 <span class="material-symbols-outlined">water_drop</span>
               </div>
               <div class="portfolio-card__text">
-                <h4>Контурная пластика губ</h4>
-                <p>Увеличение объема и коррекция формы губ гиалуроновой кислотой. Естественный объем и четкий контур.</p>
+                <h4>Контурна пластика губ</h4>
+                <p>Збільшення об'єму та корекція форми губ гіалуроновою кислотою. Природний об'єм та чіткий контур.</p>
               </div>
             </div>
 
             <div class="portfolio-card glass-card">
-              <div class="portfolio-card__badge">Лазерная эпиляция</div>
+              <div class="portfolio-card__badge">Лазерна епіляція</div>
               <div class="portfolio-card__visual" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);">
                 <span class="material-symbols-outlined">flare</span>
               </div>
               <div class="portfolio-card__text">
-                <h4>Лазерная эпиляция (после 3 сеансов)</h4>
-                <p>Замедление роста волос на 70%, удаление вросших волос и гладкая кожа без раздражения.</p>
+                <h4>Лазерна епіляція (після 3 сеансів)</h4>
+                <p>Уповільнення росту волосся на 70%, видалення врослого волосся та гладенька шкіра без подразнення.</p>
               </div>
             </div>
 
@@ -947,7 +949,7 @@
 
           <section class="portfolio-cta animate-on-scroll">
             <button class="btn-primary" onclick="scrollToContacts()">
-              Консультация
+              Консультація
               <span class="material-symbols-outlined">arrow_forward</span>
             </button>
           </section>
@@ -960,19 +962,19 @@
     <nav class="bottom-nav" id="bottom-nav">
       <a class="nav-item active" data-nav="home" onclick="navigateTo('home')">
         <span class="material-symbols-outlined">home</span>
-        <span>Главная</span>
+        <span>Головна</span>
       </a>
       <a class="nav-item" data-nav="services" onclick="scrollToServices()">
         <span class="material-symbols-outlined">assignment</span>
-        <span>Услуги</span>
+        <span>Послуги</span>
       </a>
       <a class="nav-item" data-nav="appointment" onclick="scrollToContacts()">
         <span class="material-symbols-outlined">chat_bubble</span>
-        <span>Запись</span>
+        <span>Запис</span>
       </a>
       <a class="nav-item" data-nav="calendar" onclick="navigateTo('calendar')">
         <span class="material-symbols-outlined">calendar_today</span>
-        <span>Календарь</span>
+        <span>Календар</span>
       </a>
     </nav>
   </div>

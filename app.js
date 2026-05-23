@@ -349,24 +349,24 @@ function initContactForm() {
     const message = messageInput.value.trim();
 
     if (!name || !phone || !message) {
-      showToast('Пожалуйста, заполните все поля', true);
+      showToast('Будь ласка, заповніть усі поля', true);
       return;
     }
 
     // Set loading state
     const originalBtnHTML = submitBtn.innerHTML;
     submitBtn.disabled = true;
-    submitBtn.innerHTML = '<span class="spinner"></span> <span>Отправка...</span>';
+    submitBtn.innerHTML = '<span class="spinner"></span> <span>Надсилання...</span>';
 
     // Hide previous toast if any
     toast.classList.add('hidden');
     toast.className = 'toast-message hidden';
 
     // Construct message body
-    const textMessage = `🔔 *Новая запись на сайте!*\n\n` +
-                        `👤 *Имя:* ${name}\n` +
+    const textMessage = `🔔 *Новий запис на сайті!*\n\n` +
+                        `👤 *Ім'я:* ${name}\n` +
                         `📞 *Контакт:* ${phone}\n` +
-                        `💬 *Сообщение:* ${message}`;
+                        `💬 *Повідомлення:* ${message}`;
 
     try {
       if (TG_CONFIG.botToken && TG_CONFIG.chatId) {
@@ -383,12 +383,12 @@ function initContactForm() {
         });
 
         if (response.ok) {
-          showToast('Сообщение успешно отправлено!', false);
+          showToast('Повідомлення успішно надіслано!', false);
           form.reset();
         } else {
           const errData = await response.json();
           console.error('Telegram API Error:', errData);
-          showToast(`Ошибка отправки: ${errData.description || 'Неизвестная ошибка'}`, true);
+          showToast(`Помилка надсилання: ${errData.description || 'Невідома помилка'}`, true);
         }
       } else {
         // Simulator / Demo mode when credentials are not filled
@@ -400,12 +400,12 @@ function initContactForm() {
         // Simulate network delay
         await new Promise(resolve => setTimeout(resolve, 1500));
         
-        showToast('Сообщение отправлено! (Демо-режим: настройте Telegram в app.js)', false);
+        showToast('Повідомлення надіслано! (Демо-режим: налаштуйте Telegram в app.js)', false);
         form.reset();
       }
     } catch (error) {
       console.error('Network Error:', error);
-      showToast('Ошибка сети. Проверьте подключение к интернету.', true);
+      showToast('Помилка мережі. Перевірте підключення до інтернету.', true);
     } finally {
       // Restore button state
       submitBtn.disabled = false;
@@ -460,13 +460,13 @@ function initCalendar() {
   if (!form || !monthYearLabel || !prevMonthBtn || !nextMonthBtn || !calendarDaysContainer || !timeSlotsContainer || !bookingSummary || !summaryDateTime || !calendarToast || !submitBtn) return;
 
   const monthsRu = [
-    "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-    "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+    "Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень",
+    "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"
   ];
 
   const monthsGenitiveRu = [
-    "января", "февраля", "марта", "апреля", "мая", "июня",
-    "июля", "августа", "сентября", "октября", "ноября", "декабря"
+    "січня", "лютого", "березня", "квітня", "травня", "червня",
+    "липня", "серпня", "вересня", "жовтня", "листопада", "грудня"
   ];
 
   const timeSlots = ["09:00", "10:30", "12:00", "13:30", "15:00", "16:30", "18:00", "19:30"];
@@ -543,7 +543,7 @@ function initCalendar() {
     if (!selectedDate) {
       const placeholder = document.createElement('p');
       placeholder.className = 'time-slots-placeholder';
-      placeholder.textContent = 'Пожалуйста, выберите дату на календаре';
+      placeholder.textContent = 'Будь ласка, виберіть дату на календарі';
       placeholder.style.gridColumn = '1 / -1';
       placeholder.style.textAlign = 'center';
       placeholder.style.fontSize = '13px';
@@ -577,7 +577,7 @@ function initCalendar() {
     if (selectedDate && selectedTime) {
       const day = selectedDate.getDate();
       const monthIndex = selectedDate.getMonth();
-      summaryDateTime.textContent = `${day} ${monthsGenitiveRu[monthIndex]} в ${selectedTime}`;
+      summaryDateTime.textContent = `${day} ${monthsGenitiveRu[monthIndex]} о ${selectedTime}`;
       bookingSummary.classList.remove('hidden');
     } else {
       bookingSummary.classList.add('hidden');
@@ -600,7 +600,7 @@ function initCalendar() {
     e.preventDefault();
 
     if (!selectedDate || !selectedTime) {
-      showCalendarToast('Выберите дату и доступное время на календаре', true);
+      showCalendarToast('Виберіть дату та доступний час на календарі', true);
       return;
     }
 
@@ -615,25 +615,25 @@ function initCalendar() {
     const phone = phoneInput.value.trim();
 
     if (!service || !name || !phone) {
-      showCalendarToast('Пожалуйста, заполните все поля формы', true);
+      showCalendarToast('Будь ласка, заповніть усі поля форми', true);
       return;
     }
 
     // Set loading state
     const originalBtnHTML = submitBtn.innerHTML;
     submitBtn.disabled = true;
-    submitBtn.innerHTML = '<span class="spinner"></span> <span>Бронирование...</span>';
+    submitBtn.innerHTML = '<span class="spinner"></span> <span>Бронювання...</span>';
 
     // Format final date text
     const formattedDate = `${selectedDate.getDate()} ${monthsGenitiveRu[selectedDate.getMonth()]} ${selectedDate.getFullYear()}`;
 
     // Construct Telegram message body
-    const textMessage = `📅 *Новая бронь через Календарь!*\n\n` +
-                        `👤 *Имя:* ${name}\n` +
+    const textMessage = `📅 *Нове бронювання через Календар!*\n\n` +
+                        `👤 *Ім'я:* ${name}\n` +
                         `📞 *Телефон:* ${phone}\n` +
-                        `💆‍♀️ *Услуга:* ${service}\n` +
+                        `💆‍♀️ *Послуга:* ${service}\n` +
                         `📅 *Дата:* ${formattedDate}\n` +
-                        `⏰ *Время:* ${selectedTime}`;
+                        `⏰ *Час:* ${selectedTime}`;
 
     try {
       if (TG_CONFIG.botToken && TG_CONFIG.chatId) {
@@ -650,7 +650,7 @@ function initCalendar() {
         });
 
         if (response.ok) {
-          showCalendarToast('Вы успешно записаны!', false);
+          showCalendarToast('Вас успішно записано!', false);
           form.reset();
           selectedDate = null;
           selectedTime = null;
@@ -660,7 +660,7 @@ function initCalendar() {
         } else {
           const errData = await response.json();
           console.error('Telegram API Error (Calendar):', errData);
-          showCalendarToast(`Ошибка отправки: ${errData.description || 'Неизвестная ошибка'}`, true);
+          showCalendarToast(`Помилка надсилання: ${errData.description || 'Невідома помилка'}`, true);
         }
       } else {
         // Simulator / Demo mode when credentials are not filled
@@ -672,7 +672,7 @@ function initCalendar() {
         // Simulate network delay
         await new Promise(resolve => setTimeout(resolve, 1500));
         
-        showCalendarToast('Вы успешно записаны! (Демо-режим: настройте Telegram в app.js)', false);
+        showCalendarToast('Вас успішно записано! (Демо-режим: налаштуйте Telegram в app.js)', false);
         form.reset();
         selectedDate = null;
         selectedTime = null;
@@ -682,7 +682,7 @@ function initCalendar() {
       }
     } catch (error) {
       console.error('Network Error (Calendar):', error);
-      showCalendarToast('Ошибка сети. Проверьте подключение к интернету.', true);
+      showCalendarToast('Помилка мережі. Перевірте підключення до інтернету.', true);
     } finally {
       // Restore button state
       submitBtn.disabled = false;

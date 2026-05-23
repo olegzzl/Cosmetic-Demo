@@ -1902,7 +1902,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .custom-dropdown__options {
   position: absolute;
-  top: calc(100% + 8px);
+  bottom: calc(100% + 8px);
   left: 0;
   width: 100%;
   background: var(--surface-container-lowest);
@@ -1914,15 +1914,35 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   max-height: 250px;
   overflow-y: auto;
   opacity: 0;
-  transform: scale(0.95) translateY(-10px);
+  transform: scale(0.95) translateY(10px);
   pointer-events: none;
   transition: opacity 0.25s var(--ease-out), transform 0.25s var(--ease-out);
-  transform-origin: top center;
+  transform-origin: bottom center;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+
+.custom-dropdown__options::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-dropdown__options::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-dropdown__options::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
 }
 
 [data-theme="light"] .custom-dropdown__options {
   border-color: var(--outline-variant);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+}
+
+[data-theme="light"] .custom-dropdown__options::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
 }
 
 .custom-dropdown.active .custom-dropdown__options {
