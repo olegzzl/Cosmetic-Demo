@@ -2279,9 +2279,88 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .portfolio-carousel-wrapper {
+  position: relative;
   width: 100%;
   overflow: visible;
   perspective: 1000px;
+}
+
+/* Fading overlays on left and right edges */
+.portfolio-carousel-wrapper::before,
+.portfolio-carousel-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: var(--page-margin);
+  z-index: 10;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.portfolio-carousel-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg) 20%, transparent 100%);
+}
+
+.portfolio-carousel-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg) 20%, transparent 100%);
+}
+
+/* Arrow buttons for navigation (desktop only) */
+.portfolio-arrow {
+  display: none;
+  position: absolute;
+  top: calc(50% - 10px);
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+  color: #121212;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast), opacity var(--transition-fast);
+  -webkit-tap-highlight-color: transparent;
+}
+
+[data-theme="dark"] .portfolio-arrow {
+  background: rgba(44, 44, 44, 0.75);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio-arrow:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-50%) scale(1.08);
+}
+
+[data-theme="dark"] .portfolio-arrow:hover {
+  background: rgba(60, 60, 60, 0.95);
+}
+
+.portfolio-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.portfolio-arrow--left {
+  left: 6px;
+}
+
+.portfolio-arrow--right {
+  right: 6px;
+}
+
+@media (min-width: 481px) {
+  .portfolio-arrow {
+    display: flex;
+  }
 }
 
 .portfolio-carousel {
@@ -2302,7 +2381,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .portfolio-slide {
   flex: 0 0 86%;
   scroll-snap-align: center;
-  background: var(--brand-lavender);
+  background: rgba(44, 44, 44, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: var(--radius-card-lg);
   padding: var(--page-margin);
   position: relative;
@@ -2313,7 +2395,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   cursor: pointer;
   box-sizing: border-box;
   transform-style: preserve-3d;
-  transition: opacity 0.1s ease-out, transform 0.1s ease-out;
+  transition: opacity 0.1s ease-out, transform 0.1s ease-out, background var(--transition-fast);
+}
+
+[data-theme="light"] .portfolio-slide {
+  background: rgba(226, 226, 237, 0.55);
+  border-color: rgba(202, 197, 203, 0.4);
 }
 
 .portfolio-slide:active {

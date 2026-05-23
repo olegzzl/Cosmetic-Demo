@@ -831,4 +831,20 @@ function updatePortfolioCarousel() {
   });
 }
 
+function scrollPortfolio(direction) {
+  const carousel = document.getElementById('portfolio-carousel');
+  if (!carousel) return;
+  
+  const slide = carousel.querySelector('.portfolio-slide');
+  if (!slide) return;
+  
+  // slide width + gap (12px)
+  const scrollAmount = slide.offsetWidth + 12;
+  if (direction === 'left') {
+    carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  } else {
+    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  }
+}
+
 
