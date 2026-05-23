@@ -47,6 +47,10 @@ function navigateTo(pageName, isPopState = false) {
   updateNav(pageName);
   updateBottomNavVisibility(pageName);
   updateGlobalHeaderVisibility(pageName);
+  
+  if (pageName === 'home') {
+    setTimeout(updatePortfolioCarousel, 450);
+  }
 }
 
 function goBack() {
@@ -756,6 +760,7 @@ function updateThemeIcon() {
 document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   updateGlobalHeaderVisibility('home');
+  initPortfolioCarousel();
 });
 
 // --- Drawer Sidebar & Global Header Helpers ---
@@ -777,11 +782,53 @@ function openDrawer() {
   }
 }
 
+// Close drawer
 function closeDrawer() {
   const drawer = document.getElementById('drawer-menu');
   if (drawer) {
     drawer.classList.remove('active');
   }
+}
+
+// --- Portfolio Horizontal Carousel (Homepage) Helpers ---
+function initPortfolioCarousel() {
+  const carousel = document.getElementById('portfolio-carousel');
+  if (!carousel) return;
+
+  carousel.addEventListener('scroll', updatePortfolioCarousel);
+  window.addEventListener('resize', updatePortfolioCarousel);
+  
+  // Size slides and animate them on start
+  updatePortfolioCarousel();
+}
+
+function updatePortfolioCarousel() {
+  const carousel = document.getElementById('portfolio-carousel');
+  if (!carousel) return;
+  const slides = carousel.querySelectorAll('.portfolio-slide');
+  const carouselRect = carousel.getBoundingClientRect();
+  const carouselCenter = carouselRect.left + carouselRect.width / 2;
+
+  slides.forEach(slide => {
+    const rect = slide.getBoundingClientRect();
+    const slideCenter = rect.left + rect.width / 2;
+    const distanceFromCenter = slideCenter - carouselCenter;
+    const absDistance = Math.abs(distanceFromCenter);
+
+    // Normalized distance from center (clamped at 1)
+    const maxDistance = rect.width;
+    const normalized = Math.min(absDistance / maxDistance, 1);
+
+    // Scale from 1.0 down to 0.93
+    const scale = 1 - (normalized * 0.07);
+    // Opacity from 1.0 down to 0.72
+    const opacity = 1 - (normalized * 0.28);
+    // 3D rotation based on direction and distance from center
+    const rotateY = -distanceFromCenter / rect.width * 12; // Max 12 degrees tilt
+
+    slide.style.transform = `scale(${scale}) rotateY(${Math.min(Math.max(rotateY, -12), 12)}deg)`;
+    slide.style.opacity = opacity;
+  });
 }
 
 

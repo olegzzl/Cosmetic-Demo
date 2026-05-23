@@ -2262,3 +2262,130 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   justify-content: center;
 }
 
+/* ============================================
+   PORTFOLIO HORIZONTAL CAROUSEL (HOMEPAGE)
+   ============================================ */
+.portfolio-carousel-section {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.portfolio-carousel-section .home-section-title {
+  padding: 0 var(--page-margin);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--on-surface);
+}
+
+.portfolio-carousel-wrapper {
+  width: 100%;
+  overflow: visible;
+  perspective: 1000px;
+}
+
+.portfolio-carousel {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0.5rem var(--page-margin) 1.5rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  transform-style: preserve-3d;
+}
+
+.portfolio-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.portfolio-slide {
+  flex: 0 0 86%;
+  scroll-snap-align: center;
+  background: var(--brand-lavender);
+  border-radius: var(--radius-card-lg);
+  padding: var(--page-margin);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  min-height: 180px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+  transition: opacity 0.1s ease-out, transform 0.1s ease-out;
+}
+
+.portfolio-slide:active {
+  transform: scale(0.97);
+}
+
+.portfolio-slide__text {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 55%;
+  pointer-events: none;
+}
+
+.portfolio-slide__badge {
+  align-self: flex-start;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--brand-text-secondary);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 3px 6px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+[data-theme="dark"] .portfolio-slide__badge {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.portfolio-slide__title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 6px 0;
+  color: var(--on-surface);
+}
+
+.portfolio-slide__desc {
+  font-size: 12px;
+  color: var(--brand-text-secondary);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.portfolio-slide__link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: var(--on-surface);
+}
+
+.portfolio-slide__image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 45%;
+}
+
+.portfolio-slide__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem 0 0 1.5rem;
+  box-shadow: -10px 0 20px rgba(0, 0, 0, 0.05);
+}
+
+
